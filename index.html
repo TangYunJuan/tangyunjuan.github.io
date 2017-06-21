@@ -2,11 +2,30 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>home page</title>
+	<link rel="stylesheet" type="text/css" href="http://matthew.wagerfield.com/parallax/assets/styles/css/styles.css"/>
 </head>
 <body>
 	<div class="header">
-		<h1>你好</h1>
+		<h1>parallax</h1>
 	</div>
+	<div class="parallax-wrap">
+		<div id="container" class="container">
+			<div id="scene" class="scene">
+				<div class="layer" data-depth="1.00"><img src="images/layer1.png"></div>
+				<div class="layer" data-depth="0.80"><img src="images/layer2.png"></div>
+				<div class="layer" data-depth="0.60"><img src="images/layer3.png"></div>
+				<div class="layer" data-depth="0.40"><img src="images/layer4.png"></div>
+				<div class="layer" data-depth="0.20"><img src="images/layer5.png"></div>
+				<div class="layer" data-depth="0.00"><img src="images/layer6.png"></div>
+			</div>
+		</div>
+	</div>
+	<script src="http://matthew.wagerfield.com/parallax/assets/scripts/js/libraries.min.js"></script>
+	<script src="http://matthew.wagerfield.com/parallax/deploy/jquery.parallax.js"></script>
+	<script>
+	    var $scene = $('#scene');
+	    $scene.parallax();
+	</script>
 </body>
 </html>
