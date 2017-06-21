@@ -3,7 +3,6 @@
 <head>
 	<meta charset="UTF-8">
 	<title>home page</title>
-	<link rel="stylesheet" type="text/css" href="http://matthew.wagerfield.com/parallax/assets/styles/css/styles.css"/>
 	<style>
 		@media screen and (min-width: 1000px)  {
 			.container {
@@ -16,6 +15,9 @@
 				width: 30%;
 				margin: 0 auto;
 			}
+		}
+		body {
+			background: #000;
 		}
 		
 	</style>
@@ -36,11 +38,11 @@
 			</div>
 		</div>
 	</div>
-	<script src="http://matthew.wagerfield.com/parallax/assets/scripts/js/libraries.min.js"></script>
-	<script src="http://matthew.wagerfield.com/parallax/deploy/jquery.parallax.js"></script>
+	<script src="./js/libraries.min.js"></script>
+	<script src="./js/parallax.js"></script>
 	<script>
-	    var $scene = $('#scene');
-	    $scene.parallax();
+	    var scene = document.getElementById('scene');
+		var parallax = new Parallax(scene);
 	</script>
 </body>
 </html>
