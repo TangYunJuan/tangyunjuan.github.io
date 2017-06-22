@@ -26,9 +26,9 @@
             var alpha = document.getElementById('alpha');
             var beta = document.getElementById('beta');
             var gamma = document.getElementById('gamma');
-            alpha.innerHTML = "alpha: " + x;
-            beta.innerHTML = "beta: " + y;
-            gamma.innerHTML = "gamma: " + z;
+            alpha.innerHTML = "alpha: " + Math.round(x);
+            beta.innerHTML = "beta: " + Math.round(y);
+            gamma.innerHTML = "gamma: " + Math.round(z);
 		}
 
 		window.onload = function() {
