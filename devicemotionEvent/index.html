@@ -22,13 +22,14 @@
     <script src="../js/jquery-3.2.1.min.js"></script>
 	<script>
 		function init(){
+            console.log(window.DeviceMotionEvent)
             if(window.DeviceMotionEvent) {
                 window.addEventListener('devicemotion', deviceMotionHandler, false);
             }else {
                 $('#shakeNo').show();
+                
             }
         }
-
         var SHAKE_THREHOLD = 3000;
         var last_update = 0;
         var x,
@@ -47,8 +48,8 @@
                 x = acceleration.x;
                 y = acceleration.y;
                 z = acceleration.z;
-                var speed = Math.abs((x + y + z - last_x - last_y - last_z)/diffTime * 10000)
-                alert(speed)
+                var speed = Math.abs((x + y + z - last_x - last_y - last_z) / diffTime * 10000)
+                // alert(speed)
                 if(speed > SHAKE_THREHOLD) {
                     count++;
                     $('#shakeNo').hide();
@@ -60,6 +61,7 @@
 
         $(document).ready(function(){
             init();
+            console.log("123")
         })
 	</script>
 </body>
