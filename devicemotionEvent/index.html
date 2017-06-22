@@ -73,6 +73,7 @@
                 lastZ = current.z;
                 return;
             }
+<<<<<<< HEAD
  
             //得到两次移动各个方向上的加速度绝对差距
             deltaX = Math.abs(lastX - current.x);
@@ -87,6 +88,34 @@
                      //触发摇一摇事件
                     dealShake();
                     lastTime = new Date;
+=======
+        }
+        var SHAKE_THREHOLD = 3000;
+        var last_update = 0;
+        var x,
+            y,
+            z,
+            last_x,
+            last_y,
+            last_z,
+            count = 0;
+        function deviceMotionHandler(e) {
+            var acceleration = e.accelerationIncludingGravity;
+            var curTime = new Date().getTime();
+            var diffTime = curTime - last_update;
+            if(diffTime > 100) {
+                last_update = curTime;
+                x = acceleration.x;
+                y = acceleration.y;
+                z = acceleration.z;
+                var speed = Math.abs((x + y + z - last_x - last_y - last_z) / diffTime * 10000)
+                // alert(speed)
+                if(speed > 100) {
+                    count++;
+                    $('#shakeNo').hide();
+                    $("#shakeYes").show();
+                    $("#shakeResult").html("摇了"+ count +"次了")
+>>>>>>> 6dc740448c0a6fdcd22e9da51c9f36802e993ca0
                 }
             }
  
@@ -99,6 +128,7 @@
              if (isShaking) return;
              isShaking = !0;
 
+<<<<<<< HEAD
              document.getElementById("tip").innerHTML = "恭喜您，摇中：" + GetName();
  
              setTimeout(function () {
@@ -117,3 +147,12 @@
      </script>
  
  </body>
+=======
+        $(document).ready(function(){
+            init();
+            console.log("123")
+        })
+	</script>
+</body>
+</html>
+>>>>>>> 6dc740448c0a6fdcd22e9da51c9f36802e993ca0
