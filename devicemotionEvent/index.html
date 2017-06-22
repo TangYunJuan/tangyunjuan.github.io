@@ -50,7 +50,7 @@
                 z = acceleration.z;
                 var speed = Math.abs((x + y + z - last_x - last_y - last_z) / diffTime * 10000)
                 // alert(speed)
-                if(speed > SHAKE_THREHOLD) {
+                if(speed > 100) {
                     count++;
                     $('#shakeNo').hide();
                     $("#shakeYes").show();
