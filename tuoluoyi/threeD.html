@@ -77,16 +77,27 @@
 			<div class="box6">6</div>
 		</div>
 	</div>
+	<div style="margin-top: 50px">
+		<div id="alpha"></div>
+		<div id="beta"></div>
+		<div id="gamma"></div>
+	</div>
 	<script>
 		var space = document.getElementById('space');
 		console.log(space)
-		space.style.transform = 'rotateX(100deg) rotateY(10deg) rotateZ(-100deg)'
+		var z = document.getElementById('alpha');
+        var x = document.getElementById('beta');
+        var y = document.getElementById('gamma');
+        
 		function init() {
 			if(window.DeviceOrientationEvent) {
 				window.addEventListener('deviceorientation',function(e){
-					var alpha = e.alpha;
-					var beta = e.beta;
-					var gamma = e.gamme;
+					var alpha = Math.round(e.alpha);
+					var beta = Math.round(e.beta);
+					var gamma = Math.round(e.gamma);
+					z.innerHTML = "alpha: " + alpha;
+        			x.innerHTML = "beta: " + beta;
+        			y.innerHTML = "gamma: " + gamma;
 					// space.style.webkitTransform = 'rotateX('+beta+'deg) rotateY('+gamma+'deg) rotateZ('+alpha+'deg)';
 					space.style.transform = 'rotateX('+beta+'deg) rotateY('+gamma+'deg) rotateZ('+alpha+'deg)';
 					// space.style.mozTransform = 'rotateX('+beta+'deg) rotateY('+gamma+'deg) rotateZ('+alpha+'deg)';
