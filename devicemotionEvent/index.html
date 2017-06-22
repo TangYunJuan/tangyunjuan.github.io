@@ -1,68 +1,119 @@
-<!DOCTYPE html>
-<html lang="en">
+ <!DOCTYPE html>
+<html>
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-    <style>
-        #shakeNo,#shakeYes {
-           display: none;
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>摇一摇抽奖</title>
+    <style type="text/css">
+        html,body{ 
+            width:100%; 
+            height:100%; 
+            background-color: #000; 
+            margin:0; 
+            overflow: hidden;
         }
+         .tip{ 
+            position: absolute; 
+            bottom: 30px; 
+            left: 10px; 
+            color: #fff; 
+            font-family: '楷体'; 
+            text-align: center; 
+            right: 10px; 
+            height: 32px; 
+            line-height: 32px;
+            background-color: rgba(255,255,255,.4);
+            border-radius: 3px;
+        } 
+        .tip.active{ 
+            -webkit-animation: jump 1.5s linear; 
+            animation: jump 1s linear; 
+        } 
     </style>
-</head>
-<body>
-    <div id="shakeNo">
-        <p>您看到这段话，可能有以下几个原因：</p>
-        <p>1.您使用了电脑打开这个页面，请使用手机</p>
-        <p>2.虽然您用了手机，但您的手机不支持重力感应，请换个手机吧！</p>
-    </div>
-    <div id="shakeYes">
-        <p>摇一摇，可能会有惊喜哦</p>
-    </div>
-    <div id="shakeResult"></div>
-    <script src="../js/jquery-3.2.1.min.js"></script>
-	<script>
-		function init(){
-            console.log(window.DeviceMotionEvent)
-            if(window.DeviceMotionEvent) {
-                window.addEventListener('devicemotion', deviceMotionHandler, false);
-            }else {
-                $('#shakeNo').show();
-                
+ </head>
+ <body>
+     <div class="tip" id="tip"> </div>
+     
+     <script type="text/javascript">
+        var lastX = null,
+            lastY = null,
+            lastZ = null;
+        var threshold = 3; //灵敏度（值越小灵敏度越高）
+        var timeout = 1000;
+        var lastTime = null;
+        var isShaking = !1;
+        document.addEventListener('DOMContentLoaded', function (e) {
+            ready();
+         }, !1);
+ 
+        /*脚本逻辑：
+         *移动端JS脚本逻辑的实现，摇一摇的实现需借助html5新增的devicemotion事件，获取设备在位置和方向上的改变速度的相关信息。
+         *devicemotion事件对象中有一个accelerationIncludingGravity属性，该属性包括：一个包含x、y 和z 属性的对象，在考虑z 轴自然重力加速度的情况下，告诉你在每个方向上的加速度。
+         */
+         function ready() {
+            if (window.DeviceMotionEvent) {
+                window.addEventListener('devicemotion', handler, !1);
+                lastTime = new Date();
+            } else {
+                alert('你的浏览器不支持摇一摇功能.');
+         }
+ 
+        function handler(e) {
+            var current = e.accelerationIncludingGravity;
+            var currentTime;
+            var timeDifference;
+            var deltaX = 0;
+            var deltaY = 0;
+            var deltaZ = 0;
+ 
+             //记录上一次设备在x,y,z方向上的加速度 
+            if ((lastX === null) && (lastY === null) && (lastZ === null)) {
+                lastX = current.x;
+                lastY = current.y;
+                lastZ = current.z;
+                return;
             }
-        }
-        var SHAKE_THREHOLD = 3000;
-        var last_update = 0;
-        var x,
-            y,
-            z,
-            last_x,
-            last_y,
-            last_z,
-            count = 0;
-        function deviceMotionHandler(e) {
-            var acceleration = e.accelerationIncludingGravity;
-            var curTime = new Date().getTime();
-            var diffTime = curTime - last_update;
-            if(diffTime > 100) {
-                last_update = curTime;
-                x = acceleration.x;
-                y = acceleration.y;
-                z = acceleration.z;
-                var speed = Math.abs((x + y + z - last_x - last_y - last_z) / diffTime * 10000)
-                // alert(speed)
-                if(speed > SHAKE_THREHOLD) {
-                    count++;
-                    $('#shakeNo').hide();
-                    $("#shakeYes").show();
-                    $("#shakeResult").html("摇了"+ count +"次了")
+ 
+            //得到两次移动各个方向上的加速度绝对差距
+            deltaX = Math.abs(lastX - current.x);
+            deltaY = Math.abs(lastY - current.y);
+            deltaZ = Math.abs(lastZ - current.z);
+            //当差距大于设定的阀值并且时间间隔大于指定阀值时，触发摇一摇逻辑
+            if (((deltaX > threshold) && (deltaY > threshold)) || ((deltaX > threshold) && (deltaZ > threshold)) || ((deltaY > threshold) && (deltaZ > threshold))) {
+                currentTime = new Date;
+                timeDifference = currentTime.getTime() - lastTime.getTime();
+                 //时间间隔
+                if (timeDifference > timeout) {
+                     //触发摇一摇事件
+                    dealShake();
+                    lastTime = new Date;
                 }
             }
+ 
+            lastX = current.x;
+            lastY = current.y;
+            lastZ = current.z;
         }
+ 
+         function dealShake() {
+             if (isShaking) return;
+             isShaking = !0;
 
-        $(document).ready(function(){
-            init();
-            console.log("123")
-        })
-	</script>
-</body>
-</html>
+             document.getElementById("tip").innerHTML = "恭喜您，摇中：" + GetName();
+ 
+             setTimeout(function () {
+                 isShaking = !1;
+                 document.getElementById("tip").innerHTML = " 11";
+             }, 1000);
+         }
+ 
+         function GetName() {
+             var chars = ["一等奖", "二等奖", "三等奖", "四等奖", "五等奖"];
+             return chars[GetRandom(0, chars.length - 1)];
+         }
+         function GetRandom(minValue, maxValue) {
+             return Math.round(Math.random() * (maxValue - minValue)) + minValue;
+         }
+     </script>
+ 
+ </body>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>陀螺仪</title>
+</head>
+<body>
+	<div id="alpha"></div>
+	<div id="beta"></div>
+	<div id="gamma"></div>
+	<script>
+		function init() {
+			if(window.DeviceOrientationEvent) {
+				window.addEventListener('deviceorientation',function(e) {halder(e)},false)
+			}
+		}
+		function halder(e) {
+            var x = e.alpha;
+            var y = e.beta;
+            var z = e.gamma;
+            var alpha = document.getElementById('alpha');
+            var beta = document.getElementById('beta');
+            var gamma = document.getElementById('gamma');
+            alpha.innerHTML = "alpha: " + x;
+            beta.innerHTML = "beta: " + y;
+            gamma.innerHTML = "gamma: " + z;
+		}
+
+		window.onload = function() {
+			init()
+		}
+	</script>
+</body>
+</html>
