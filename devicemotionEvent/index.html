@@ -3,27 +3,63 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+    <style>
+        #shakeNo,#shakeYes {
+           display: none;
+        }
+    </style>
 </head>
 <body>
+    <div id="shakeNo">
+        <p>您看到这段话，可能有以下几个原因：</p>
+        <p>1.您使用了电脑打开这个页面，请使用手机</p>
+        <p>2.虽然您用了手机，但您的手机不支持重力感应，请换个手机吧！</p>
+    </div>
+    <div id="shakeYes">
+        <p>摇一摇，可能会有惊喜哦</p>
+    </div>
+    <div id="shakeResult"></div>
 	<script>
-		if (window.DeviceMotionEvent) { 
-                 window.addEventListener('devicemotion',deviceMotionHandler, false);  
-        } 
-        var speed = 30;//speed
-        var x = y = z = lastX = lastY = lastZ = 0;
-        function deviceMotionHandler(eventData) {  
-            var acceleration =eventData.accelerationIncludingGravity;
-            x = acceleration.x;
-            y = acceleration.y;
-            z = acceleration.z;
-            if(Math.abs(x-lastX) > speed || Math.abs(y-lastY) > speed || Math.abs(z-lastZ) > speed) {
-                    //简单的摇一摇触发代码
-                alert(1);
+		function init(){
+            if(window.DeviceMotionEvent) {
+                window.addEventListener('devicemotion', deviceMotionHandler, false);
+            }else {
+                $('#shakeNo').show();
             }
-            lastX = x;
-            lastY = y;
-            lastZ = z;
         }
+
+        var SHAKE_THREHOLD = 3000;
+        var last_update = 0;
+        var x,
+            y,
+            z,
+            last_x;
+            last_y;
+            last_z;
+            var count = 0;
+        function deviceMotionHandler(e) {
+            var acceleration = e.accelerationIncludingGravity;
+            var curTime = new Date().getTime();
+            var diffTime = curTime - last_update;
+            if(diffTime > 100) {
+                last_update = curTime;
+                x = acceleration.x;
+                y = acceleration.y;
+                z = acceleration.z;
+                var speed = Math.abs((x + y + z - last_x - last_y - last_z)/diffTime * 10000)
+                alert(speed)
+                if(speed > SHAKE_THREHOLD) {
+                    count++;
+                    $('#shakeNo').hide();
+                    $("#shakeYes").show();
+                    $("#shakeResult").html("摇了"+ count +"次了")
+                }
+            }
+        }
+
+        $(document).ready(function(){
+            init();
+        })
 	</script>
 </body>
 </html>
