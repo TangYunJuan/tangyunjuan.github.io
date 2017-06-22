@@ -19,6 +19,7 @@
         <p>摇一摇，可能会有惊喜哦</p>
     </div>
     <div id="shakeResult"></div>
+    <script src="../js/jquery-3.2.1.min.js"></script>
 	<script>
 		function init(){
             if(window.DeviceMotionEvent) {
@@ -33,10 +34,10 @@
         var x,
             y,
             z,
-            last_x;
-            last_y;
-            last_z;
-            var count = 0;
+            last_x,
+            last_y,
+            last_z,
+            count = 0;
         function deviceMotionHandler(e) {
             var acceleration = e.accelerationIncludingGravity;
             var curTime = new Date().getTime();
