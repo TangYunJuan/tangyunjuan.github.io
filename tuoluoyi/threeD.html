@@ -79,15 +79,17 @@
 	</div>
 	<script>
 		var space = document.getElementById('space');
+		console.log(space)
+		space.style.transform = 'rotate(100deg,80deg)'
 		function init() {
 			if(window.DeviceOrientationEvent) {
 				window.addEventListener('deviceorientation',function(e){
 					var alpha = e.alpha;
 					var beta = e.beta;
 					var gamma = e.gamme;
-					space.style.webkitTransform = 'rotate('+ beta + 'deg,'+ gamma +'deg) rotateZ('+alpha+'deg)';
-					space.style.transform = 'rotate('+ beta + 'deg,'+ gamma +'deg) rotateZ('+alpha+'deg)';
-					space.style.mozTransform = 'rotate('+ beta + 'deg,'+ gamma +'deg) rotateZ('+alpha+'deg)';
+					space.style.webkitTransform = 'rotateX('+beta+'deg) rotateY('+gamma+'deg) rotateZ('+alpha+'deg)';
+					space.style.transform = 'rotateX('+beta+'deg) rotateY('+gamma+'deg) rotateZ('+alpha+'deg)';
+					space.style.mozTransform = 'rotateX('+beta+'deg) rotateY('+gamma+'deg) rotateZ('+alpha+'deg)';
 				},false)
 			}else {
 				document.querySelector('body').innerHTML = '您的浏览器不支持'
