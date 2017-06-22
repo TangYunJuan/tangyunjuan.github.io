@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>正四面体</title>
+	<title>3D陀螺仪旋转</title>
 	<style>
 		.camera {
 			width: 200px;
@@ -24,7 +24,6 @@
 			transform-style: preserve-3d;
 			-moz-transform-style: preserve-3d;
 			-webkit-transform-style: preserve-3d;
-			-webkit-animation:s 4s linear infinite;
 		}
 		.space>div {
 			position: absolute;
@@ -65,19 +64,11 @@
 			transform: translate(50px, 150px) rotateX(90deg);
 			transform-origin: center top;/
 		}
-		@-webkit-keyframes s{
-	      	0%{
-	         	-webkit-transform:rotateY(0);
-	      	}
-	      	100%{
-	          	-webkit-transform:rotateY(-359.9deg);
-	      	}
-  		}
 	</style>
 </head>
 <body>
 	<div class="camera">
-		<div class="space">
+		<div class="space" id="space">
 			<div class="box1">1</div>
 			<div class="box2">2</div>
 			<div class="box3">3</div>
@@ -86,5 +77,23 @@
 			<div class="box6">6</div>
 		</div>
 	</div>
+	<script>
+		var space = document.getElementById('space');
+		function init() {
+			if(window.DeviceOrientationEvent) {
+				window.addEventListener('deviceorientation',function(e){
+					var alpha = e.alpha;
+					var beta = e.beta;
+					var gamma = e.gamme;
+					space.style.webkitTransform = 'rotate('+ beta + 'deg,'+ gamma +'deg) rotateZ('+alpha+'deg)';
+					space.style.transform = 'rotate('+ beta + 'deg,'+ gamma +'deg) rotateZ('+alpha+'deg)';
+					space.style.mozTransform = 'rotate('+ beta + 'deg,'+ gamma +'deg) rotateZ('+alpha+'deg)';
+				},false)
+			}else {
+				document.querySelector('body').innerHTML = '您的浏览器不支持'
+			}
+
+		}
+	</script>
 </body>
 </html>
