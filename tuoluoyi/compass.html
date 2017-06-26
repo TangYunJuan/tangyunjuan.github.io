@@ -22,6 +22,7 @@
 		var show = document.getElementById('show');
 		function getCompass(){
 			if(window.DeviceOrientationEvent) {
+				console.log(window.DeviceOrientationEvent)
 				window.addEventListener('deviceorientation',function(e){
                     var alpha;
                     if(e.webkitCompassHeading) {
@@ -38,7 +39,7 @@
 
                     }
                     compass.style.transform = 'rotate(-' + alpha + 'deg)';
-                    compass.style.WebkitTransform = 'rotate(-' + alpha + 'deg)';
+                    compass.style.WebkitTransform = 'rotate(-' + webkitAlpha + 'deg)';
                     compass.style.MozTransform = 'rotate(-' + alpha + 'deg)';
 
 				},false)
@@ -46,6 +47,7 @@
 				document.querySelector('body').innerHTML = '您的浏览器不支持'
 			}
 		}
+		getCompass()
 	</script>
 </body>
 </html>
