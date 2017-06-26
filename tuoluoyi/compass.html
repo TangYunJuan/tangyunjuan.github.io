@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>compass</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
 	<style>
 		.compass {
 			width:260px;
@@ -15,8 +16,10 @@
 </head>
 <body>
 	<div class="compass" id="compass"></div>
+	<div id="show"></div>
 	<script>
 		var compass = document.getElementById('compass');
+		var show = document.getElementById('show');
 		function getCompass(){
 			if(window.DeviceOrientationEvent) {
 				window.addEventListener('deviceorientation',function(e){
@@ -31,6 +34,8 @@
                     	if(!window.chrome) {
                     		webkitAlpha = alpha - 270;
                     	}
+                    	show.innerHTML = 'alpha:' + alpha;
+
                     }
                     compass.style.transform = 'rotate(-' + alpha + 'deg)';
                     compass.style.WebkitTransform = 'rotate(-' + alpha + 'deg)';
