@@ -14,6 +14,7 @@
 			margin: 0 auto;
 		}
 		#show {
+			text-align: center;
 			margin-top: 50px;
 		}
 	</style>
@@ -37,8 +38,8 @@
                     	alpha = e.alpha;
                     	webkitAlpha = alpha;
                     	if(!window.chrome) {
-                    		webkitAlpha = alpha - 270;
-                    		show.innerHTML = 'alpha:' + webkitAlpha;
+                    		// webkitAlpha = alpha - 270;
+                    		show.innerHTML = 'webkit-alpha:' + webkitAlpha;
                     	}
                     	show.innerHTML = 'alpha:' + alpha;
 
