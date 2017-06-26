@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- ios和android 正北方向的参数不一样，ios是 webkitCompassHeading，而android直接是apha，浏览器的不同apha的参数可能也会不同，直接进行角度的加减即可 -->
 	<meta charset="UTF-8">
 	<title>compass</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
@@ -38,7 +39,7 @@
                     	alpha = e.alpha;
                     	webkitAlpha = alpha;
                     	if(!window.chrome) {
-                    		// webkitAlpha = alpha - 270;
+                    		webkitAlpha = alpha - 270;
                     		show.innerHTML = 'webkit-alpha:' + webkitAlpha;
                     	}
                     	show.innerHTML = 'alpha:' + alpha;
