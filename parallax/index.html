@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>home page</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+	<style>
+		@media screen and (min-width: 1000px)  {
+			.container {
+				width: 50%;
+				margin: 0 auto;
+			}
+		}
+		@media screen and (min-width: 1920px)  {
+			.container {
+				width: 30%;
+				margin: 0 auto;
+			}
+		}
+		body {
+			background: #000;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="header">
+		<h1>parallax</h1>
+	</div>
+	<div class="parallax-wrap">
+		<div id="container" class="container">
+			<div id="scene" class="scene">
+				<div class="layer" data-depth="1.00"><img src="../images/layer1.png"></div>
+				<div class="layer" data-depth="0.80"><img src="../images/layer2.png"></div>
+				<div class="layer" data-depth="0.60"><img src="../images/layer3.png"></div>
+				<div class="layer" data-depth="0.40"><img src="../images/layer4.png"></div>
+				<div class="layer" data-depth="0.20"><img src="../images/layer5.png"></div>
+				<div class="layer" data-depth="0.00"><img src="../images/layer6.png"></div>
+			</div>
+		</div>
+	</div>
+	<script src="../js/libraries.min.js"></script>
+	<script src="../js/parallax.js"></script>
+	<script>
+	    var scene = document.getElementById('scene');
+		var parallax = new Parallax(scene);
+	</script>
+</body>
+</html>
