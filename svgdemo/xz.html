@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>宣臻动画</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+	<style>
+		#svg {
+			width: 100%;
+			height: 100%;
+		}
+		.show1 {
+			stroke-dasharray:1000;
+    		stroke-dashoffset:1000;
+    		animation: dash1 0.44s 2.12s ease forwards;
+		}
+		@keyframes dash1 {
+		  100% {
+		  	stroke-dashoffset: 0;
+		  }
+		}
+		.show2 {
+			stroke-dasharray:1000;
+    		stroke-dashoffset:1000;
+    		animation: dash2 0.64s 2.16s ease forwards;
+		}
+		@keyframes dash2 {
+			100% {
+			  stroke-dashoffset: 0;
+			}
+		}
+		.show3 {
+			stroke-dasharray:2000;
+    		stroke-dashoffset:2000;
+    		animation: dash3 1.84s 2.12s ease forwards;
+		}
+		@keyframes dash3 {
+			100% {
+			  stroke-dashoffset: 0;
+			}
+		}
+		.show4 {
+			stroke-dasharray:2000;
+    		stroke-dashoffset:2000;
+    		animation: dash4 0.28s 2.32s ease forwards;
+		}
+		@keyframes dash4 {
+			100% {
+			  stroke-dashoffset: 0;
+			}
+		}
+		.show5 {
+			stroke-dasharray:2000;
+    		stroke-dashoffset:2000;
+    		animation: dash5 0.28s 2.92s ease forwards;
+		}
+		@keyframes dash5 {
+			100% {
+			  stroke-dashoffset: 0;
+			}
+		}
+		.show6 {
+			stroke-dasharray:2000;
+    		stroke-dashoffset:2000;
+    		animation: dash6 0.52s 3.64s ease forwards;
+		}
+		@keyframes dash6 {
+			100% {
+			  stroke-dashoffset: 0;
+			}
+		}
+		.show7 {
+			stroke-dasharray:2000;
+    		stroke-dashoffset:2000;
+    		animation: dash7 0.52s 3.64s ease forwards;
+		}
+		@keyframes dash7 {
+			100% {
+			  stroke-dashoffset: 0;
+			}
+		}
+		.show8 {
+			stroke-dasharray:2000;
+    		stroke-dashoffset:2000;
+    		animation: dash8 0.4s 4.12s ease forwards;
+		}
+		@keyframes dash8 {
+			100% {
+			  stroke-dashoffset: 0;
+			}
+		}
+		.show9 {
+			stroke-dasharray:2000;
+    		stroke-dashoffset:2000;
+    		animation: dash9 0.46s 3.64s ease forwards;
+		}
+		@keyframes dash9 {
+			100% {
+			  stroke-dashoffset: 0;
+			}
+		}
+		.show10 {
+			stroke-dasharray:2000;
+    		stroke-dashoffset:2000;
+    		animation: dash10 1.16s 3.44s ease forwards;
+		}
+		@keyframes dash10 {
+			100% {
+			  stroke-dashoffset: 0;
+			}
+		}
+		.show11 {
+			stroke-dasharray:2000;
+    		stroke-dashoffset:2000;
+    		animation: dash11 0.4s 4.64s ease forwards;
+		}
+		@keyframes dash11 {
+			100% {
+			  stroke-dashoffset: 0;
+			}
+		}
+		.show12 {
+			stroke-dasharray:2000;
+    		stroke-dashoffset:2000;
+    		animation: dash12 1s 4.64s ease forwards;
+		}
+		@keyframes dash12 {
+			100% {
+			  stroke-dashoffset: 0;
+			}
+		}
+		.bg {
+			/*background:url("2.png") no-repeat;*/
+		}
+		path{
+			opacity:0;
+		}
+		circle {
+			opacity:0;
+		}
+		.imgbg {
+			opacity: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="bg">
+		<svg id="svg" viewBox="0,0,1920,856"></svg>
+	</div>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/snap.svg.js"></script>
+	<script>
+		var s = Snap("#svg");
+		var bgImg = s.paper.image('base1.png',500,75,900,600);
+		var X = s.paper.image('x.png',800,203,300,272);
+		var Z = s.paper.image('z.png',790,203,300,272);
+		var imgG = s.paper.g(X,Z);
+		
+
+		var path11 = s.paper.path("M443 260Q396 324,400 350Q396 408,417 430L443 468").attr({
+			stroke:"#010101",
+			strokeWidth: 5,
+			fill:"none"
+		})
+		var path12 = s.paper.path("M1415 260Q1466 324,1463 350Q1465 408,1443 430L1416 468").attr({
+			stroke:"#010101",
+			strokeWidth: 5,
+			fill:"none"
+		})
+		var path13 = s.paper.path("M843 77L620 77").attr({
+			stroke:"#010101",
+			strokeWidth: 5,
+			fill:"none"
+		})
+		var path14 = s.paper.path("M1018 77L1239 77").attr({
+			stroke:"#010101",
+			strokeWidth: 5,
+			fill:"none"
+		})
+		var path15 = s.paper.path("M660 116Q639 112,629 130L500 300Q461 346,500 384L624 560Q632 578,670 574L1200 574Q1232 579,1243 550L1363 382").attr({
+			stroke:"#010101",
+			strokeWidth: 3,
+			fill:"none"
+		})
+		var path16 = s.paper.path("M660 116L715 116Q738 116,749 130Q765 153,800 149L1080 149Q1090 153,1116 125Q1125 115,1144 116L1200 116Q1226 113,1235 136L1360 300Q1398 341,1360 386").attr({
+			stroke:"#010101",
+			strokeWidth: 3,
+			fill:"none"
+		})
+		var circle11 = s.paper.circle(902 ,120, 1).attr({
+			fill:"#010101",
+			// stroke:"#ccc"
+		})
+		var path17 = s.paper.path("M900 120Q900 134,870 133L780 133").attr({
+			stroke:"#010101",
+			strokeWidth: 3,
+			fill:"none"
+		})
+		var circle12 = s.paper.circle(961 ,120, 1).attr({
+			fill:"#010101",
+			// stroke:"#010101"
+		})
+		var path18 = s.paper.path("M963 120Q958 132,980 133L970 133L1080 133").attr({
+			stroke:"#010101",
+			strokeWidth: 3,
+			fill:"none"
+		})
+		var g1 = s.paper.g(path18,path17,path16,path15,path14,path13,circle11);
+
+		var path21 = s.paper.path("M442 262L548 120Q569 84,620 91L930 91").attr({
+			stroke:"#010101",
+			strokeWidth: 5,
+			fill:"none"
+		})
+		var path22 = s.paper.path("M443 468L551 610Q570 643,600 639L680 639Q703 643,710 620Q728 597,770 604L930 604 ").attr({
+			stroke:"#010101",
+			strokeWidth: 5,
+			fill:"none"
+		})
+		var path23 = s.paper.path("M1416 468L1304 615Q1288 644,1260 638L1180 638Q1158 643,1150 620Q1138 602,1120 604L930 604").attr({
+			stroke:"#010101",
+			strokeWidth: 5,
+			fill:"none"
+		})
+		var path24 = s.paper.path("M1415 260L1312 120Q1292 87,1260 90L930 91").attr({
+			stroke:"#010101",
+			strokeWidth: 5,
+			fill:"none"
+		})
+		var path31 = s.paper.path("M866 178L740 178Q724 176,719 168Q713 148,686 152L646 152").attr({
+			stroke:"#010101",
+			strokeWidth: 3,
+			fill:"none"
+		})
+		var path32 = s.paper.path("M995 178L1110 178Q1137 180,1143 164Q1152 149,1170 152L1212 152").attr({
+			stroke:"#010101",
+			strokeWidth: 3,
+			fill:"none"
+		})
+		var g3 = s.paper.g(path32,path31);
+
+		var circle41 = s.paper.circle(648,188,1).attr({
+			fill:"#010101"
+		})
+		var path41 = s.paper.path("M648 188L565 304L564 340L544 378L640 520").attr({
+			stroke:"#010101",
+			strokeWidth: 3,
+			fill:"none"
+		})
+		var circle42 = s.paper.circle(1212,188,1).attr({
+			fill:"#010101"
+		})
+		var path42 = s.paper.path("M1214 188L1295 304L1296 340L1318 378L1220 520").attr({
+			stroke:"#010101",
+			strokeWidth: 3,
+			fill:"none"
+		})
+		var circle43 = s.paper.circle(447,388,1).attr({
+			fill:"#010101"
+		})
+		var path43 = s.paper.path("M450 388L464 418Q467 420,464 430Q460 436,471 450L546 558").attr({
+			stroke:"#010101",
+			strokeWidth: 3,
+			fill:"none"
+		})
+		var circle44 = s.paper.circle(1413,388,1).attr({
+			fill:"#010101"
+		})
+		var path44 = s.paper.path("M1410 388L1396 418Q1394 420,1396 430Q1402 432,1392 448L1315 558").attr({
+			stroke:"#010101",
+			strokeWidth: 3,
+			fill:"none"
+		})
+		var circle45 = s.paper.circle(842,512,9).attr({
+			fill:"#010101"
+		})
+		var path45 = s.paper.path("M652 555Q670 522,710 527L810 526Q842 526,838 518").attr({
+			stroke:"#010101",
+			strokeWidth: 3,
+			fill:"none"
+		})
+		var circle46 = s.paper.circle(1017,512,9).attr({
+			fill:"#010101"
+		})
+		var path46 = s.paper.path("M1207 554Q1190 526,1155 526L1050 526Q1026 530,1019 518").attr({
+			stroke:"#010101",
+			strokeWidth: 3,
+			fill:"none"
+		})
+		var circle47 = s.paper.circle(670,608,1).attr({
+			fill:"#010101"
+		})
+		var path47 = s.paper.path("M670 610L623 610L608 580Q605 578,600 577Q592 582,577 560L497 446").attr({
+			stroke:"#010101",
+			strokeWidth: 3,
+			fill:"none"
+		})
+
+		var circle48 = s.paper.circle(1190,608,1).attr({
+			fill:"#010101"
+		})
+		var path48 = s.paper.path("M1193 610L1235 610L1252 580Q1254 576,1259 578Q1271 580,1284 560L1365 444").attr({
+			stroke:"#010101",
+			strokeWidth: 3,
+			fill:"none"
+		})
+		var g4 = s.paper.g(path48,path47,path46,path45,path44,path43,path42,path41,circle48,circle47,circle46,circle45,circle44,circle43,circle42,circle41)
+		var path51 = s.paper.path("M237 0L77 230Q64 252,65 280L65 324Q65 365,82 381L280 660Q290 684,350 678L654 678").attr({
+			stroke:"#3693FB",
+			strokeWidth: 3,
+			fill:"none"
+		})
+		var circle51 = s.paper.circle(660,679,1).attr({
+			fill:"#3693FB"
+		});;
+		var path52 = s.paper.path("M661 680L661 742L586 742").attr({
+			stroke:"#3693FB",
+			strokeWidth: 3,
+			fill:"none"
+		})
+		var path53 = s.paper.path("M650 690L635 730L630 708L620 725L610 703L603 730L593 715L581 730L576 719L561 742").attr({
+			stroke:"#3693FB",
+			strokeWidth: 3,
+			fill:"none"
+		})
+		var path54 = s.paper.path("M1625 0L1778 220Q1795 244,1797 270L1797 320Q1801 360,1768 400L1590 646Q1570 684,1530 675L1200 675").attr({
+			stroke:"#3693FB",
+			strokeWidth: 3,
+			fill:"none"
+		})
+		var circle52 = s.paper.circle(1205,677,1).attr({
+			fill:"#3693FB"
+		});
+
+		var path61 = s.paper.path("M270 395L270 395").attr({
+			stroke:"#090101",
+			strokeWidth: 10,
+			fill:"none"
+		})
+		var path62 = s.paper.path("M282 395L282 395").attr({
+			stroke:"#090101",
+			strokeWidth: 10,
+			fill:"none"
+		})
+		var path63 = s.paper.path("M294 395L294 395").attr({
+			stroke:"#090101",
+			strokeWidth: 10,
+			fill:"none"
+		})
+		var path64 = s.paper.path("M306 395L306 395").attr({
+			stroke:"#090101",
+			strokeWidth: 10,
+			fill:"none"
+		})
+		var path65 = s.paper.path("M318 395L318 395").attr({
+			stroke:"#090101",
+			strokeWidth: 10,
+			fill:"none"
+		})
+		var path66 = s.paper.path("M330 395L330 395").attr({
+			stroke:"#090101",
+			strokeWidth: 10,
+			fill:"none"
+		})
+		var path67 = s.paper.path("M342 395L342 395").attr({
+			stroke:"#090101",
+			strokeWidth: 10,
+			fill:"none"
+		})
+		var path68 = s.paper.path("M354 395L354 395").attr({
+			stroke:"#090101",
+			strokeWidth: 10,
+			fill:"none"
+		})
+		var path69 = s.paper.path("M366 395L366 395").attr({
+			stroke:"#090101",
+			strokeWidth: 10,
+			fill:"none"
+		})
+		var path610 = s.paper.path("M378 395L378 395").attr({
+			stroke:"#090101",
+			strokeWidth: 10,
+			fill:"none"
+		})
+		var path611 = s.paper.path("M390 395L390 395").attr({
+			stroke:"#090101",
+			strokeWidth: 10,
+			fill:"none"
+		})
+		var path71 = s.paper.path("M1590 395L1584 395").attr({
+			stroke:"#090101",
+			strokeWidth: 10,
+			fill:"none"
+		})
+		var path72 = s.paper.path("M1578 395L1584 395").attr({
+			stroke:"#090101",
+			strokeWidth: 10,
+			fill:"none"
+		})
+		var path73 = s.paper.path("M1566 395L1572 395").attr({
+			stroke:"#090101",
+			strokeWidth: 10,
+			fill:"none"
+		})
+		var path74 = s.paper.path("M1554 395L1560 395").attr({
+			stroke:"#090101",
+			strokeWidth: 10,
+			fill:"none"
+		})
+		var path75 = s.paper.path("M1542 395L1548 395").attr({
+			stroke:"#090101",
+			strokeWidth: 10,
+			fill:"none"
+		})
+		var path76 = s.paper.path("M1530 395L1536 395").attr({
+			stroke:"#090101",
+			strokeWidth: 10,
+			fill:"none"
+		})
+		var path77 = s.paper.path("M1518 395L1524 395").attr({
+			stroke:"#090101",
+			strokeWidth: 10,
+			fill:"none"
+		})
+		var path78 = s.paper.path("M1506 395L1512 395").attr({
+			stroke:"#090101",
+			strokeWidth: 10,
+			fill:"none"
+		})
+		var path79 = s.paper.path("M1494 395L1500 395").attr({
+			stroke:"#090101",
+			strokeWidth: 10,
+			fill:"none"
+		})
+		var path710 = s.paper.path("M1482 395L1482 395").attr({
+			stroke:"#090101",
+			strokeWidth: 10,
+			fill:"none"
+		})
+		var path711 = s.paper.path("M1470 395L1470 395").attr({
+			stroke:"#090101",
+			strokeWidth: 10,
+			fill:"none"
+		})
+		var fontImg = s.paper.image('font.png',720,720,429,137)
+		fontImg.animate({opacity:0},40,function() {
+			fontImg.animate({opacity:0},5080,function() {
+				fontImg.animate({opacity:1,y:670},560,mina.easein)
+			})
+		})
+		bgImg.animate({opacity:0},40,function() {
+			bgImg.animate({opacity:0},1760,function() {
+				bgImg.animate({opacity:1},1200)
+			})
+		});
+		X.animate({x: 650}, 320,mina.easeout,function() {
+			X.animate({x:650},240,function() {
+				X.animate({x:835},200,function() {
+					X.animate({x:930,y:330,width:50,height:45},200,function() {
+						X.animate({x:755,y:203,width:300,height:272},330)
+					})
+				})
+			})
+		});
+		Z.animate({opacity:0},40,function() {
+			Z.animate({opacity:1,x:940},320,mina.easeout,function() {
+				Z.animate({opacity:1,x:940},240,function() {
+					Z.animate({x:755},150,function() {
+						Z.animate({x:930,y:330,width:50,height:45},200,function(){
+							Z.animate({x:835,y:203,width:300,height:272},280)
+						})
+					})
+				})
+			})
+		});
+
+		path11.animate({opacity:0},2120,function() {
+			path11.animate({opacity:1},40)
+		})
+		path12.animate({opacity:0},2120,function() {
+			path12.animate({opacity:1},40)
+		})
+		path13.animate({opacity:0},2120,function() {
+			path13.animate({opacity:1},40)
+		})
+		path14.animate({opacity:0},2120,function() {
+			path14.animate({opacity:1},40)
+		})
+		path15.animate({opacity:0},2120,function() {
+			path15.animate({opacity:1},40)
+		})
+		path16.animate({opacity:0},2120,function() {
+			path16.animate({opacity:1},40)
+		})
+		circle11.animate({opacity:0},2120,function() {
+			circle11.animate({r:9,opacity:1},200)
+		})
+		circle12.animate({opacity:0},2120,function() {
+			circle12.animate({r:9,opacity:1},200)
+		})
+		path17.animate({opacity:0},2320,function() {
+			path17.animate({opacity:1},40)
+		})
+		path18.animate({opacity:0},2320,function() {
+			path18.animate({opacity:1},40)
+		})
+		path21.animate({opacity:0},2120,function() {
+			path21.animate({opacity:1},40)
+		})
+		path22.animate({opacity:0},2120,function() {
+			path22.animate({opacity:1},40)
+		})
+		path23.animate({opacity:0},2120,function() {
+			path23.animate({opacity:1},40)
+		})
+		path24.animate({opacity:0},2120,function() {
+			path24.animate({opacity:1},40)
+		})
+		path31.animate({opacity:0},2920,function() {
+			path31.animate({opacity:1},40)
+		})
+		path32.animate({opacity:0},2920,function() {
+			path32.animate({opacity:1},40)
+		})
+		circle41.animate({opacity:0},3440,function() {
+			circle41.animate({opacity:1,r:9},200)
+		})
+		circle42.animate({opacity:0},3440,function() {
+			circle42.animate({opacity:1,r:9},200)
+		})
+		circle43.animate({opacity:0},3440,function() {
+			circle43.animate({opacity:1,r:9},200)
+		})
+		circle44.animate({opacity:0},3440,function() {
+			circle44.animate({opacity:1,r:9},200)
+		})
+		
+		path41.animate({opacity:0},3640,function() {
+			path41.animate({opacity:1},40)
+		})
+		path42.animate({opacity:0},3640,function() {
+			path42.animate({opacity:1},40)
+		})
+		path43.animate({opacity:0},3640,function() {
+			path43.animate({opacity:1},40)
+		})
+		path44.animate({opacity:0},3640,function() {
+			path44.animate({opacity:1},40)
+		})
+		path45.animate({opacity:0},4120,function() {
+			path45.animate({opacity:1},40)
+		})
+		path46.animate({opacity:0},4120,function() {
+			path46.animate({opacity:1},40)
+		})
+		circle46.animate({opacity:0},4340,function() {
+			circle46.animate({opacity:1,r:9},200)
+		})
+		circle45.animate({opacity:0},4340,function() {
+			circle45.animate({opacity:1,r:9},200)
+		})
+		circle47.animate({opacity:0},3440,function() {
+			circle47.animate({opacity:1,r:9},200)
+		})
+		circle48.animate({opacity:0},3440,function() {
+			circle48.animate({opacity:1,r:9},200)
+		})
+		path47.animate({opacity:0},3640,function() {
+			path47.animate({opacity:1},40)
+		})
+		path48.animate({opacity:0},3640,function() {
+			path48.animate({opacity:1},40)
+		})
+		path51.animate({opacity:0},3440,function() {
+			path51.animate({opacity:1},40)
+		})
+		path52.animate({opacity:0},3440,function() {
+			path52.animate({opacity:1},40)
+		})
+		path53.animate({opacity:0},4640,function() {
+			path53.animate({opacity:1},40)
+		})
+		path54.animate({opacity:0},3440,function() {
+			path54.animate({opacity:1},40)
+		})
+		circle51.animate({opacity:0},4100,function() {
+			circle51.animate({opacity:1,r:8},40,function(){
+				circle51.animate({r:8},200)
+			})
+		})
+		circle52.animate({opacity:0},4100,function() {
+			circle52.animate({opacity:1},40,function(){
+				circle52.animate({r:8},200)
+			})
+		})
+		console.log($('path'))
+		$($('path')[2]).addClass('show4');
+		$($('path')[3]).addClass('show4');
+		$($('path')[4]).addClass('show3');
+		$($('path')[5]).addClass('show3');
+		$($('path')[6]).addClass('show1');
+		$($('path')[7]).addClass('show1');
+		$($('path')[8]).addClass('show2');
+		$($('path')[9]).addClass('show2');
+		$($('path')[10]).addClass('show2');
+		$($('path')[11]).addClass('show2');
+		$($('path')[12]).addClass('show5');
+		$($('path')[13]).addClass('show5');
+		$($('path')[14]).addClass('show9');
+		$($('path')[15]).addClass('show9');
+		$($('path')[16]).addClass('show8');
+		$($('path')[17]).addClass('show8');
+		$($('path')[18]).addClass('show7');
+		$($('path')[19]).addClass('show7');
+		$($('path')[20]).addClass('show6');
+		$($('path')[21]).addClass('show6');
+		$($('path')[22]).addClass('show10');
+		$($('path')[23]).addClass('show11');
+		$($('path')[24]).addClass('show12');
+		$($('path')[25]).addClass('show10');
+
+		path61.animate({opacity:0},40,function(){
+			path61.animate({opacity:0},4100,function() {
+				path61.animate({opacity:1},40)
+			})
+		})
+		path62.animate({opacity:0},40,function(){
+			path62.animate({opacity:0},4020,function() {
+				path62.animate({opacity:1},40)
+			})
+		})
+		path63.animate({opacity:0},40,function(){
+			path63.animate({opacity:0},3940,function() {
+				path63.animate({opacity:1},40)
+			})
+		})
+		path64.animate({opacity:0},40,function(){
+			path64.animate({opacity:0},3860,function() {
+				path64.animate({opacity:1},40)
+			})
+		})
+		path65.animate({opacity:0},40,function(){
+			path65.animate({opacity:0},3780,function() {
+				path65.animate({opacity:1},40)
+			})
+		})
+		path66.animate({opacity:0},40,function(){
+			path66.animate({opacity:0},3700,function() {
+				path66.animate({opacity:1},40)
+			})
+		})
+		path67.animate({opacity:0},40,function(){
+			path67.animate({opacity:0},3620,function() {
+				path67.animate({opacity:1},40)
+			})
+		})
+		path68.animate({opacity:0},40,function(){
+			path68.animate({opacity:0},3560,function() {
+				path68.animate({opacity:1},40)
+			})
+		})
+		path69.animate({opacity:0},40,function(){
+			path69.animate({opacity:0},3480,function() {
+				path69.animate({opacity:1},40)
+			})
+		})
+		path610.animate({opacity:0},40,function(){
+			path610.animate({opacity:0},3400,function() {
+				path610.animate({opacity:1},40)
+			})
+		})
+		path611.animate({opacity:0},40,function(){
+			path611.animate({opacity:0},3320,function() {
+				path611.animate({opacity:1},40)
+			})
+		})
+		
+		path72.animate({opacity:0},40,function(){
+			path72.animate({opacity:0},4020,function() {
+				path72.animate({opacity:1},40)
+			})
+		})
+		path73.animate({opacity:0},40,function(){
+			path73.animate({opacity:0},3940,function() {
+				path73.animate({opacity:1},40)
+			})
+		})
+		path74.animate({opacity:0},40,function(){
+			path74.animate({opacity:0},3860,function() {
+				path74.animate({opacity:1},40)
+			})
+		})
+		path75.animate({opacity:0},40,function(){
+			path75.animate({opacity:0},3780,function() {
+				path75.animate({opacity:1},40)
+			})
+		})
+		path76.animate({opacity:0},40,function(){
+			path76.animate({opacity:0},3700,function() {
+				path76.animate({opacity:1},40)
+			})
+		})
+		path77.animate({opacity:0},40,function(){
+			path77.animate({opacity:0},3620,function() {
+				path77.animate({opacity:1},40)
+			})
+		})
+		path78.animate({opacity:0},40,function(){
+			path78.animate({opacity:0},3560,function() {
+				path78.animate({opacity:1},40,mina.bounce)
+			})
+		})
+		path79.animate({opacity:0},40,function(){
+			path79.animate({opacity:0},3480,function() {
+				path79.animate({opacity:1},40,mina.bounce)
+			})
+		})
+		path710.animate({opacity:0},40,function(){
+			path710.animate({opacity:0},3400,function() {
+				path710.animate({opacity:1},40,mina.bounce)
+			})
+		})
+		path711.animate({opacity:0},40,function(){
+			path711.animate({opacity:0},3320,function() {
+				path711.animate({opacity:1},40,mina.bounce)
+			})
+		})
+		$(function() {
+			function musicMove(path,x,h) {
+				var time = (Math.random()*5).toFixed(2)*100;
+				console.log(time)
+				path.animate({
+					d:s.paper.path("M"+ x +" 395L"+x+" "+h)
+				},time,mina.easeout,function() {
+					path.animate({
+						d:s.paper.path("M"+ x +" 396L"+x +" 385")
+					},time,mina.easeout)
+				})
+			}
+			function musicWrap() {
+				musicMove(path61,270,375)
+				musicMove(path62,282,355)
+				musicMove(path63,294,363)
+				musicMove(path64,306,373)
+				musicMove(path65,318,369)
+				musicMove(path66,330,362)
+				musicMove(path67,342,354)
+				musicMove(path68,354,365)
+				musicMove(path69,366,379)
+				musicMove(path610,378,366)
+				musicMove(path611,390,357)
+				musicMove(path711,1470,373)
+				musicMove(path710,1482,357)
+				musicMove(path79,1494,351)
+				musicMove(path78,1506,361)
+				musicMove(path77,1518,371)
+				musicMove(path76,1530,350)
+				musicMove(path75,1542,362)
+				musicMove(path74,1554,370)
+				musicMove(path73,1566,365)
+				musicMove(path72,1578,375)
+			}
+			// musicWrap()
+			setInterval(musicWrap,500); 
+		})
+	</script>
+</body>
+</html>

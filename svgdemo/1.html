@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.svg {
+			width: 50%;
+			height: 500px;
+			border: 1px solid #ccc;
+		}
+	</style>
+</head>
+<body>
+	<div class="svg">
+		<svg id="svg" width="100%" height="100%"></svg>
+	</div>
+	<button type="button" id="button">点击</button>
+	<script src="js/snap.svg.js"></script>
+	<script>
+		var s = Snap("#svg");
+		// var bigCircle = s.rect(150, 150, 100,120,120).attr({
+		// 	fill: "#abcdef",
+		// 	stroke:"#ccc",
+		// 	strokeWidth:"2",
+		// 	'fill-opacity':0.7
+		// }).hover(function(){
+		// 	this.animate({
+		// 		fill:"#"+(Math.random()+"").slice(-3)
+		// 	},1000);
+		// },function() {
+		// 	this.animate({
+		// 		fill:'#abcdef'
+		// 	},1000)
+		// });
+
+		// bigCircle.clone().attr({
+		// 	cx:"300"
+		// }).drag();
+
+		// var line = s.paper.path('M10 20L90 90').attr({
+		// 	stroke:"#000",
+		// 	strokeWidth:5,
+		// }).drag();
+
+		// var c1 = s.paper.circle(5, 5, 3);
+		// var p1 = s.paper.path("M2,2 L2,11 L10,6 L2,2").attr({
+		// 			// fill: "#000"      
+		// 		});
+		// var m1 = c1.marker(0, 0, 8, 8, 5, 5)
+		// 	 m2 = p1.marker(0, 0, 13, 13, 6, 5);
+		// var p2 = s.paper.path("M10,10 L250,10 L50,90").attr({
+		//     // 描边
+		//     stroke: "#00f",
+		//     strokeWidth: 1,
+		//     fill: "none",
+		//     // 起始标记
+		//     markerStart: m1,
+		//     // 结束标记
+		//     "marker-end": m2
+		// });
+
+
+		// var p = s.paper.path("M10-5-10,15M15,0,0,15M0-5-20,15").attr({
+		//     fill: "none",
+		//     stroke: "#beceeb",
+		//     strokeWidth: 5
+		// }).pattern(0, 0, 10, 10)
+		// c = s.paper.circle(150, 150, 100);
+		// c.attr({
+		//     // 斜纹图案填充
+		//     fill: p
+		// });
+
+		// var c = s.paper.circle(50, 50, 40);
+		// // 当前矩阵
+		// var m1 = new Snap.Matrix(1,0,0,1,20,20);
+		// // 圈圈应用矩阵变换 - 位移(20, 20)
+		// c.transform(m1.toTransformString());
+		// // 事件
+		// if (document.addEventListener) {
+		//     document.querySelector("#button").onclick = function(){
+		//         // 矩阵组合
+		//         m1.add(1,0,0,1,-20,-20);
+		//         // 圈圈再次应用矩阵变换 - 位移(-20, -20)
+		//         c.transform(m1.toTransformString());
+		//     };
+		// }
+
+
+		// var r = s.paper.rect(50,50,100,100,10).attr({
+		// 	fill:'red'
+		// });
+
+		// var rot = 0;
+		// if(document.addEventListener) {
+		// 	document.getElementById("button").onclick = function() {
+		// 		var scale = Math.round((0.8 + 0.4 * Math.random()) * 10) / 10;
+		// 		// Snap.animate(rot,rot+45,function(value) {
+		// 		// 	rot = value;
+		// 		// 	var rota = new Snap.Matrix().rotate(value,100,100);
+		// 		// 	r.transform(rota);
+		// 		// },500)
+				
+		// 		// var sc = new Snap.Matrix().scale(scale,scale);
+		// 		// r.transform(sc);
+		// 		// console.log(scale)
+
+		// 		var translate = new Snap.Matrix().translate(20,20);
+		// 		r.transform(translate)
+		// 	}
+		// }
+
+		// var g1 = s.paper.gradient("l(0,0,1,1)#fff-#f99");
+		// var g2 = s.paper.gradient("r(0.5, 0.5, 0.3)#d39-#fff");
+		// var f = s.paper.filter('<feGaussianBlur stdDeviation="2"/>');
+		// var el = s.paper.ellipse(100,100,100,60).attr({
+		// 	fill:g1,
+		// 	filter:f,
+
+		// });
+		// var circle = s.paper.circle(350,100,90).attr({
+		// 	fill:g2
+		// })
+		// var g = s.paper.g(el,circle)
+
+		// var p1 = s.paper.polyline([10,10,100,100]).attr({
+		// 	stroke:'#000',
+		// 	strokeWidth:5
+		// })
+
+		var path = "m32,118c0,0 21,-100 78,-94c57,6 -78,94 -78,94z";
+		var is50x50 = Snap.path.isPointInside(path, 50, 50),
+    	is80x80 = Snap.path.isPointInside(path, 80, 80);
+    	console.log([is50x50, is80x80].join());
+	</script>
+</body>
+</html>
