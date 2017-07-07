@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#svg {
+			width: 100%;
+			height: 100%;
+		}
+		.show1 {
+			stroke-dasharray:1000;
+    		stroke-dashoffset:1000;
+    		-webkit-stroke-dasharray:1000;
+    		-webkit-stroke-dashoffset:1000;
+    		-moz-stroke-dasharray:1000;
+    		-moz-stroke-dashoffset:1000;
+    		-o-stroke-dasharray:1000;
+    		-o-stroke-dashoffset:1000;
+    		-ms-stroke-dasharray:2000;
+    		-ms-stroke-dashoffset:2000;
+    		animation: dash1 0.492s 2.12s ease forwards;
+		}
+		@keyframes dash1 {
+		  100% {
+		  	stroke-dashoffset: 0;
+		  	-webkit-stroke-dashoffset: 0;
+			-moz-stroke-dashoffset: 0;
+			-o-stroke-dashoffset: 0;
+			-ms-stroke-dashoffset: 0;
+		  }
+		}
+		.show2 {
+			stroke-dasharray:1000;
+    		stroke-dashoffset:1000;
+    		-webkit-stroke-dasharray:1000;
+    		-webkit-stroke-dashoffset:1000;
+    		-moz-stroke-dasharray:1000;
+    		-moz-stroke-dashoffset:1000;
+    		-o-stroke-dasharray:1000;
+    		-o-stroke-dashoffset:1000;
+    		-ms-stroke-dasharray:2000;
+    		-ms-stroke-dashoffset:2000;
+    		animation: dash2 6s 2.16s ease forwards;
+    		-o-animation: dash2 6s 2.16s ease forwards;
+    		-webkit-animation: dash2 6s 2.16s ease forwards;
+    		-moz-animation: dash2 6s 2.16s ease forwards;
+    		-ms-animation: dash2 6s 2.16s ease forwards;
+		}
+		@keyframes dash2 {
+			100% {
+			  stroke-dashoffset: 0;
+			  -webkit-stroke-dashoffset: 0;
+			  -moz-stroke-dashoffset: 0;
+			  -o-stroke-dashoffset: 0;
+			  -ms-stroke-dashoffset: 0;
+			}
+		}
+		.show3 {
+			stroke-dasharray:2000;
+    		stroke-dashoffset:2000;
+    		-webkit-stroke-dasharray:2000;
+    		-webkit-stroke-dashoffset:2000;
+    		-moz-stroke-dasharray:2000;
+    		-moz-stroke-dashoffset:2000;
+    		-o-stroke-dasharray:2000;
+    		-o-stroke-dashoffset:2000;
+    		-ms-stroke-dasharray:2000;
+    		-ms-stroke-dashoffset:2000;
+    		animation: dash3 1.84s 2.12s ease forwards;
+    		-moz-animation: dash3 1.84s 2.12s ease forwards;
+    		-webkit-animation: dash3 1.84s 2.12s ease forwards;
+    		-ms-animation: dash3 1.84s 2.12s ease forwards;
+    		-o-animation: dash3 1.84s 2.12s ease forwards;
+		}
+		@keyframes dash3 {
+			100% {
+			  stroke-dashoffset: 0;
+			  -webkit-stroke-dashoffset: 0;
+			  -moz-stroke-dashoffset: 0;
+			  -o-stroke-dashoffset: 0;
+			  -ms-stroke-dashoffset: 0;
+			}
+		}
+		.show4 {
+			stroke-dasharray:2000;
+    		stroke-dashoffset:2000;
+    		-webkit-stroke-dasharray:2000;
+    		-webkit-stroke-dashoffset:2000;
+    		-moz-stroke-dasharray:2000;
+    		-moz-stroke-dashoffset:2000;
+    		-o-stroke-dasharray:2000;
+    		-o-stroke-dashoffset:2000;
+    		-ms-stroke-dasharray:2000;
+    		-ms-stroke-dashoffset:2000;
+    		animation: dash4 0.28s 2.32s ease forwards;
+    		-moz-animation: dash4 0.28s 2.32s ease forwards;
+    		-webkit-animation: dash4 0.28s 2.32s ease forwards;
+    		-o-animation: dash4 0.28s 2.32s ease forwards;
+    		-ms-animation: dash4 0.28s 2.32s ease forwards;
+		}
+		@keyframes dash4 {
+			100% {
+			  stroke-dashoffset: 0;
+			  -webkit-stroke-dashoffset: 0;
+			  -moz-stroke-dashoffset: 0;
+			  -o-stroke-dashoffset: 0;
+			  -ms-stroke-dashoffset: 0;
+			}
+		}
+		.show5 {
+			stroke-dasharray:2000;
+    		stroke-dashoffset:2000;
+    		-webkit-stroke-dasharray:2000;
+    		-webkit-stroke-dashoffset:2000;
+    		-moz-stroke-dasharray:2000;
+    		-moz-stroke-dashoffset:2000;
+    		-o-stroke-dasharray:2000;
+    		-o-stroke-dashoffset:2000;
+    		-ms-stroke-dasharray:2000;
+    		-ms-stroke-dashoffset:2000;
+    		animation: dash5 0.28s 2.92s ease forwards;
+    		-o-animation: dash5 0.28s 2.92s ease forwards;
+    		-webkit-animation: dash5 0.28s 2.92s ease forwards;
+    		-moz-animation: dash5 0.28s 2.92s ease forwards;
+    		-ms-animation: dash5 0.28s 2.92s ease forwards;
+		}
+		@keyframes dash5 {
+			100% {
+			  stroke-dashoffset: 0;
+			  -webkit-stroke-dashoffset: 0;
+			  -moz-stroke-dashoffset: 0;
+			  -o-stroke-dashoffset: 0;
+			  -ms-stroke-dashoffset: 0;
+			}
+		}
+		.show6 {
+			stroke-dasharray:2000;
+    		stroke-dashoffset:2000;
+    		-webkit-stroke-dasharray:2000;
+    		-webkit-stroke-dashoffset:2000;
+    		-moz-stroke-dasharray:2000;
+    		-moz-stroke-dashoffset:2000;
+    		-o-stroke-dasharray:2000;
+    		-o-stroke-dashoffset:2000;
+    		-ms-stroke-dasharray:2000;
+    		-ms-stroke-dashoffset:2000;
+    		animation: dash6 0.52s 3.64s ease forwards;
+    		-moz-animation: dash6 0.52s 3.64s ease forwards;
+    		-o-animation: dash6 0.52s 3.64s ease forwards;
+    		-webkit-animation: dash6 0.52s 3.64s ease forwards;
+    		-ms-animation: dash6 0.52s 3.64s ease forwards;
+		}
+		@keyframes dash6 {
+			100% {
+			  stroke-dashoffset: 0;
+			  -webkit-stroke-dashoffset: 0;
+			  -moz-stroke-dashoffset: 0;
+			  -o-stroke-dashoffset: 0;
+			  -ms-stroke-dashoffset: 0;
+			}
+		}
+		.show7 {
+			stroke-dasharray:2000;
+    		stroke-dashoffset:2000;
+    		-webkit-stroke-dasharray:2000;
+    		-webkit-stroke-dashoffset:2000;
+    		-moz-stroke-dasharray:2000;
+    		-moz-stroke-dashoffset:2000;
+    		-o-stroke-dasharray:2000;
+    		-o-stroke-dashoffset:2000;
+    		-ms-stroke-dasharray:2000;
+    		-ms-stroke-dashoffset:2000;
+    		animation: dash7 0.52s 3.64s ease forwards;
+    		-webkit-animation: dash7 0.52s 3.64s ease forwards;
+    		-moz-animation: dash7 0.52s 3.64s ease forwards;
+    		-ms-animation: dash7 0.52s 3.64s ease forwards;
+    		-o-animation: dash7 0.52s 3.64s ease forwards;
+		}
+		@keyframes dash7 {
+			100% {
+			  stroke-dashoffset: 0;
+			  -webkit-stroke-dashoffset: 0;
+			  -moz-stroke-dashoffset: 0;
+			  -o-stroke-dashoffset: 0;
+			  -ms-stroke-dashoffset: 0;
+			  -ms-stroke-dashoffset: 0;
+			}
+		}
+		.show8 {
+			stroke-dasharray:2000;
+    		stroke-dashoffset:2000;
+    		-webkit-stroke-dasharray:2000;
+    		-webkit-stroke-dashoffset:2000;
+    		-moz-stroke-dasharray:2000;
+    		-moz-stroke-dashoffset:2000;
+    		-o-stroke-dasharray:2000;
+    		-o-stroke-dashoffset:2000;
+    		-ms-stroke-dasharray:2000;
+    		-ms-stroke-dashoffset:2000;
+    		animation: dash8 0.4s 4.12s ease forwards;
+    		-webkit-animation: dash8 0.4s 4.12s ease forwards;
+    		-moz-animation: dash8 0.4s 4.12s ease forwards;
+    		-ms-animation: dash8 0.4s 4.12s ease forwards;
+    		-o-animation: dash8 0.4s 4.12s ease forwards;
+		}
+		@keyframes dash8 {
+			100% {
+			  stroke-dashoffset: 0;
+			  -webkit-stroke-dashoffset: 0;
+			  -moz-stroke-dashoffset: 0;
+			  -o-stroke-dashoffset: 0;
+			  -ms-stroke-dashoffset: 0;
+			}
+		}
+		.show9 {
+			stroke-dasharray:2000;
+    		stroke-dashoffset:2000;
+    		-webkit-stroke-dasharray:2000;
+    		-webkit-stroke-dashoffset:2000;
+    		-moz-stroke-dasharray:2000;
+    		-moz-stroke-dashoffset:2000;
+    		-o-stroke-dasharray:2000;
+    		-o-stroke-dashoffset:2000;
+    		-ms-stroke-dasharray:2000;
+    		-ms-stroke-dashoffset:2000;
+    		animation: dash9 0.46s 3.64s ease forwards;
+    		-webkit-animation: dash9 0.46s 3.64s ease forwards;
+    		-moz-animation: dash9 0.46s 3.64s ease forwards;
+    		-ms-animation: dash9 0.46s 3.64s ease forwards;
+    		-o-animation: dash9 0.46s 3.64s ease forwards;
+		}
+		@keyframes dash9 {
+			100% {
+			  stroke-dashoffset: 0;
+			  -webkit-stroke-dashoffset: 0;
+			  -moz-stroke-dashoffset: 0;
+			  -o-stroke-dashoffset: 0;
+			  -ms-stroke-dashoffset: 0;
+			}
+		}
+		.show10 {
+			stroke-dasharray:2000;
+    		stroke-dashoffset:2000;
+    		-webkit-stroke-dasharray:2000;
+    		-webkit-stroke-dashoffset:2000;
+    		-moz-stroke-dasharray:2000;
+    		-moz-stroke-dashoffset:2000;
+    		-o-stroke-dasharray:2000;
+    		-o-stroke-dashoffset:2000;
+    		-ms-stroke-dasharray:2000;
+    		-ms-stroke-dashoffset:2000;
+    		animation: dash10 1.16s 3.44s ease forwards;
+    		-webkit-animation: dash10 1.16s 3.44s ease forwards;
+    		-moz-animation: dash10 1.16s 3.44s ease forwards;
+    		-ms-animation: dash10 1.16s 3.44s ease forwards;
+    		-o-animation: dash10 1.16s 3.44s ease forwards;
+		}
+		@keyframes dash10 {
+			100% {
+			  stroke-dashoffset: 0;
+			  -webkit-stroke-dashoffset: 0;
+			  -moz-stroke-dashoffset: 0;
+			  -o-stroke-dashoffset: 0;
+			  -ms-stroke-dashoffset: 0;
+			}
+		}
+		.show11 {
+			stroke-dasharray:2000;
+    		stroke-dashoffset:2000;
+    		-webkit-stroke-dasharray:2000;
+    		-webkit-stroke-dashoffset:2000;
+    		-moz-stroke-dasharray:2000;
+    		-moz-stroke-dashoffset:2000;
+    		-o-stroke-dasharray:2000;
+    		-o-stroke-dashoffset:2000;
+    		-ms-stroke-dasharray:2000;
+    		-ms-stroke-dashoffset:2000;
+    		animation: dash11 0.4s 4.64s ease forwards;
+    		-webkit-animation: dash11 0.4s 4.64s ease forwards;
+    		-moz-animation: dash11 0.4s 4.64s ease forwards;
+    		-ms-animation: dash11 0.4s 4.64s ease forwards;
+    		-o-animation: dash11 0.4s 4.64s ease forwards;
+		}
+		@keyframes dash11 {
+			100% {
+			  stroke-dashoffset: 0;
+			  -webkit-stroke-dashoffset: 0;
+			  -moz-stroke-dashoffset: 0;
+			  -o-stroke-dashoffset: 0;
+			  -ms-stroke-dashoffset: 0;
+			}
+		}
+		.show12 {
+			stroke-dasharray:2000;
+    		stroke-dashoffset:2000;
+    		-webkit-stroke-dasharray:2000;
+    		-webkit-stroke-dashoffset:2000;
+    		-moz-stroke-dasharray:2000;
+    		-moz-stroke-dashoffset:2000;
+    		-o-stroke-dasharray:2000;
+    		-o-stroke-dashoffset:2000;
+    		-ms-stroke-dasharray:2000;
+    		-ms-stroke-dashoffset:2000;
+    		animation: dash12 1s 4.64s ease forwards;
+    		-webkit-animation: dash12 1s 4.64s ease forwards;
+    		-moz-animation: dash12 1s 4.64s ease forwards;
+    		-ms-animation: dash12 1s 4.64s ease forwards;
+    		-o-animation: dash12 1s 4.64s ease forwards;
+		}
+		@keyframes dash12 {
+			100% {
+			  stroke-dashoffset: 0;
+			  -webkit-stroke-dashoffset: 0;
+			  -moz-stroke-dashoffset: 0;
+			  -o-stroke-dashoffset: 0;
+			  -ms-stroke-dashoffset: 0;
+			}
+		}
+		.bg {
+			/*background:url("2.png") no-repeat;*/
+		}
+		path{
+			opacity:0;
+		}
+		circle {
+			opacity:0;
+		}
+		.imgbg {
+			opacity: 0;
+		}
+		image {
+			opacity: 0;
+		}
+		.icon1 {
+			transform-origin: center center;
+			-webkit-transform-origin: center center;
+			-moz-transform-origin: center center;
+			-o-transform-origin: center center;
+			-ms-transform-origin: center center;
+
+		}
+		.imgz {
+			opacity: 0;
+		}
+		.xz-change {
+			opacity: 1;
+			transform-origin: 49% 35%;
+			-webkit-transform-origin: 49% 35%;
+			-ms-transform-origin: 49% 35%;
+			-o-transform-origin: 49% 35%;
+			-moz-transform-origin: 49% 35%;
+		}
+		circle {
+			opacity: 0;
+		}
+	</style>
+</head>
+<body>
+	<svg id="svg" viewBox="0,0,1920,856">
+		<desc>Created with Snap</desc>
+		<defs></defs>
+		<image href="base1.png" preserveAspectRatio="none" x="500" y="75" width="900" height="600" class="icon1 baseImg"></image>
+		<image href="img/1.png" preserveAspectRatio="none" x="850" y="500" width="2" height="2" class="icon1" transform="matrix(-0.9703,0.2419,-0.2419,-0.9703,0,0)" style="opacity: 1;"></image>
+		<image href="img/2.png" preserveAspectRatio="none" x="650" y="200" width="0" height="0" class="icon1" transform="matrix(0.2419,0.9703,-0.9703,0.2419,0,0)" style="opacity: 0;"></image>
+		<image href="img/3.png" preserveAspectRatio="none" x="690" y="340" width="61" height="66" class="icon1 "></image>
+		<image href="img/4.png" preserveAspectRatio="none" x="1180" y="380" width="0" height="0" class="icon1" transform="matrix(0.9998,0.0175,-0.0175,0.9998,0,0)" style="opacity: 0;"></image>
+		<image href="img/5.png" preserveAspectRatio="none" x="1250" y="130" width="0" height="0" class="icon1" transform="matrix(-0.9135,0.4067,-0.4067,-0.9135,0,0)" style="opacity: 0;"></image>
+		<image href="img/6.png" preserveAspectRatio="none" x="1150" y="260" width="0" height="0" class="icon1" transform="matrix(0.5592,0.829,-0.829,0.5592,0,0)" style="opacity: 0;"></image>
+		<image href="img/7.png" preserveAspectRatio="none" x="810" y="430" width="0" height="0" class="icon1" transform="matrix(0.9613,0.2756,-0.2756,0.9613,0,0)" style="opacity: 0;"></image>
+		<image href="img/8.png" preserveAspectRatio="none" x="1300" y="70" width="0" height="0" class="icon1" transform="matrix(0.9135,-0.4067,0.4067,0.9135,0,0)" style="opacity: 0;"></image>
+		<image href="img/9.png" preserveAspectRatio="none" x="1070" y="610" width="0" height="0" class="icon1" transform="matrix(0.1045,-0.9945,0.9945,0.1045,0,0)" style="opacity: 0;"></image>
+		<image href="img/10.png" preserveAspectRatio="none" x="850" y="130" width="0" height="0" class="icon1" transform="matrix(-0.5592,-0.829,0.829,-0.5592,0,0)" style="opacity: 0;"></image>
+		<image href="img/11.png" preserveAspectRatio="none" x="790" y="520" width="0" height="0" class="icon1" transform="matrix(-0.9945,-0.1045,0.1045,-0.9945,0,0)" style="opacity: 0;"></image>
+		<image href="img/12.png" preserveAspectRatio="none" x="970" y="520" width="0" height="0" class="icon1" transform="matrix(-0.7193,0.6947,-0.6947,-0.7193,0,0)" style="opacity: 0;"></image>
+		<image href="img/13.png" preserveAspectRatio="none" x="550" y="260" width="0" height="0" class="icon1" transform="matrix(0.0698,0.9976,-0.9976,0.0698,0,0)" style="opacity: 0;"></image>
+		<image href="img/14.png" preserveAspectRatio="none" x="770" y="280" width="0" height="0" class="icon1" transform="matrix(0.2419,0.9703,-0.9703,0.2419,0,0)" style="opacity: 0;"></image>
+		<image href="img/15.png" preserveAspectRatio="none" x="1090" y="120" width="0" height="0" class="icon1" transform="matrix(0.7193,-0.6947,0.6947,0.7193,0,0)" style="opacity: 0;"></image>
+		<image href="img/16.png" preserveAspectRatio="none" x="990" y="480" width="310" height="12" class="icon1" transform="matrix(0.866,-0.5,0.5,0.866,0,0)" style="opacity: 0;"></image>
+		<image href="img/17.png" preserveAspectRatio="none" x="920" y="110" width="0" height="0" class="icon1" transform="matrix(0.2756,-0.9613,0.9613,0.2756,0,0)" style="opacity: 0;"></image>
+		<image href="img/18.png" preserveAspectRatio="none" x="1380" y="200" width="0" height="0" class="icon1" transform="matrix(0.0175,-0.9998,0.9998,0.0175,0,0)" style="opacity: 0;"></image>
+		<image href="img/19.png" preserveAspectRatio="none" x="1070" y="420" width="100" height="4" transform="matrix(0.5,-0.866,0.866,0.5,0,0)" style="opacity: 0;"></image>
+		<image href="img/20.png" preserveAspectRatio="none" x="990" y="440" width="310" height="12" transform="matrix(0,-1,1,0,0,0)" style="opacity: 1;"></image>
+		<image href="img/21.png" preserveAspectRatio="none" x="920" y="327" width="10" height="11"></image>
+		<image href="img/22.png" preserveAspectRatio="none" x="920" y="327" width="10" height="11"></image>
+		<g class="xz-change">
+			<image href="x.png" preserveAspectRatio="none" x="780" y="203" width="300" height="272" style="opacity: 1;" class="imgx"></image>
+			<image href="z.png" preserveAspectRatio="none" x="780" y="203" width="300" height="272" class="imgz"></image>
+		</g>
+		<path d="M443 260Q396 324,400 350Q396 408,417 430L443 468" stroke="#010101" fill="none" style="stroke-width: 4;" class="path1"></path>
+		<path d="M1415 260Q1466 324,1463 350Q1465 408,1443 430L1416 468" stroke="#010101" fill="none" style="stroke-width: 4;" class="path1"></path>
+		<path d="M843 77L620 77" stroke="#010101" fill="none" style="stroke-width: 2; opacity: 1;" class="show4"></path>
+		<path d="M1018 77L1239 77" stroke="#010101" fill="none" style="stroke-width: 2; opacity: 1;" class="show4"></path>
+		<path d="M660 116Q639 112,629 130L500 300Q461 346,500 384L624 560Q632 578,670 574L1200 574Q1232 579,1243 550L1363 382" stroke="#010101" fill="none" style="stroke-width: 2; opacity: 1;" class="show3"></path>
+		<path d="M660 116L715 116Q738 116,749 130Q765 153,800 149L1080 149Q1090 153,1116 125Q1125 115,1144 116L1200 116Q1226 113,1235 136L1360 300Q1398 341,1360 386" stroke="#010101" fill="none" style="stroke-width: 2; opacity: 1;" class="show3"></path>
+		<circle cx="902" cy="120" fill="#010101" class="circle1"></circle>
+		<path d="M900 120Q900 134,870 133L780 133" stroke="#010101" fill="none" style="stroke-width: 2; opacity: 1;" class="show1"></path>
+		<circle cx="961" cy="120" fill="#010101" class="circle1"></circle>
+		<path d="M963 120Q958 132,980 133L970 133L1080 133" stroke="#010101" fill="none" style="stroke-width: 2; opacity: 1;" class="show1"></path>
+		<path d="M442 262L548 120Q569 84,620 91L930 91" stroke="#010101" fill="none" style="stroke-width: 4; opacity: 1;" class="show2"></path>
+		<path d="M443 468L551 610Q570 643,600 639L680 639Q703 643,710 620Q728 597,770 604L930 604 " stroke="#010101" fill="none" style="stroke-width: 4; opacity: 1;" class="show2"></path>
+		<path d="M1416 468L1304 615Q1288 644,1260 638L1180 638Q1158 643,1150 620Q1138 602,1120 604L930 604" stroke="#010101" fill="none" style="stroke-width: 4; opacity: 1;" class="show2"></path>
+		<path d="M1415 260L1312 120Q1292 87,1260 90L930 91" stroke="#010101" fill="none" style="stroke-width: 4; opacity: 1;" class="show2"></path>
+		<path d="M866 178L740 178Q724 176,719 168Q713 148,686 152L646 152" stroke="#010101" fill="none" style="stroke-width: 2; opacity: 1;" class="show5"></path>
+		<path d="M995 178L1110 178Q1137 180,1143 164Q1152 149,1170 152L1212 152" stroke="#010101" fill="none" style="stroke-width: 2; opacity: 1;" class="show5"></path>
+		<circle cx="648" cy="188"  fill="#010101" class="circle2"></circle>
+		<path d="M648 188L565 304L564 340L544 378L640 520" stroke="#010101" fill="none" style="stroke-width: 2; opacity: 1;" class="show9"></path>
+		<circle cx="1212" cy="188"  fill="#010101" class="circle2"></circle>
+		<path d="M1214 188L1295 304L1296 340L1318 378L1220 520" stroke="#010101" fill="none" style="stroke-width: 2; opacity: 1;" class="show9"></path><circle cx="447" cy="388"  fill="#010101" class="circle3"></circle>
+		<path d="M450 388L464 418Q467 420,464 430Q460 436,471 450L546 558" stroke="#010101" fill="none" style="stroke-width: 2; opacity: 1;" class="show8"></path>
+		<circle cx="1413" cy="388"  fill="#010101" class="circle3"></circle>
+		<path d="M1410 388L1396 418Q1394 420,1396 430Q1402 432,1392 448L1315 558" stroke="#010101" fill="none" style="stroke-width: 2; opacity: 1;" class="show8"></path>
+		<circle cx="842" cy="512" fill="#010101" class="circle4"></circle>
+		<path d="M652 555Q670 522,710 527L810 526Q842 526,838 518" stroke="#010101" fill="none" style="stroke-width: 2; opacity: 1;" class="show7"></path>
+		<circle cx="1017" cy="512" fill="#010101" class="circle4"></circle>
+		<path d="M1207 554Q1190 526,1155 526L1050 526Q1026 530,1019 518" stroke="#010101" fill="none" style="stroke-width: 2; opacity: 1;" class="show7"></path>
+		<circle cx="670" cy="608" fill="#010101" class="circle5"></circle>
+		<path d="M670 610L623 610L608 580Q605 578,600 577Q592 582,577 560L497 446" stroke="#010101" fill="none" style="stroke-width: 2; opacity: 1;" class="show6"></path>
+		<circle cx="1190" cy="608" r="9" fill="#010101" class="circle5"></circle>
+		<path d="M1193 610L1235 610L1252 580Q1254 576,1259 578Q1271 580,1284 560L1365 444" stroke="#010101" fill="none" style="stroke-width: 2; opacity: 1;" class="show6"></path>
+		<path d="M237 0L77 230Q64 252,65 280L65 324Q65 365,82 381L280 660Q290 684,350 678L654 678" stroke="#3693fb" fill="none" style="stroke-width: 2; opacity: 1;" class="show10"></path>
+		<circle cx="660" cy="679" fill="#3693fb" class="circle6"></circle>
+		<path d="M661 680L661 742L586 742" stroke="#3693fb" fill="none" style="stroke-width: 2; opacity: 1;" class="show11"></path>
+		<path d="M650 690L635 730L630 708L620 725L610 703L603 730L593 715L581 730L576 719L561 742" stroke="#3693fb" fill="none" style="stroke-width: 2; opacity: 1;" class="show12"></path>
+		<path d="M1625 0L1778 220Q1795 244,1797 270L1797 320Q1801 360,1768 400L1590 646Q1570 684,1530 675L1200 675" stroke="#3693fb" fill="none" style="stroke-width: 2; opacity: 1;" class="show10"></path>
+		<circle cx="1205" cy="677" fill="#3693fb" class="circle6"></circle>
+		<path d="M270 395L270 395" stroke="#090101" fill="none" style="stroke-width: 10; opacity: 1;"></path>
+		<path d="M282 395L282 395" stroke="#090101" fill="none" style="stroke-width: 10; opacity: 1;"></path>
+		<path d="M294 395L294 395" stroke="#090101" fill="none" style="stroke-width: 10; opacity: 1;"></path>
+		<path d="M306 395L306 395" stroke="#090101" fill="none" style="stroke-width: 10; opacity: 1;"></path>
+		<path d="M318 395L318 395" stroke="#090101" fill="none" style="stroke-width: 10; opacity: 1;"></path>
+		<path d="M330 395L330 395" stroke="#090101" fill="none" style="stroke-width: 10; opacity: 1;"></path>
+		<path d="M342 395L342 395" stroke="#090101" fill="none" style="stroke-width: 10; opacity: 1;"></path>
+		<path d="M354 395L354 395" stroke="#090101" fill="none" style="stroke-width: 10; opacity: 1;"></path>
+		<path d="M366 395L366 395" stroke="#090101" fill="none" style="stroke-width: 10; opacity: 1;"></path>
+		<path d="M378 395L378 395" stroke="#090101" fill="none" style="stroke-width: 10; opacity: 1;"></path>
+		<path d="M390 395L390 395" stroke="#090101" fill="none" style="stroke-width: 10; opacity: 1;"></path>
+		<path d="M1590 395L1584 395" stroke="#090101" fill="none" style="stroke-width: 10;"></path>
+		<path d="M1578 395L1584 395" stroke="#090101" fill="none" style="stroke-width: 10; opacity: 1;"></path>
+		<path d="M1566 395L1572 395" stroke="#090101" fill="none" style="stroke-width: 10; opacity: 1;"></path>
+		<path d="M1554 395L1560 395" stroke="#090101" fill="none" style="stroke-width: 10; opacity: 1;"></path>
+		<path d="M1542 395L1548 395" stroke="#090101" fill="none" style="stroke-width: 10; opacity: 1;"></path>
+		<path d="M1530 395L1536 395" stroke="#090101" fill="none" style="stroke-width: 10; opacity: 1;"></path>
+		<path d="M1518 395L1524 395" stroke="#090101" fill="none" style="stroke-width: 10; opacity: 1;"></path>
+		<path d="M1506 395L1512 395" stroke="#090101" fill="none" style="stroke-width: 10; opacity: 1;"></path>
+		<path d="M1494 395L1500 395" stroke="#090101" fill="none" style="stroke-width: 10; opacity: 1;"></path>
+		<path d="M1482 395L1482 395" stroke="#090101" fill="none" style="stroke-width: 10; opacity: 1;"></path>
+		<path d="M1470 395L1470 395" stroke="#090101" fill="none" style="stroke-width: 10; opacity: 1;"></path>
+		<image href="font.png" preserveAspectRatio="none" x="720" y="740" width="429" height="137" class="font"></image></svg>
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
+		<script>
+			$('.imgx').velocity({translateX:"-140px"},{duration:300}).velocity(
+				{translateX:"35px"},{duration:300}
+			);
+			$('.imgz').velocity({translateX:"140px",opacity:1},{duration:300}).velocity(
+				{translateX:"-35px"},{duration:300,complete: function() {
+					$('.xz-change').velocity(
+						{scale:0.1},
+						{duration:300,complete: function() {
+							$('.imgx').velocity({translateX:"-120px"},200)
+							$(".imgz").velocity({translateZ:"120px"},200)
+							$('.xz-change').velocity({scale:1,translateX:"70px"},300,function() {
+								$(".baseImg").velocity({opacity:1},200,function() {
+									$(".path1").velocity({opacity:1},10)
+									$(".circle1").velocity({opacity: 1,r:8},200)
+									$(".circle2").velocity({opacity: 1,r:8},{duration:200,delay:1600})
+									$(".circle3").velocity({opacity: 1,r:8},{duration:200,delay:2000})
+									$(".circle4").velocity({opacity: 1,r:8},{duration:200,delay:2000})
+									$(".circle5").velocity({opacity: 1,r:8},{duration:200,delay:1800})
+									$(".circle6").velocity({opacity: 1,r:7},{duration:200,delay:1800})
+
+								})
+							})
+						}}
+					)
+				}}
+			)
+			$('.font').velocity({opacity:1,y:670},{duration:300,delay:4300})
+		</script>
+</body>
+</html>
