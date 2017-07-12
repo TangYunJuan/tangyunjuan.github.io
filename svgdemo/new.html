@@ -368,8 +368,8 @@
 					$('.xz-change').velocity(
 						{translateX:840,translateY:310,scale:0.1},
 						{duration:300,complete: function() {
-							$('.imgx').velocity({translateX:"-120px"},200)
-							$(".imgz").velocity({translateZ:"120px"},200)
+							$('.imgx').velocity({translateX:"-40px"},200)
+							$(".imgz").velocity({translateX:"40px"},200)
 							
 							$('.icon11').velocity({opacity:1,x:1090,y:120,width:36,height:42},900,function(){
 									$('.icon11').velocity({opacity:0,x:1100,y:80},198)
@@ -443,7 +443,7 @@
 							$('.icon36').velocity({opacity:1,x:620,y:250,width:40,height:40},900,function(){
 									$('.icon36').velocity({opacity:0,x:600,y:240},210)
 								})
-							$('.xz-change').velocity({scale:1,translateX:60,translateY:6},1000,'easeInOutExpo',function() {
+							$('.xz-change').velocity({scale:1,translateX:-18,translateY:6},1000,'easeInOutExpo',function() {
 								$(".baseImg").velocity({opacity:1},200,function() {
 									$(".path1").velocity({opacity:1},10)
 									$(".circle1").velocity({opacity: 1,r:8},200)
