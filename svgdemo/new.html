@@ -360,6 +360,7 @@
 		<script src="js/jquery-3.2.1.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
 		<script>
+		$(document).ready(function(){
 			$('.imgx').velocity({translateX:"-140px"},{duration:300}).velocity(
 				{translateX:"35px"},{duration:300}
 			);
@@ -488,7 +489,7 @@
 				$(".line11").velocity({y2:360},{duration:100,loop:true})
 				$(".line12").velocity({y2:360},{duration:90,loop:true})
 			}})
-			
+		})	
 		</script>
 
 </body>
