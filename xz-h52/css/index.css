@@ -12,6 +12,7 @@ body {
 	color: #fff;
 	width: 100%;
 	height: 100%;
+	background: #000;
 	
 }
 .swiper-container {
@@ -49,13 +50,16 @@ body {
 	width: 100%;
 	height: 100%;
 	position: relative;
+	opacity:0;
 }
 @media screen and (min-width: 769px) {
 	.xz {
 		width: 414px;
 		height: 736px;
 		margin: 0 auto;
-		margin-top: 20px;	}
+		margin-top: 20px;
+		opacity:0;
+	}
 }
 .home{
 	width: 100%;
@@ -384,7 +388,7 @@ body {
 }
 .text {
 	margin: 5px auto 0;
-    width: 79%;
+    width: 74px;
 }
 .text>p {
 	text-align: left;

@@ -1,11 +1,9 @@
-window.onload = function() {
+$(function(){
 	var IMGWIDTH = $(".home").width();
 	var IMGHEIGHT = $(".home").height();
-	console.log(IMGWIDTH+","+IMGHEIGHT)
 	var BGWIDTH = 640;
 	var BGHEIGHT = 1136;
 	var ZOOMNUM = IMGWIDTH / BGWIDTH;
-	console.log(ZOOMNUM)
 	function Size(width ,height){return {w:width,h:height}}
 	function position(left,top){return {x:left,y:top}}
 	function MoveImg(dom,url,x,y) {
@@ -84,7 +82,6 @@ window.onload = function() {
 	new MoveImg($('.pop-img7'),"img/xiaxiaball.png","60")
 	new MoveImg($('.close'),"img/close.png","40","490")
 	new MoveImg($('.slider-set'),"img/sao.png")
-	console.log("12")
 
 
 
@@ -101,7 +98,7 @@ window.onload = function() {
 			touchEnd = e.timeStamp;
 			if(touchEnd - touchStart > 50) {
 				$('.home-wrap').hide();
-				$('.home').addClass("bg-black").fadeOut().delay(200);
+				$('.home').addClass("bg-black").fadeOut();
 				$(".main").fadeIn();
 				setCanvas()
 				// setTimeout(setCanvas,100)
@@ -181,4 +178,5 @@ window.onload = function() {
 		})
 	}
 	
-}
+})
+
