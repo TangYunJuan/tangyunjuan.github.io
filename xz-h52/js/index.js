@@ -1,4 +1,4 @@
-$(function() {
+window.onload = function() {
 	var IMGWIDTH = $(".home").width();
 	var IMGHEIGHT = $(".home").height();
 	console.log(IMGWIDTH+","+IMGHEIGHT)
@@ -45,6 +45,8 @@ $(function() {
 		this.dom.css("left",this.pos.y);
 		// console.log(this.dom.style.width)
 	}
+
+
 	new MoveImg($('.logo'),"img/logo.png","100")
 	new MoveImg($('.fingerprint-wrap'),"img/figure.png","500")
 	new MoveImg($('.hold'),"img/font.png","550","50")
@@ -60,9 +62,9 @@ $(function() {
 	new MoveImg($('.qiu5'),"img/shuju.png")
 	new MoveImg($('.qiu6'),"img/yunying.png")
 	new MoveImg($('.qiu7'),"img/xianxia.png")
-	new MoveImg($('.address-img'),"img/address.png","760")
-	new MoveImg($('.contect'),"img/lianxi.png","80")
-	new MoveImg($('.erwei'),"img/er.png","200")
+	new MoveImg($('.address-img'),"img/address.png","720")
+	new MoveImg($('.contect'),"img/lianxi.png","70")
+	new MoveImg($('.erwei'),"img/er.png","170")
 	new MoveImg($('.pop-cir'),"img/keji1.png","124")
 	new MoveImg($('.pop-in'),"img/keji2.png","108","90")
 	new MoveImg($('.pop-out'),"img/keji3.png","80","63")	
@@ -82,6 +84,7 @@ $(function() {
 	new MoveImg($('.pop-img7'),"img/xiaxiaball.png","60")
 	new MoveImg($('.close'),"img/close.png","40","490")
 	new MoveImg($('.slider-set'),"img/sao.png")
+	console.log("12")
 
 
 
@@ -96,7 +99,7 @@ $(function() {
 		})
 		$(".fingerprint-wrap").on('touchend',function(e) {
 			touchEnd = e.timeStamp;
-			if(touchEnd - touchStart > 100) {
+			if(touchEnd - touchStart > 50) {
 				$('.home-wrap').hide();
 				$('.home').addClass("bg-black").fadeOut().delay(200);
 				$(".main").fadeIn();
@@ -178,4 +181,4 @@ $(function() {
 		})
 	}
 	
-})
+}

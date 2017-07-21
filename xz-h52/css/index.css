@@ -96,8 +96,8 @@ body {
 }
 @keyframes shaing {
 	100% {
-		width: 3px;
-		height: 3px;
+		width: 2px;
+		height: 2px;
 	}
 }
 .star1 {
@@ -108,8 +108,8 @@ body {
 	background: rgba(0,0,255, 0.1);
 	top: 16px;
 	left: 24px;
-	box-shadow: 0 0 40px rgba(0,0,255, .9),inset 0 0 5px rgba(41, 55, 241,.1);
-	animation: glow1 800ms ease-out infinite alternate;
+	box-shadow: 0 0 100px rgba(41, 55, 241, .9);
+	animation: glow1 500ms ease-out infinite alternate;
 }
 @keyframes glow1 {  
     100% {
@@ -118,20 +118,20 @@ body {
     }
 }
 .star2 {
-	width:20px;
-	height:20px;
+	width:10px;
+	height:10px;
 	border-radius:50%;
 	position: absolute;
 	background: rgba(0,0,255, 0.1);
-	top: 323px;
-	left: 40px;
-	box-shadow: 0 0 100px rgba(41, 55, 241, .9),inset 0 0 5px rgba(41, 55, 241,.1);
-	animation: glow2 800ms ease-out infinite alternate;
+	top: 376px;
+    right: 54px;
+	box-shadow: 0 0 100px rgba(41, 55, 241, .9);
+	animation: glow2 500ms ease-out 0.3s infinite alternate;
 }
 @keyframes glow2 {
 	100% {
         background: rgba(0,0,255, 0.4);
-        box-shadow: 0 0 30px rgb(0,0,255),inset 0 0 20px rgba(41, 55, 241,.4), 0 2px 0 #000;
+        box-shadow: 0 0 40px rgb(0,0,255),inset 0 0 5px rgba(41, 55, 241,.1), 0 2px 0 #000;
     }
 }
 .star3 {
@@ -143,7 +143,7 @@ body {
 	top: 376px;
     right: 54px;
 	box-shadow: 0 0 100px rgba(41, 55, 241, .9);
-	animation: glow3 500ms ease-out infinite alternate;
+	animation: glow3 500ms ease-out 0.2s infinite alternate;
 }
 @keyframes glow3 {
 	100% {
@@ -160,9 +160,77 @@ body {
 	bottom: 113px;
     left: 20px;
 	box-shadow: 0 0 100px rgba(41, 55, 241, .9);
-	animation: glow4 800ms ease-out infinite alternate;
+	animation: glow4 500ms ease-out 0.4s infinite alternate;
 }
 @keyframes glow4 {
+	100% {
+        background: rgba(0,0,255, 0.4);
+        box-shadow: 0 0 40px rgb(0,0,255),inset 0 0 5px rgba(41, 55, 241,.1), 0 2px 0 #000;
+    }
+}
+.star5 {
+	width:10px;
+	height:10px;
+	border-radius:50%;
+	position: absolute;
+	background: rgba(0,0,255, 0.1);
+	bottom: 182px;
+    left: 197px;
+	box-shadow: 0 0 100px rgba(41, 55, 241, .9);
+	animation: glow5 500ms ease-out 0.4s infinite alternate;
+}
+@keyframes glow5 {
+	100% {
+        background: rgba(0,0,255, 0.4);
+        box-shadow: 0 0 40px rgb(0,0,255),inset 0 0 5px rgba(41, 55, 241,.1), 0 2px 0 #000;
+    }
+}
+.star6 {
+	width:10px;
+	height:10px;
+	border-radius:50%;
+	position: absolute;
+	background: rgba(0,0,255, 0.1);
+	top: 287px;
+    left: 69px;
+	box-shadow: 0 0 100px rgba(41, 55, 241, .9);
+	animation: glow6 300ms ease-out  infinite alternate;
+}
+@keyframes glow6 {
+	100% {
+        background: rgba(0,0,255, 0.4);
+        box-shadow: 0 0 40px rgb(0,0,255),inset 0 0 5px rgba(41, 55, 241,.1), 0 2px 0 #000;
+    }
+}
+.star7 {
+	width:10px;
+	height:10px;
+	border-radius:50%;
+	position: absolute;
+	background: rgba(0,0,255, 0.1);
+	top: 102px;
+    right: 118px;
+	box-shadow: 0 0 100px rgba(41, 55, 241, .9);
+	animation: glow7 500ms ease-out 0.4s infinite alternate;
+}
+@keyframes glow7 {
+	100% {
+        background: rgba(0,0,255, 0.4);
+        box-shadow: 0 0 40px rgb(0,0,255),inset 0 0 5px rgba(41, 55, 241,.1), 0 2px 0 #000;
+    }
+}
+.star8 {
+	width:10px;
+	height:10px;
+	border-radius:50%;
+	position: absolute;
+	background: rgba(0,0,255, 0.1);
+	top: 334px;
+    left: 40px;
+	box-shadow: 0 0 100px rgba(41, 55, 241, .9);
+	animation: glow8 600ms ease-out 0.4s infinite alternate;
+}
+@keyframes glow8 {
 	100% {
         background: rgba(0,0,255, 0.4);
         box-shadow: 0 0 40px rgb(0,0,255),inset 0 0 5px rgba(41, 55, 241,.1), 0 2px 0 #000;
@@ -185,16 +253,19 @@ body {
 }
 .fingerprint {
 	position: relative;
+	width: 100%;
+	height: 100%;
 }
 .slider-set {
 	position: absolute;
-	top: 20px;
+	top: 14%;
 	box-shadow: 0 0 5px rgba(73,150,193,0.4);
 	animation: moveSet 2s linear infinite alternate;
 }
 @keyframes moveSet {    
     100% {
-        top: 220px;
+    	position: absolute;
+        top: 88%;
     }
 }
 /*.slider-set:before {
@@ -278,44 +349,45 @@ body {
 }
 .ball-re {
 	position: absolute;
-	top: 8%;
-	left: 4%;
+	top: 11%;
+    left: 7%;
 }
 .ball-re2 {
 	position: absolute;
-	top: 4%;
-	left: 36%;
+	top: 6%;
+    left: 39%;
 }
 .ball-re3 {
 	position: absolute;
-	top: 12%;
-    left: 66%
+	top: 18%;
+    left: 67%;
 }
 .ball-re4 {
 	position: absolute;
-	top: 33%;
-    left: 31%
+	top: 32%;
+    left: 31%;
 }
 .ball-re5 {
 	position: absolute;
-	top: 57%;
-    left: 66%;
+	top: 46%;
+    left: 68%;
 }
 .ball-re6 {
 	position: absolute;
-	top: 70%;
-    left: 36%;
+	top: 61%;
+    left: 42%;
 }
 .ball-re7 {
 	position: absolute;
-	top: 73%;
-    left: 8%;
+	top: 65%;
+    left: 10%;
 }
 .text {
-	margin-top:5px;
+	margin: 5px auto 0;
+    width: 79%;
 }
 .text>p {
-	text-align: center;
+	text-align: left;
 }
 .ball-wrap {
 	/*animation: ballR 1s linear infinite alternate;*/
@@ -410,7 +482,7 @@ body {
 .kuang {
 	position: absolute;
 	left: 50%;
-	top: 50%;
+	top: 47%;
 	transform:translate(-50%,-50%);
 	display: none;
 }
@@ -426,24 +498,24 @@ body {
 }
 .pop-out {
 	position: absolute;
-	transform: rotateZ(135deg);
+	transform: rotateZ(90deg);
 	transform-origin: 50% 50%;
 	animation: ballO 3s linear infinite alternate;
 }
 .pop-in {
 	position: absolute;
-	transform: rotateZ(-135deg);
+	transform: rotateZ(-90deg);
 	transform-origin: 50% 50%;
-	animation: ballI 3s linear infinite alternate;
+	animation: ballI 5s linear infinite alternate;
 }
 @keyframes ballO {    
     100% {
-        transform: rotateZ(-135deg);
+        transform: rotateZ(-90deg);
     }
 }
 @keyframes ballI {    
     100% {
-        transform: rotateZ(135deg);
+        transform: rotateZ(90deg);
     }
 }
 
