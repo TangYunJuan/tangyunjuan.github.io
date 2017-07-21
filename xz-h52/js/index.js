@@ -47,7 +47,7 @@ $(function(){
 
 	new MoveImg($('.logo'),"img/logo.png","100")
 	new MoveImg($('.fingerprint-wrap'),"img/figure.png","500")
-	new MoveImg($('.hold'),"img/font.png","550","50")
+	new MoveImg($('.hold'),"img/font.png","550","80")
 	new MoveImg($('.name'),"img/tucen.png","480")
 	new MoveImg($('.next'),"img/la.png")
 	new MoveImg($('.ball-wrap'),"img/ke3.png")
@@ -102,13 +102,13 @@ $(function(){
 				$(".main").fadeIn();
 				setCanvas()
 				// setTimeout(setCanvas,100)
-				setTimeout(writeFont,1800)
+				// setTimeout(writeFont,1800)
+				writeFont()
 			}
 		})
 
 	}
 	touchFinger()
-	writeFont()
 	function writeFont() {
 		var str_shi = '以时尚科技引领潮流';
 			var str_jihe = '集合线上线下为一体';
@@ -116,7 +116,7 @@ $(function(){
 			var jishu = 0;
 			var hangshu = 1;
 			$(".shi .gbiao").show();
-			var mysetT =  setInterval(function(){
+			var mysetT = setInterval(function(){
 					if(hangshu == 1 && jishu<str_shi.length){
 						$(".shi .txtbox").html($(".shi .txtbox").html()+str_shi[jishu])
 						jishu++;
@@ -150,6 +150,7 @@ $(function(){
 						clearInterval(mysetT)
 					}
 			},150)
+			console.log("111")
 		}
 	getDialog()
 	function getDialog() {
