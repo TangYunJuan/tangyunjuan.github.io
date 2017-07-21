@@ -239,9 +239,10 @@ body {
 }
 .inter {
 	position: absolute;
-	margin-top: 40px;
-	width: 100%;
-	height:75px;
+    margin-top: 95%;
+    top: 0;
+    width: 100%;
+    height: 75px;
 }
 .inter>p {
 	line-height: 25px;
