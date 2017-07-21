@@ -49,7 +49,7 @@ $(function() {
 	new MoveImg($('.fingerprint-wrap'),"img/figure.png","500")
 	new MoveImg($('.hold'),"img/font.png","550","50")
 	new MoveImg($('.name'),"img/tucen.png","480")
-	new MoveImg($('.next'),"img/la.png","1080")
+	new MoveImg($('.next'),"img/la.png")
 	new MoveImg($('.ball-wrap'),"img/ke3.png")
 	new MoveImg($('.ball-in'),"img/ke2.png")
 	new MoveImg($('.out'),"img/ke1.png")
@@ -64,8 +64,8 @@ $(function() {
 	new MoveImg($('.contect'),"img/lianxi.png","80")
 	new MoveImg($('.erwei'),"img/er.png","200")
 	new MoveImg($('.pop-cir'),"img/keji1.png","124")
-	new MoveImg($('.pop-in'),"img/keji2.png","108")
-	new MoveImg($('.pop-out'),"img/keji3.png","80")	
+	new MoveImg($('.pop-in'),"img/keji2.png","108","90")
+	new MoveImg($('.pop-out'),"img/keji3.png","80","63")	
 	new MoveImg($('.ball1-content1'),"img/webbase.png")
 	new MoveImg($('.ball1-content2'),"img/wecahtbase.png")
 	new MoveImg($('.ball1-content3'),"img/app.png")
@@ -81,6 +81,7 @@ $(function() {
 	new MoveImg($('.pop-img6'),"img/yunball.png","60")
 	new MoveImg($('.pop-img7'),"img/xiaxiaball.png","60")
 	new MoveImg($('.close'),"img/close.png","40","490")
+	new MoveImg($('.slider-set'),"img/sao.png")
 
 
 
@@ -95,11 +96,12 @@ $(function() {
 		})
 		$(".fingerprint-wrap").on('touchend',function(e) {
 			touchEnd = e.timeStamp;
-			if(touchEnd - touchStart > 0) {
+			if(touchEnd - touchStart > 300) {
 				$('.home-wrap').hide();
-				$('.home').addClass("bg-black").fadeOut();
+				$('.home').addClass("bg-black").fadeOut().delay(200);
 				$(".main").fadeIn();
-				setTimeout(setCanvas,700)
+				setCanvas()
+				// setTimeout(setCanvas,100)
 				setTimeout(writeFont,1800)
 			}
 		})
@@ -151,17 +153,26 @@ $(function() {
 		}
 	getDialog()
 	function getDialog() {
-		var ballArr = []
+		var ballArr = [];
+		var touchstart,touchend
 		$(".ball-dia").each(function(index) {
 			ballArr.push($(this))
-			// console.log(ballArr)
 			var _this = $(this);
 			var _index = index;
-			console.log(index)
-			$(this).on("touchstart",function() {
+			$(this).on("touchstart",function(e) {
+				touchstart = e.timeStamp;
 				$(this).parent().children().eq(_index+7).show();
 			})
-			$(".close").on("touchstart",function() {
+			$(this).on('touchmove',function(e) {
+				 event.preventDefault();
+			})
+			$(this).on("touchsend",function(e) {
+				touchend = e.timeStamp;
+				if(touchend - touchstart > 200) {
+					$(this).parent().children().eq(_index+7).show();
+				}
+			})
+			$(".close").on("touchend",function() {
 				_this.parent().children().eq(_index+7).hide();
 			})
 		})

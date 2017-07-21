@@ -50,6 +50,13 @@ body {
 	height: 100%;
 	position: relative;
 }
+@media screen and (min-width: 769px) {
+	.xz {
+		width: 414px;
+		height: 736px;
+		margin: 0 auto;
+		margin-top: 20px;	}
+}
 .home{
 	width: 100%;
 	height: 100%;
@@ -77,88 +84,88 @@ body {
 	width: 100%;
 	height: 100%;
 }
+.star-cir {
+	width:1px; 
+	height: 1px;
+	border-radius: 50%;
+	margin:50% 0 0 50%;
+	transform:translate(-50%,-50%);
+	background:#fff;
+	box-shadow:inset 0 0 5px rgba(41, 55, 241,.1);
+	animation: shaing 800ms ease-out infinite alternate;
+}
+@keyframes shaing {
+	100% {
+		width: 3px;
+		height: 3px;
+	}
+}
 .star1 {
-	width:1px;
-	height:1px;
+	width:10px;
+	height:10px;
 	border-radius:50%;
 	position: absolute;
+	background: rgba(0,0,255, 0.1);
 	top: 16px;
 	left: 24px;
-	box-shadow: 0 0 30px rgba(0,0,255, .9);
+	box-shadow: 0 0 40px rgba(0,0,255, .9),inset 0 0 5px rgba(41, 55, 241,.1);
 	animation: glow1 800ms ease-out infinite alternate;
 }
-@keyframes glow1 {
-	0% {
-		width:1px;
-		height:1px;
-        background: #cafefe;
-        box-shadow: 0 0 5px rgb(0,0,255), inset 0 0 5px rgba(41, 55, 241,.1), 0 2px 0 #000;
-    }    
+@keyframes glow1 {  
     100% {
-        width:3px;
-		height:3px;
-        background: #fff;
-        box-shadow: 0 0 30px rgb(0,0,255),inset 0 0 5px rgba(41, 55, 241,.1), 0 2px 0 #000;
+        background: rgba(0,0,255, 0.4);
+        box-shadow: 0 0 40px rgb(0,0,255),inset 0 0 5px rgba(41, 55, 241,.1), 0 2px 0 #000;
     }
 }
 .star2 {
-	width:3px;
-	height:3px;
+	width:20px;
+	height:20px;
 	border-radius:50%;
 	position: absolute;
+	background: rgba(0,0,255, 0.1);
 	top: 323px;
 	left: 40px;
-	box-shadow: 0 0 100px rgba(41, 55, 241, .9);
+	box-shadow: 0 0 100px rgba(41, 55, 241, .9),inset 0 0 5px rgba(41, 55, 241,.1);
 	animation: glow2 800ms ease-out infinite alternate;
 }
 @keyframes glow2 {
-	0% {
-        background:rgb(178,182,245) ;
-        box-shadow: 0 0 20px rgba(6, 23, 247, .9);
-    }    
-    100% {
-        background:#cafefe ;
-        box-shadow: 0 0 60px rgba(41, 55, 241, .75);
+	100% {
+        background: rgba(0,0,255, 0.4);
+        box-shadow: 0 0 30px rgb(0,0,255),inset 0 0 20px rgba(41, 55, 241,.4), 0 2px 0 #000;
     }
 }
 .star3 {
-	width:2px;
-	height:2px;
+	width:10px;
+	height:10px;
 	border-radius:50%;
 	position: absolute;
+	background: rgba(0,0,255, 0.1);
 	top: 376px;
     right: 54px;
 	box-shadow: 0 0 100px rgba(41, 55, 241, .9);
 	animation: glow3 500ms ease-out infinite alternate;
 }
 @keyframes glow3 {
-	0% {
-        background:rgb(178,182,245) ;
-        box-shadow: 0 0 20px rgba(6, 23, 247, .9);
-    }    
-    100% {
-        background:#cafefe ;
-        box-shadow: 0 0 60px rgba(41, 55, 241, .75);
+	100% {
+        background: rgba(0,0,255, 0.4);
+        box-shadow: 0 0 40px rgb(0,0,255),inset 0 0 5px rgba(41, 55, 241,.1), 0 2px 0 #000;
     }
 }
 .star4 {
-	width:2px;
-	height:2px;
+	width:10px;
+	height:10px;
 	border-radius:50%;
 	position: absolute;
+	background: rgba(0,0,255, 0.1);
 	bottom: 113px;
     left: 20px;
 	box-shadow: 0 0 100px rgba(41, 55, 241, .9);
 	animation: glow4 800ms ease-out infinite alternate;
 }
 @keyframes glow4 {
-	0% {
-        background:rgb(178,182,245) ;
-        box-shadow: 0 0 10px rgba(6, 23, 247, .9);
-    }    
-    100% {
-        background:#cafefe ;
-        box-shadow: 0 0 20px rgba(41, 55, 241, .75);
+	100% {
+        background: rgba(0,0,255, 0.4);
+        box-shadow: 0 0 40px rgb(0,0,255),inset 0 0 5px rgba(41, 55, 241,.1), 0 2px 0 #000;
     }
 }
 .logo {
@@ -170,7 +177,7 @@ body {
 .logo img {
 	width:100%;
 }
-.fingerprint-wrap {
+.fingerprint-wrap ,.slider-set{
 	position: absolute;
 	left: 50%;
 	transform:translate(-50%,-50%);
@@ -181,23 +188,16 @@ body {
 }
 .slider-set {
 	position: absolute;
-	top:5%;
-	left:50%;
-	transform:translateX(-50%);
-	width: 74%;
-	height: 70px;
-	background:-webkit-gradient(linear, 0 0, 0 bottom, from(rgba(113,175,240,0.7)), to(rgba(113,175,240,0.1))); 
-	animation: moveSet 900ms  linear infinite alternate;
+	top: 20px;
+	box-shadow: 0 0 5px rgba(73,150,193,0.4);
+	animation: moveSet 2s linear infinite alternate;
 }
-@keyframes moveSet {
-	0% {
-        top:20px;
-    }    
+@keyframes moveSet {    
     100% {
-        top: 120px;
+        top: 220px;
     }
 }
-.slider-set:before {
+/*.slider-set:before {
 	content:"";
 	width: 10px;
 	height:2px;
@@ -216,7 +216,7 @@ body {
 	top: 0;
 	right:0;
 	z-index: -10;
-}
+}*/
 .hold {
 	position: absolute;
 	top: 48%;
@@ -250,6 +250,7 @@ body {
 	font-size: 14px;
 }
 .next {
+	bottom: 14px;
 	position: absolute;
 	left: 50%;
 	transform:translateX(-50%);
@@ -317,30 +318,79 @@ body {
 	text-align: center;
 }
 .ball-wrap {
-	transform: rotateZ(-45deg);
-	animation: ballR 1s linear infinite alternate;
+	/*animation: ballR 1s linear infinite alternate;*/
 }
-@keyframes ballR {
-	0% {
-        transform: rotateZ(-45deg);
-    }    
+.rotate-ball1 {
+	transform: rotateZ(-45deg);
+	animation: ballR 2.4s linear infinite alternate;
+}
+.rotate-ball2 {
+	transform: rotateZ(45deg);
+	animation: ballR 2s linear infinite alternate;
+}
+.rotate-ball3 {
+	transform: rotateZ(80deg);
+	animation: ballR 2.1s linear infinite alternate;
+}
+.rotate-ball4 {
+	transform: rotateZ(-50deg);
+	animation: ballR 1.7s linear infinite alternate;
+}
+.rotate-ball5 {
+	transform: rotateZ(40deg);
+	animation: ballR 2.3s linear infinite alternate;
+}
+.rotate-ball6 {
+	transform: rotateZ(40deg);
+	animation: ballR 2s linear infinite alternate;
+}
+.rotate-ball7 {
+	transform: rotateZ(40deg);
+	animation: ballR 2.2s linear infinite alternate;
+}
+@keyframes ballR {   
     100% {
-        transform: rotateZ(45deg);
+        transform: rotateZ(0deg);
     }
 }
 .ball-in {
-	transform: rotateZ(45deg);
+	/*transform: rotateZ(45deg);*/
 	transform-origin: 50% 50%;
 	top: 6%;
     left: 8%;
-	animation: ballL 1s linear infinite alternate;
+	/*animation: ballL 1s linear infinite alternate;*/
 }
-@keyframes ballL {
-	0% {
-        transform: rotateZ(45deg);
-    }    
+.rotate-in1 {
+	transform: rotateZ(45deg);
+	animation: ballR 2.4s linear infinite alternate;
+}
+.rotate-in2{
+	transform: rotateZ(-45deg);
+	animation: ballR 2s linear infinite alternate;
+}
+.rotate-in3 {
+	transform: rotateZ(-80deg);
+	animation: ballR 2.1s linear infinite alternate;
+}
+.rotate-in4 {
+	transform: rotateZ(50deg);
+	animation: ballR 1.7s linear infinite alternate;
+}
+.rotate-in5 {
+	transform: rotateZ(-40deg);
+	animation: ballR 2.3s linear infinite alternate;
+}
+.rotate-in6 {
+	transform: rotateZ(-40deg);
+	animation: ballR 2s linear infinite alternate;
+}
+.rotate-in7 {
+	transform: rotateZ(-40deg);
+	animation: ballR 2.2s linear infinite alternate;
+}
+@keyframes ballL {   
     100% {
-        transform: rotateZ(-45deg);
+        transform: rotateZ(0deg);
     }
 }
 .shi .gbiao {
@@ -352,7 +402,7 @@ body {
 .pop-wrap {
 	position: relative;
 }
-.contect ,.erwei,.pop-cir,.pop-in,.pop-out,.address-img{
+.contect ,.erwei,.pop-cir,.address-img{
 	position: absolute;
 	left: 50%;
 	transform:translateX(-50%);
@@ -374,16 +424,26 @@ body {
 	border-radius: 50%;
     box-shadow:0 2px 15px rgba(222,219,219,0.1);
 }
-/*.pop-out {
+.pop-out {
+	position: absolute;
 	transform: rotateZ(135deg);
-	animation: ballO 1.5s linear infinite alternate;
+	transform-origin: 50% 50%;
+	animation: ballO 3s linear infinite alternate;
 }
-@keyframes ballO {
-	0% {
-        transform: rotateZ(135deg);
-    }    
+.pop-in {
+	position: absolute;
+	transform: rotateZ(-135deg);
+	transform-origin: 50% 50%;
+	animation: ballI 3s linear infinite alternate;
+}
+@keyframes ballO {    
     100% {
         transform: rotateZ(-135deg);
     }
-}*/
+}
+@keyframes ballI {    
+    100% {
+        transform: rotateZ(135deg);
+    }
+}
 
