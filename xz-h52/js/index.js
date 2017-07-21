@@ -108,7 +108,7 @@ $(function(){
 
 	}
 	touchFinger()
-	
+	writeFont()
 	function writeFont() {
 		var str_shi = '以时尚科技引领潮流';
 			var str_jihe = '集合线上线下为一体';
@@ -117,10 +117,10 @@ $(function(){
 			var hangshu = 1;
 			$(".shi .gbiao").show();
 			var mysetT =  setInterval(function(){
-					if(hangshu == 1&&jishu<str_shi.length){
+					if(hangshu == 1 && jishu<str_shi.length){
 						$(".shi .txtbox").html($(".shi .txtbox").html()+str_shi[jishu])
 						jishu++;
-						return
+						return;
 					}else{
 						if(hangshu == 1){
 							hangshu =2;
@@ -149,7 +149,7 @@ $(function(){
 						$(".tigong .gbiao").hide()
 						clearInterval(mysetT)
 					}
-			},200)
+			},150)
 		}
 	getDialog()
 	function getDialog() {

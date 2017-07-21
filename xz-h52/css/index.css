@@ -314,7 +314,7 @@ body {
 }
 .inter {
 	position: absolute;
-    margin-top: 95%;
+    margin-top: 97%;
     top: 0;
     width: 100%;
     height: 75px;
@@ -329,6 +329,9 @@ body {
 	position: absolute;
 	left: 50%;
 	transform:translateX(-50%);
+}
+.ball-dia .ball-text>p {
+	text-align: center;
 }
 .ball {
 	position: absolute;
@@ -359,16 +362,16 @@ body {
 .ball-re2 {
 	position: absolute;
 	top: 6%;
-    left: 39%;
+    left: 40%;
 }
 .ball-re3 {
 	position: absolute;
-	top: 18%;
+	top: 19%;
     left: 67%;
 }
 .ball-re4 {
 	position: absolute;
-	top: 32%;
+	top: 35%;
     left: 31%;
 }
 .ball-re5 {
@@ -387,7 +390,7 @@ body {
     left: 10%;
 }
 .text {
-	margin: 5px auto 0;
+	margin: 7px auto 0;
     width: 74px;
 }
 .text>p {
