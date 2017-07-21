@@ -1,0 +1,360 @@
+* {
+	padding: 0;
+	margin:0;
+}
+html {
+	width: 100%;
+	height: 100%;
+}
+body {
+	font-family: '黑体';
+	font-size: 14px;
+	color: #fff;
+	width: 100%;
+	height: 100%;
+	
+}
+.swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.block {
+	display: block;
+}
+.none {
+	display: none;
+}
+.xz .bg-black {
+	background: #000;
+}
+.xz {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.home{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: url(../img/base.jpg);
+	background-size: contain;
+}
+.main {
+	background: url(../img/base.jpg);
+	background-size: contain;
+}
+.home{
+	z-index: 10;
+}
+.main {
+	display: none;
+}
+.home-wrap ,.light-wrap,.content-pos {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.home-star ,.home-content{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.star1 {
+	width:1px;
+	height:1px;
+	border-radius:50%;
+	position: absolute;
+	top: 16px;
+	left: 24px;
+	box-shadow: 0 0 30px rgba(0,0,255, .9);
+	animation: glow1 800ms ease-out infinite alternate;
+}
+@keyframes glow1 {
+	0% {
+		width:1px;
+		height:1px;
+        background: #cafefe;
+        box-shadow: 0 0 5px rgb(0,0,255), inset 0 0 5px rgba(41, 55, 241,.1), 0 2px 0 #000;
+    }    
+    100% {
+        width:3px;
+		height:3px;
+        background: #fff;
+        box-shadow: 0 0 30px rgb(0,0,255),inset 0 0 5px rgba(41, 55, 241,.1), 0 2px 0 #000;
+    }
+}
+.star2 {
+	width:3px;
+	height:3px;
+	border-radius:50%;
+	position: absolute;
+	top: 323px;
+	left: 40px;
+	box-shadow: 0 0 100px rgba(41, 55, 241, .9);
+	animation: glow2 800ms ease-out infinite alternate;
+}
+@keyframes glow2 {
+	0% {
+        background:rgb(178,182,245) ;
+        box-shadow: 0 0 20px rgba(6, 23, 247, .9);
+    }    
+    100% {
+        background:#cafefe ;
+        box-shadow: 0 0 60px rgba(41, 55, 241, .75);
+    }
+}
+.star3 {
+	width:2px;
+	height:2px;
+	border-radius:50%;
+	position: absolute;
+	top: 376px;
+    right: 54px;
+	box-shadow: 0 0 100px rgba(41, 55, 241, .9);
+	animation: glow3 500ms ease-out infinite alternate;
+}
+@keyframes glow3 {
+	0% {
+        background:rgb(178,182,245) ;
+        box-shadow: 0 0 20px rgba(6, 23, 247, .9);
+    }    
+    100% {
+        background:#cafefe ;
+        box-shadow: 0 0 60px rgba(41, 55, 241, .75);
+    }
+}
+.star4 {
+	width:2px;
+	height:2px;
+	border-radius:50%;
+	position: absolute;
+	bottom: 113px;
+    left: 20px;
+	box-shadow: 0 0 100px rgba(41, 55, 241, .9);
+	animation: glow4 800ms ease-out infinite alternate;
+}
+@keyframes glow4 {
+	0% {
+        background:rgb(178,182,245) ;
+        box-shadow: 0 0 10px rgba(6, 23, 247, .9);
+    }    
+    100% {
+        background:#cafefe ;
+        box-shadow: 0 0 20px rgba(41, 55, 241, .75);
+    }
+}
+.logo {
+	position: absolute;
+	/*top: 8%;*/
+	left:50%;
+	transform:translateX(-50%);
+}
+.logo img {
+	width:100%;
+}
+.fingerprint-wrap {
+	position: absolute;
+	left: 50%;
+	transform:translate(-50%,-50%);
+	background-size: cover;
+}
+.fingerprint {
+	position: relative;
+}
+.slider-set {
+	position: absolute;
+	top:5%;
+	left:50%;
+	transform:translateX(-50%);
+	width: 74%;
+	height: 50px;
+	background:-webkit-gradient(linear, 0 0, 0 bottom, from(rgba(113,175,240,0.7)), to(rgba(113,175,240,0.1))); 
+	animation: moveSet 800ms  infinite alternate;
+}
+@keyframes moveSet {
+	0% {
+        top:20px;
+    }    
+    100% {
+        top: 80px;
+    }
+}
+.slider-set:before {
+	content:"";
+	width: 10px;
+	height:2px;
+	background: #fff;
+	position: absolute;
+	top: 0;
+	left:0;
+	z-index: -10;
+}
+.slider-set:after {
+	content:"";
+	width: 10px;
+	height:2px;
+	background: #fff;
+	position: absolute;
+	top: 0;
+	right:0;
+	z-index: -10;
+}
+.hold {
+	position: absolute;
+	top: 48%;
+	left: 12%;
+}
+.hold img {
+	width: 70%;
+}
+.slidepage {
+	position: relative;
+}
+.name {
+	position: absolute;
+	left: 50%;
+	transform:translateX(-50%);
+	text-align: center;
+}
+.name img {
+	width: 100%;
+}
+.inter {
+	position: absolute;
+	bottom: 210px;
+	width: 100%;
+	height:75px;
+}
+.inter>p {
+	line-height: 25px;
+	text-align: center;
+}
+.next {
+	position: absolute;
+	left: 50%;
+	transform:translateX(-50%);
+}
+.ball {
+	position: absolute;
+	width: 100%;
+	height:100%;
+}
+.ball-in,.out,.qiu{
+	position: absolute;
+}
+.ball-pos {
+	position: relative;
+	width:100%;
+	height: 100%;
+}
+.web {
+	position: relative;
+}
+.out,.qiu {
+	top:50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.ball-re {
+	position: absolute;
+	top: 8%;
+	left: 4%;
+}
+.ball-re2 {
+	position: absolute;
+	top: 4%;
+	left: 36%;
+}
+.ball-re3 {
+	position: absolute;
+	top: 12%;
+    left: 66%
+}
+.ball-re4 {
+	position: absolute;
+	top: 33%;
+    left: 31%
+}
+.ball-re5 {
+	position: absolute;
+	top: 57%;
+    left: 66%;
+}
+.ball-re6 {
+	position: absolute;
+	top: 70%;
+    left: 36%;
+}
+.ball-re7 {
+	position: absolute;
+	top: 73%;
+    left: 8%;
+}
+.text {
+	margin-top:5px;
+}
+.text>p {
+	text-align: center;
+}
+.ball-wrap {
+	transform: rotateZ(-45deg);
+	animation: ballR 1s linear infinite alternate;
+}
+@keyframes ballR {
+	0% {
+        transform: rotateZ(-45deg);
+    }    
+    100% {
+        transform: rotateZ(45deg);
+    }
+}
+.ball-in {
+	transform: rotateZ(45deg);
+	transform-origin: 50% 50%;
+	top: 6%;
+    left: 8%;
+	animation: ballL 1s linear infinite alternate;
+}
+@keyframes ballL {
+	0% {
+        transform: rotateZ(45deg);
+    }    
+    100% {
+        transform: rotateZ(-45deg);
+    }
+}
+.ball1-content {
+	width: 200px;
+	height: 300px;
+	border:1px solid #ccc;
+	background: #abcdef
+}
+.shi .gbiao {
+	display: none;
+}
+.jihe,.tigong{
+	display: none;
+} 
+.contect ,.erwei{
+	position: absolute;
+	left: 50%;
+	transform:translateX(-50%);
+}
