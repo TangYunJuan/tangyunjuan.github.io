@@ -60,8 +60,28 @@ $(function() {
 	new MoveImg($('.qiu5'),"img/shuju.png")
 	new MoveImg($('.qiu6'),"img/yunying.png")
 	new MoveImg($('.qiu7'),"img/xianxia.png")
+	new MoveImg($('.address-img'),"img/address.png","760")
 	new MoveImg($('.contect'),"img/lianxi.png","80")
 	new MoveImg($('.erwei'),"img/er.png","200")
+	new MoveImg($('.pop-cir'),"img/keji1.png","124")
+	new MoveImg($('.pop-in'),"img/keji2.png","108")
+	new MoveImg($('.pop-out'),"img/keji3.png","80")	
+	new MoveImg($('.ball1-content1'),"img/webbase.png")
+	new MoveImg($('.ball1-content2'),"img/wecahtbase.png")
+	new MoveImg($('.ball1-content3'),"img/app.png")
+	new MoveImg($('.ball1-content4'),"img/yinbase.png")
+	new MoveImg($('.ball1-content5'),"img/shujubase.png")
+	new MoveImg($('.ball1-content6'),"img/yunbase.png")
+	new MoveImg($('.ball1-content7'),"img/xianxiabase.png")
+	new MoveImg($('.pop-img1'),"img/webball.png","60")
+	new MoveImg($('.pop-img2'),"img/wechatball.png","60")
+	new MoveImg($('.pop-img3'),"img/appball.png","60")
+	new MoveImg($('.pop-img4'),"img/yinyongbase.png","60")
+	new MoveImg($('.pop-img5'),"img/shujuball.png","60")
+	new MoveImg($('.pop-img6'),"img/yunball.png","60")
+	new MoveImg($('.pop-img7'),"img/xiaxiaball.png","60")
+	new MoveImg($('.close'),"img/close.png","40","490")
+
 
 
 
@@ -127,9 +147,24 @@ $(function() {
 						$(".tigong .gbiao").hide()
 						clearInterval(mysetT)
 					}
-					console.log(1)
-
 			},200)
 		}
+	getDialog()
+	function getDialog() {
+		var ballArr = []
+		$(".ball-dia").each(function(index) {
+			ballArr.push($(this))
+			// console.log(ballArr)
+			var _this = $(this);
+			var _index = index;
+			console.log(index)
+			$(this).on("touchstart",function() {
+				$(this).parent().children().eq(_index+7).show();
+			})
+			$(".close").on("touchstart",function() {
+				_this.parent().children().eq(_index+7).hide();
+			})
+		})
+	}
 	
 })
