@@ -96,7 +96,7 @@ $(function() {
 		})
 		$(".fingerprint-wrap").on('touchend',function(e) {
 			touchEnd = e.timeStamp;
-			if(touchEnd - touchStart > 300) {
+			if(touchEnd - touchStart > 100) {
 				$('.home-wrap').hide();
 				$('.home').addClass("bg-black").fadeOut().delay(200);
 				$(".main").fadeIn();
