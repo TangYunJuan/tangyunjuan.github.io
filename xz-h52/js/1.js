@@ -54,19 +54,19 @@ function setCanvas() {
 		        dot.paint();
 	        })
 	       	if (!pause) {
-				if ("requestAnimationFrame" in window) {
-					// requestAnimationFrame(animate);//启动 小球 动画 类似setTimeout
-					setTimeout(animate,16)
-				}
-				else if ("webkitRequestAnimationFrame" in window) {
-					webkitRequestAnimationFrame(animate);
-				}
-				else if ("msRequestAnimationFrame" in window) {
-					msRequestAnimationFrame(animate);
-				}
-				else if ("mozRequestAnimationFrame" in window) {
-					mozRequestAnimationFrame(animate);
-				}
+	       		setTimeout(animate,50)
+				// if ("requestAnimationFrame" in window) {
+				// 	// requestAnimationFrame(animate);//启动 小球 动画 类似setTimeout
+				// }
+				// else if ("webkitRequestAnimationFrame" in window) {
+				// 	webkitRequestAnimationFrame(animate);
+				// }
+				// else if ("msRequestAnimationFrame" in window) {
+				// 	msRequestAnimationFrame(animate);
+				// }
+				// else if ("mozRequestAnimationFrame" in window) {
+				// 	mozRequestAnimationFrame(animate);
+				// }
 			}
 		}
 
