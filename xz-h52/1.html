@@ -1,7 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!DOCTYPE>
+<html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1.0, user-scalable=no" />
     <style>
         #cas{
             display: block;
@@ -100,8 +101,8 @@ function getimgData(theyImg) {
     var dots = [];
     console.log('画布宽度',imgData.width,imgData.height)
     console.log('画布点',imgData.data)
-    for (var x = 0; x < imgData.width; x += 4) {
-        for (var y = 0; y < imgData.height; y += 4) {
+    for (var x = 0; x < imgData.width; x += 6) {
+        for (var y = 0; y < imgData.height; y += 6) {
             var i = (y * imgData.width + x) * 4;
             // console.log('取点',i)
             // console.log('取点',imgData.data[i])
@@ -148,6 +149,6 @@ Dot.prototype = {
            }
     </script>
 
-    <div><canvas id='cas' width="375" height="667">浏览器不支持canvas</canvas></div>
+    <div><canvas id='cas' width="375px" height="667px">浏览器不支持canvas</canvas></div>
 </body>
 </html>
