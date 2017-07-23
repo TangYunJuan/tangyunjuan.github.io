@@ -88,24 +88,33 @@ $(function(){
 
 	function touchFinger() {
 		var touchStart, touchEnd, touchTime
-		$(".fingerprint-wrap").on('touchstart',function(e) {
-			touchStart = e.timeStamp;
-			e.preventDefault();
-		})
-		$(".fingerprint-wrap").on('touchmove',function(e) {
-			 event.preventDefault();
-		})
-		$(".fingerprint-wrap").on('touchend',function(e) {
-			touchEnd = e.timeStamp;
-			if(touchEnd - touchStart > 50) {
-				$('.home-wrap').hide();
+		// $(".fingerprint-wrap").on('touchstart',function(e) {
+		// 	touchStart = e.timeStamp;
+		// 	e.preventDefault();
+		// })
+		// $(".fingerprint-wrap").on('touchmove',function(e) {
+		// 	 event.preventDefault();
+		// })
+		// $(".fingerprint-wrap").on('touchend',function(e) {
+		// 	touchEnd = e.timeStamp;
+		// 	if(touchEnd - touchStart > 50) {
+		// 		// $('.home-wrap').hide();
+		// 		$('.home').addClass("bg-black").fadeOut();
+		// 		$(".main").fadeIn();
+		// 		setCanvas()
+		// 		// setTimeout(setCanvas,100)
+		// 		// setTimeout(writeFont,1800)
+		// 		writeFont()
+		// 	}
+		// })
+		$(".fingerprint-wrap").on('click',function() {
+			$('.home-wrap').hide();
 				$('.home').addClass("bg-black").fadeOut();
 				$(".main").fadeIn();
 				setCanvas()
 				// setTimeout(setCanvas,100)
 				// setTimeout(writeFont,1800)
 				writeFont()
-			}
 		})
 
 	}
@@ -183,8 +192,8 @@ $(function(){
 	// $(".fingerprint-wrap").on("touchstart", function(e) { e.preventDefault(); };
 	$(".erwei").css("width", $(".erwei").width()*ZOOMNUM)
 	$(".erwei").css("top",170*ZOOMNUM);
-	$(".inter").css("top",0);
+	$(".inter").css("top",620*ZOOMNUM);
 
-	console.log($(".erwei").width())
+	// console.log($(".erwei").width())
 })
 
