@@ -249,6 +249,10 @@ body {
 .logo img {
 	width:100%;
 }
+.fingerprint-wrap {
+	-webkit-user-select: none;/*禁用手机浏览器的用户选择功能 */
+	-moz-user-select: none;
+}
 .fingerprint-wrap ,.slider-set{
 	position: absolute;
 	left: 50%;
@@ -485,6 +489,9 @@ body {
 	position: absolute;
 	left: 50%;
 	transform:translateX(-50%);
+}
+.erwei {
+	width: 484px;
 }
 .kuang {
 	position: absolute;

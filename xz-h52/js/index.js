@@ -62,7 +62,6 @@ $(function(){
 	new MoveImg($('.qiu7'),"img/xianxia.png")
 	new MoveImg($('.address-img'),"img/address.png","720")
 	new MoveImg($('.contect'),"img/lianxi.png","70")
-	new MoveImg($('.erwei'),"img/er.png","170")
 	new MoveImg($('.pop-cir'),"img/keji1.png","124")
 	new MoveImg($('.pop-in'),"img/keji2.png","108","90")
 	new MoveImg($('.pop-out'),"img/keji3.png","80","63")	
@@ -90,6 +89,7 @@ $(function(){
 		var touchStart, touchEnd, touchTime
 		$(".fingerprint-wrap").on('touchstart',function(e) {
 			touchStart = e.timeStamp;
+			e.preventDefault();
 		})
 		$(".fingerprint-wrap").on('touchmove',function(e) {
 			 event.preventDefault();
@@ -178,6 +178,10 @@ $(function(){
 			})
 		})
 	}
-	
+
+	// $(".fingerprint-wrap").on("touchstart", function(e) { e.preventDefault(); };
+	$(".erwei").css("width", $(".erwei").width()*ZOOMNUM)
+	$(".erwei").css("top",170*ZOOMNUM)
+	console.log($(".erwei").width())
 })
 

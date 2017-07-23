@@ -55,7 +55,8 @@ function setCanvas() {
 	        })
 	       	if (!pause) {
 				if ("requestAnimationFrame" in window) {
-					requestAnimationFrame(animate);//启动 小球 动画 类似setTimeout
+					// requestAnimationFrame(animate);//启动 小球 动画 类似setTimeout
+					setTimeout(animate,16)
 				}
 				else if ("webkitRequestAnimationFrame" in window) {
 					webkitRequestAnimationFrame(animate);
