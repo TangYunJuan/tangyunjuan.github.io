@@ -92,13 +92,23 @@ body {
 	width:1px; 
 	height: 1px;
 	border-radius: 50%;
+	-webkit-border-radius: 50%;
 	margin:50% 0 0 50%;
 	transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
 	background:#fff;
 	box-shadow:inset 0 0 5px rgba(41, 55, 241,.1);
+	-webkit-box-shadow:inset 0 0 5px rgba(41, 55, 241,.1);
 	animation: shaing 800ms ease-out infinite alternate;
+	-webkit-animation: shaing 800ms ease-out infinite alternate;
 }
 @keyframes shaing {
+	100% {
+		width: 2px;
+		height: 2px;
+	}
+}
+@-webkit-keyframes shaing {
 	100% {
 		width: 2px;
 		height: 2px;
@@ -108,12 +118,21 @@ body {
 	width:10px;
 	height:10px;
 	border-radius:50%;
+	-webkit-border-radius:50%;
 	position: absolute;
 	background: rgba(0,0,255, 0.1);
 	top: 16px;
 	left: 24px;
 	box-shadow: 0 0 100px rgba(41, 55, 241, .9);
+	-webkit-box-shadow: 0 0 100px rgba(41, 55, 241, .9);
 	animation: glow1 500ms ease-out infinite alternate;
+	-webkit-animation: glow1 500ms ease-out infinite alternate;
+}
+@keyframes glow1 {  
+    100% {
+        background: rgba(0,0,255, 0.4);
+        box-shadow: 0 0 40px rgb(0,0,255),inset 0 0 5px rgba(41, 55, 241,.1), 0 2px 0 #000;
+    }
 }
 @keyframes glow1 {  
     100% {
@@ -131,8 +150,9 @@ body {
     right: 54px;
 	box-shadow: 0 0 100px rgba(41, 55, 241, .9);
 	animation: glow2 500ms ease-out 0.3s infinite alternate;
+	-webkit-animation: glow2 500ms ease-out 0.3s infinite alternate;
 }
-@keyframes glow2 {
+@-webkit-keyframes glow2 {
 	100% {
         background: rgba(0,0,255, 0.4);
         box-shadow: 0 0 40px rgb(0,0,255),inset 0 0 5px rgba(41, 55, 241,.1), 0 2px 0 #000;
@@ -142,14 +162,23 @@ body {
 	width:10px;
 	height:10px;
 	border-radius:50%;
+	-webkit-border-radius:50%;
 	position: absolute;
 	background: rgba(0,0,255, 0.1);
 	top: 376px;
     right: 54px;
 	box-shadow: 0 0 100px rgba(41, 55, 241, .9);
+	-webkit-box-shadow: 0 0 100px rgba(41, 55, 241, .9);
 	animation: glow3 500ms ease-out 0.2s infinite alternate;
+	-webkit-animation: glow3 500ms ease-out 0.2s infinite alternate;
 }
 @keyframes glow3 {
+	100% {
+        background: rgba(0,0,255, 0.4);
+        box-shadow: 0 0 40px rgb(0,0,255),inset 0 0 5px rgba(41, 55, 241,.1), 0 2px 0 #000;
+    }
+}
+@-webkit-keyframes glow3 {
 	100% {
         background: rgba(0,0,255, 0.4);
         box-shadow: 0 0 40px rgb(0,0,255),inset 0 0 5px rgba(41, 55, 241,.1), 0 2px 0 #000;
@@ -159,14 +188,23 @@ body {
 	width:10px;
 	height:10px;
 	border-radius:50%;
+	-webkit-border-radius:50%;
 	position: absolute;
 	background: rgba(0,0,255, 0.1);
 	bottom: 113px;
     left: 20px;
 	box-shadow: 0 0 100px rgba(41, 55, 241, .9);
+	-webkit-box-shadow: 0 0 100px rgba(41, 55, 241, .9);
 	animation: glow4 500ms ease-out 0.4s infinite alternate;
+	-webkit-animation: glow4 500ms ease-out 0.4s infinite alternate;
 }
 @keyframes glow4 {
+	100% {
+        background: rgba(0,0,255, 0.4);
+        box-shadow: 0 0 40px rgb(0,0,255),inset 0 0 5px rgba(41, 55, 241,.1), 0 2px 0 #000;
+    }
+}
+@-webkit-keyframes glow4 {
 	100% {
         background: rgba(0,0,255, 0.4);
         box-shadow: 0 0 40px rgb(0,0,255),inset 0 0 5px rgba(41, 55, 241,.1), 0 2px 0 #000;
@@ -176,14 +214,23 @@ body {
 	width:10px;
 	height:10px;
 	border-radius:50%;
+	-webkit-border-radius:50%;
 	position: absolute;
 	background: rgba(0,0,255, 0.1);
 	bottom: 182px;
     left: 197px;
 	box-shadow: 0 0 100px rgba(41, 55, 241, .9);
+	-webkit-box-shadow: 0 0 100px rgba(41, 55, 241, .9);
 	animation: glow5 500ms ease-out 0.4s infinite alternate;
+	-webkit-animation: glow5 500ms ease-out 0.4s infinite alternate;
 }
 @keyframes glow5 {
+	100% {
+        background: rgba(0,0,255, 0.4);
+        box-shadow: 0 0 40px rgb(0,0,255),inset 0 0 5px rgba(41, 55, 241,.1), 0 2px 0 #000;
+    }
+}
+@-webkit-keyframes glow5 {
 	100% {
         background: rgba(0,0,255, 0.4);
         box-shadow: 0 0 40px rgb(0,0,255),inset 0 0 5px rgba(41, 55, 241,.1), 0 2px 0 #000;
@@ -199,8 +246,14 @@ body {
     left: 69px;
 	box-shadow: 0 0 100px rgba(41, 55, 241, .9);
 	animation: glow6 300ms ease-out  infinite alternate;
+	-webkit-animation: glow6 300ms ease-out  infinite alternate;
 }
 @keyframes glow6 {
+	100% {
+        background: rgba(0,0,255, 0.4);
+        box-shadow: 0 0 40px rgb(0,0,255),inset 0 0 5px rgba(41, 55, 241,.1), 0 2px 0 #000;
+    }
+}@-webkit-keyframes glow6 {
 	100% {
         background: rgba(0,0,255, 0.4);
         box-shadow: 0 0 40px rgb(0,0,255),inset 0 0 5px rgba(41, 55, 241,.1), 0 2px 0 #000;
@@ -216,8 +269,14 @@ body {
     right: 118px;
 	box-shadow: 0 0 100px rgba(41, 55, 241, .9);
 	animation: glow7 500ms ease-out 0.4s infinite alternate;
+	-webkit-animation: glow7 500ms ease-out 0.4s infinite alternate;
 }
 @keyframes glow7 {
+	100% {
+        background: rgba(0,0,255, 0.4);
+        box-shadow: 0 0 40px rgb(0,0,255),inset 0 0 5px rgba(41, 55, 241,.1), 0 2px 0 #000;
+    }
+}@-webkit-keyframes glow7 {
 	100% {
         background: rgba(0,0,255, 0.4);
         box-shadow: 0 0 40px rgb(0,0,255),inset 0 0 5px rgba(41, 55, 241,.1), 0 2px 0 #000;
@@ -233,8 +292,14 @@ body {
     left: 40px;
 	box-shadow: 0 0 100px rgba(41, 55, 241, .9);
 	animation: glow8 600ms ease-out 0.4s infinite alternate;
+	-webkit-animation: glow8 600ms ease-out 0.4s infinite alternate;
 }
 @keyframes glow8 {
+	100% {
+        background: rgba(0,0,255, 0.4);
+        box-shadow: 0 0 40px rgb(0,0,255),inset 0 0 5px rgba(41, 55, 241,.1), 0 2px 0 #000;
+    }
+}@-webkit-keyframes glow8 {
 	100% {
         background: rgba(0,0,255, 0.4);
         box-shadow: 0 0 40px rgb(0,0,255),inset 0 0 5px rgba(41, 55, 241,.1), 0 2px 0 #000;
@@ -245,6 +310,7 @@ body {
 	/*top: 8%;*/
 	left:50%;
 	transform:translateX(-50%);
+	-webkit-transform:translateX(-50%);
 }
 .logo img {
 	width:100%;
@@ -257,6 +323,7 @@ body {
 	position: absolute;
 	left: 50%;
 	transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
 	background-size: cover;
 }
 .fingerprint {
@@ -269,8 +336,14 @@ body {
 	top: 14%;
 	box-shadow: 0 0 5px rgba(73,150,193,0.4);
 	animation: moveSet 2s linear infinite alternate;
+	-webkit-animation: moveSet 2s linear infinite alternate;
 }
 @keyframes moveSet {    
+    100% {
+    	position: absolute;
+        top: 88%;
+    }
+}@-webkit-keyframes moveSet {    
     100% {
     	position: absolute;
         top: 88%;
@@ -311,6 +384,7 @@ body {
 	position: absolute;
 	left: 50%;
 	transform:translateX(-50%);
+	-webkit-transform:translateX(-50%);
 	text-align: center;
 }
 .name img {
@@ -318,8 +392,6 @@ body {
 }
 .inter {
 	position: absolute;
-    margin-top: 97%;
-    top: 0;
     width: 100%;
     height: 75px;
 }
@@ -333,6 +405,7 @@ body {
 	position: absolute;
 	left: 50%;
 	transform:translateX(-50%);
+	-webkit-transform:translateX(-50%);
 }
 .ball-dia .ball-text>p {
 	text-align: center;
@@ -357,6 +430,7 @@ body {
 	top:50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
 }
 .ball-re {
 	position: absolute;
@@ -402,78 +476,123 @@ body {
 }
 .ball-wrap {
 	/*animation: ballR 1s linear infinite alternate;*/
+	/*-webkit-animation: ballR 1s linear infinite alternate;*/
 }
 .rotate-ball1 {
 	transform: rotateZ(-45deg);
+	-webkit-transform: rotateZ(-45deg);
 	animation: ballR 2.4s linear infinite alternate;
+	-webkit-animation: ballR 2.4s linear infinite alternate;
 }
 .rotate-ball2 {
 	transform: rotateZ(45deg);
+	-webkit-transform: rotateZ(45deg);
 	animation: ballR 2s linear infinite alternate;
+	-webkit-animation: ballR 2s linear infinite alternate;
 }
 .rotate-ball3 {
 	transform: rotateZ(80deg);
+	-webkit-transform: rotateZ(80deg);
 	animation: ballR 2.1s linear infinite alternate;
+	-webkit-animation: ballR 2.1s linear infinite alternate;
 }
 .rotate-ball4 {
 	transform: rotateZ(-50deg);
+	-webkit-transform: rotateZ(-50deg);
 	animation: ballR 1.7s linear infinite alternate;
+	-webkit-animation: ballR 1.7s linear infinite alternate;
 }
 .rotate-ball5 {
 	transform: rotateZ(40deg);
+	-webkit-transform: rotateZ(40deg);
 	animation: ballR 2.3s linear infinite alternate;
+	-webkit-animation: ballR 2.3s linear infinite alternate;
 }
 .rotate-ball6 {
 	transform: rotateZ(40deg);
+	-webkit-transform: rotateZ(40deg);
 	animation: ballR 2s linear infinite alternate;
+	-webkit-animation: ballR 2s linear infinite alternate;
 }
 .rotate-ball7 {
 	transform: rotateZ(40deg);
+	-webkit-transform: rotateZ(40deg);
 	animation: ballR 2.2s linear infinite alternate;
+	-webkit-animation: ballR 2.2s linear infinite alternate;
 }
 @keyframes ballR {   
     100% {
         transform: rotateZ(0deg);
+        -webkit-transform: rotateZ(0deg);
+    }
+}@-webkit-keyframes ballR {   
+    100% {
+        transform: rotateZ(0deg);
+        -webkit-transform: rotateZ(0deg);
     }
 }
 .ball-in {
 	/*transform: rotateZ(45deg);*/
+	/*-webkit-transform: rotateZ(45deg);*/
 	transform-origin: 50% 50%;
+	-webkit-transform-origin: 50% 50%;
 	top: 6%;
     left: 8%;
 	/*animation: ballL 1s linear infinite alternate;*/
+	/*-webkit-animation: ballL 1s linear infinite alternate;*/
 }
 .rotate-in1 {
 	transform: rotateZ(45deg);
+	-webkit-transform: rotateZ(45deg);
 	animation: ballR 2.4s linear infinite alternate;
+	-webkit-animation: ballR 2.4s linear infinite alternate;
 }
 .rotate-in2{
 	transform: rotateZ(-45deg);
+	-webkit-transform: rotateZ(-45deg);
 	animation: ballR 2s linear infinite alternate;
+	-webkit-animation: ballR 2s linear infinite alternate;
 }
 .rotate-in3 {
 	transform: rotateZ(-80deg);
+	-webkit-transform: rotateZ(-80deg);
 	animation: ballR 2.1s linear infinite alternate;
+	-webkit-animation: ballR 2.1s linear infinite alternate;
 }
 .rotate-in4 {
 	transform: rotateZ(50deg);
+	-webkit-transform: rotateZ(50deg);
 	animation: ballR 1.7s linear infinite alternate;
+	-webkit-animation: ballR 1.7s linear infinite alternate;
 }
 .rotate-in5 {
 	transform: rotateZ(-40deg);
+	-webkit-transform: rotateZ(-40deg);
 	animation: ballR 2.3s linear infinite alternate;
+	-webkit-animation: ballR 2.3s linear infinite alternate;
 }
 .rotate-in6 {
 	transform: rotateZ(-40deg);
+	-webkit-transform: rotateZ(-40deg);
 	animation: ballR 2s linear infinite alternate;
+	-webkit-animation: ballR 2s linear infinite alternate;
 }
 .rotate-in7 {
 	transform: rotateZ(-40deg);
+	-webkit-transform: rotateZ(-40deg);
 	animation: ballR 2.2s linear infinite alternate;
+	-webkit-animation: ballR 2.2s linear infinite alternate;
 }
 @keyframes ballL {   
     100% {
         transform: rotateZ(0deg);
+        -webkit-transform: rotateZ(0deg);
+    }
+}
+@-webkit-keyframes ballL {   
+    100% {
+        transform: rotateZ(0deg);
+        -webkit-transform: rotateZ(0deg);
     }
 }
 .shi .gbiao {
@@ -489,6 +608,7 @@ body {
 	position: absolute;
 	left: 50%;
 	transform:translateX(-50%);
+	-webkit-transform:translateX(-50%);
 }
 .erwei {
 	width: 484px;
@@ -498,6 +618,7 @@ body {
 	left: 50%;
 	top: 47%;
 	transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
 	display: none;
 }
 .close {
@@ -507,29 +628,49 @@ body {
 	position: absolute;
 	left: 50%;
 	transform:translateX(-50%);
+	-webkit-transform:translateX(-50%);
 	border-radius: 50%;
     box-shadow:0 2px 15px rgba(222,219,219,0.1);
 }
 .pop-out {
 	position: absolute;
 	transform: rotateZ(90deg);
+	-webkit-transform: rotateZ(90deg);
 	transform-origin: 50% 50%;
+	-webkit-transform-origin: 50% 50%;
 	animation: ballO 3s linear infinite alternate;
+	-webkit-animation: ballO 3s linear infinite alternate;
 }
 .pop-in {
 	position: absolute;
 	transform: rotateZ(-90deg);
+	-webkit-transform: rotateZ(-90deg);
 	transform-origin: 50% 50%;
+	-webkit-transform-origin: 50% 50%;
 	animation: ballI 5s linear infinite alternate;
+	-webkit-animation: ballI 5s linear infinite alternate;
 }
 @keyframes ballO {    
     100% {
         transform: rotateZ(-90deg);
+        -webkit-transform: rotateZ(-90deg);
     }
 }
 @keyframes ballI {    
     100% {
         transform: rotateZ(90deg);
+        -webkit-transform: rotateZ(90deg);
     }
 }
-
+@-webkit-keyframes ballO {    
+    100% {
+        transform: rotateZ(-90deg);
+        -webkit-transform: rotateZ(-90deg);
+    }
+}
+@-webkit-keyframes ballI {    
+    100% {
+        transform: rotateZ(90deg);
+        -webkit-transform: rotateZ(90deg);
+    }
+}

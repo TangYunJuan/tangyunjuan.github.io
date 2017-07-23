@@ -181,7 +181,8 @@ $(function(){
 
 	// $(".fingerprint-wrap").on("touchstart", function(e) { e.preventDefault(); };
 	$(".erwei").css("width", $(".erwei").width()*ZOOMNUM)
-	$(".erwei").css("top",170*ZOOMNUM)
+	$(".erwei").css("top",170*ZOOMNUM);
+	$(".inter").css("top",620*ZOOMNUM);
 	console.log($(".erwei").width())
 })
 

@@ -54,7 +54,7 @@ function setCanvas() {
 		        dot.paint();
 	        })
 	       	if (!pause) {
-	       		setTimeout(animate,50)
+	       		setTimeout(animate,100)
 				// if ("requestAnimationFrame" in window) {
 				// 	// requestAnimationFrame(animate);//启动 小球 动画 类似setTimeout
 				// }
