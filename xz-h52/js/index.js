@@ -88,38 +88,39 @@ $(function(){
 
 	function touchFinger() {
 		var touchStart, touchEnd, touchTime
-		// $(".fingerprint-wrap").on('touchstart',function(e) {
-		// 	touchStart = e.timeStamp;
-		// 	e.preventDefault();
-		// })
-		// $(".fingerprint-wrap").on('touchmove',function(e) {
-		// 	 event.preventDefault();
-		// })
-		// $(".fingerprint-wrap").on('touchend',function(e) {
-		// 	touchEnd = e.timeStamp;
-		// 	if(touchEnd - touchStart > 50) {
-		// 		// $('.home-wrap').hide();
+		$(".fingerprint-wrap").on('touchstart',function(e) {
+			touchStart = e.timeStamp;
+			e.preventDefault();
+		})
+		$(".fingerprint-wrap").on('touchmove',function(e) {
+			 event.preventDefault();
+		})
+		$(".fingerprint-wrap").on('touchend',function(e) {
+			touchEnd = e.timeStamp;
+			if(touchEnd - touchStart > 50) {
+				$('.home-wrap').hide();
+				$('.home').addClass("bg-black").fadeOut();
+				$(".main").fadeIn();
+				
+				// setTimeout(setCanvas,100)
+				// setTimeout(writeFont,1800)
+				
+				swiperReady();
+			}
+		})
+		// $(".fingerprint-wrap").on('click',function() {
+		// 	$('.home-wrap').hide();
 		// 		$('.home').addClass("bg-black").fadeOut();
 		// 		$(".main").fadeIn();
 		// 		setCanvas()
 		// 		// setTimeout(setCanvas,100)
 		// 		// setTimeout(writeFont,1800)
 		// 		writeFont()
-		// 	}
 		// })
-		$(".fingerprint-wrap").on('click',function() {
-			$('.home-wrap').hide();
-				$('.home').addClass("bg-black").fadeOut();
-				$(".main").fadeIn();
-				setCanvas()
-				// setTimeout(setCanvas,100)
-				// setTimeout(writeFont,1800)
-				writeFont()
-		})
 
 	}
 	touchFinger()
-	function writeFont() {
+	window.writeFont = function () {
 		var str_shi = '以时尚科技引领潮流';
 			var str_jihe = '集合线上线下为一体';
 			var str_tigong = '提供全面且独具创意的一站式服务';
@@ -188,12 +189,56 @@ $(function(){
 			})
 		})
 	}
-
-	// $(".fingerprint-wrap").on("touchstart", function(e) { e.preventDefault(); };
 	$(".erwei").css("width", $(".erwei").width()*ZOOMNUM)
 	$(".erwei").css("top",170*ZOOMNUM);
 	$(".inter").css("top",620*ZOOMNUM);
 
-	// console.log($(".erwei").width())
+	function swiperReady(){
+		var mySwiper = new Swiper('.swiper-container', {
+			direction : 'vertical',
+			width: window.innerWidth,
+			height: window.innerHeight,
+			onInit: function(swiper){
+				console.log('ready',swiper)
+				setCanvas()
+
+			},
+			onSlideChangeEnd: function(swiper){
+				console.log('进入')
+				if(swiper.activeIndex == 1) {
+					moveHand()
+				      // alert(swiper.activeIndex) //切换结束时，告诉我现在是第几个slide
+				}
+			}
+		})
+	}
+	function moveHand() {
+		var handPos1Top = 170 * ZOOMNUM + "px";
+		var handPos1left = 50 * ZOOMNUM + "px";
+		var handPos2Top = 130 * ZOOMNUM + "px";
+		var handPos2left = 320 * ZOOMNUM + "px";
+		var handPos3Top = 280 * ZOOMNUM  + "px";
+		var handPos3Left = 480 * ZOOMNUM  + "px";
+		var handPos4Top = 460 * ZOOMNUM + "px";
+		var handPos4Left = 260 * ZOOMNUM + "px";
+		var handPos5Top = 580 * ZOOMNUM + "px";
+		var handPos5Left = 500 * ZOOMNUM + "px";
+		var handPos6Top = 760 * ZOOMNUM + "px";
+		var handPos6Left = 320 * ZOOMNUM + "px";
+		var handPos7Top = 800 * ZOOMNUM + "px";
+		var handPos7Left = 40 * ZOOMNUM + "px";
+		console.log(handPos1Top,handPos2Top,handPos3Top,handPos4Top,handPos5Top,handPos6Top,handPos7Top)
+		$(".hand").css({"top":handPos1Top,"left":handPos1left}).animate(
+			{top:handPos2Top,left:handPos2left},1000).animate(
+			{top:handPos3Top,left:handPos3Left},1000).animate(
+			{top:handPos4Top,left:handPos4Left},1000).animate(
+			{top:handPos5Top,left:handPos5Left},1000).animate(
+			{top:handPos6Top,left:handPos6Left},1000).animate(
+			{top:handPos7Top,left:handPos7Left},1000,function() {
+				$(".hand").hide()
+			})
+		
+	}
+
 })
 

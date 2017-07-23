@@ -26,6 +26,7 @@ function setCanvas() {
 				this.paint();
 			});
 	        animate();
+
 	    }
 	    		//计算帧速率
 		var lastTime;
@@ -42,6 +43,7 @@ function setCanvas() {
 		                dot.y = dot.dy;
 		                dot.z = dot.dz;
 		                pause = true;
+		                
 		                // if (thisTime - lastTime < -400) derection = false;
 		            } else {
 		                dot.x = dot.x + (dot.dx - dot.x) * 0.1;//朝向 文字位置
@@ -67,8 +69,11 @@ function setCanvas() {
 				// else if ("mozRequestAnimationFrame" in window) {
 				// 	mozRequestAnimationFrame(animate);
 				// }
+			}else{
+				writeFont();
 			}
 		}
+
 
 	}
 

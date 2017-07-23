@@ -397,7 +397,6 @@ body {
 	left:0;
     width: 100%;
     height: 75px;
-    z-index: 100;
     color: #fff;
 }
 .inter>p {
@@ -678,4 +677,9 @@ body {
         transform: rotateZ(90deg);
         -webkit-transform: rotateZ(90deg);
     }
+}
+.hand {
+	position: absolute;
+	/*top:0;
+	left:0;*/
 }
