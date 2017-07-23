@@ -81,6 +81,7 @@ $(function(){
 	new MoveImg($('.pop-img7'),"img/xiaxiaball.png","60")
 	new MoveImg($('.close'),"img/close.png","40","490")
 	new MoveImg($('.slider-set'),"img/sao.png")
+	new MoveImg($('.hand'),"img/la.png")
 
 
 
@@ -183,6 +184,7 @@ $(function(){
 	$(".erwei").css("width", $(".erwei").width()*ZOOMNUM)
 	$(".erwei").css("top",170*ZOOMNUM);
 	$(".inter").css("top",0);
+
 	console.log($(".erwei").width())
 })
 

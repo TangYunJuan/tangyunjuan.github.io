@@ -394,6 +394,7 @@ body {
 	position: absolute;
     width: 100%;
     height: 75px;
+    z-index: 100;
 }
 .inter>p {
 	line-height: 25px;

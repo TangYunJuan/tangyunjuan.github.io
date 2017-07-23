@@ -68,7 +68,7 @@
                 dot.paint();
             })
             if (!pause) {
-                setTimeout(animate,100)
+                setTimeout(animate,50)
                 // if ("requestAnimationFrame" in window) {
                 //  // requestAnimationFrame(animate);//启动 小球 动画 类似setTimeout
                 // }
@@ -102,7 +102,7 @@ function getimgData(theyImg) {
     console.log('画布宽度',imgData.width,imgData.height)
     console.log('画布点',imgData.data)
     for (var x = 0; x < imgData.width; x += 6) {
-        for (var y = 0; y < imgData.height; y += 6) {
+        for (var y = 0; y < imgData.height; y += 9) {
             var i = (y * imgData.width + x) * 4;
             // console.log('取点',i)
             // console.log('取点',imgData.data[i])
@@ -111,7 +111,7 @@ function getimgData(theyImg) {
             // console.log('>=128',imgData.data[i])
             // console.log('通过点')
 
-            var dot = new Dot((Math.random()-0.5)*4+x, (Math.random()-0.5)*4 +y, 0, 1);//(centerX, centerY, centerZ, radius)
+            var dot = new Dot((Math.random()-0.5)*4+x, (Math.random()-0.5)*4 +y, 0, 1.5);//(centerX, centerY, centerZ, radius)
 
             // console.log(dot)
             dots.push(dot);// 
