@@ -54,7 +54,7 @@ function setCanvas() {
 		        dot.paint();
 	        })
 	       	if (!pause) {
-	       		setTimeout(animate,100)
+	       		setTimeout(animate,50)
 				// if ("requestAnimationFrame" in window) {
 				// 	// requestAnimationFrame(animate);//启动 小球 动画 类似setTimeout
 				// }
@@ -87,7 +87,7 @@ function getimgData(theyImg) {
 	var dots = [];
 	console.log('画布宽度',imgData.width,imgData.height)
 	console.log('画布点',imgData.data)
-	for (var x = 0; x < imgData.width; x += 4) {
+	for (var x = 0; x < imgData.width; x += 8) {
 		for (var y = 0; y < imgData.height; y += 4) {
 			var i = (y * imgData.width + x) * 4;
 			// console.log('取点',i)
