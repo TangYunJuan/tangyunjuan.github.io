@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+	<title>Document</title>
+	<style>
+		.shi .gbiao {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="inter">
+		<p class="shi"><span class="txtbox"></span><span class="gbiao">|</span></p>
+		<p class="jihe"><span class="txtbox"></span><span class="gbiao">|</span></p>
+		<p class="tigong"><span class="txtbox"></span><span class="gbiao">|</span></p>
+	</div>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script>
+		 writeFont()
+		function writeFont() {
+		var str_shi = '以时尚科技引领潮流';
+			var str_jihe = '集合线上线下为一体';
+			var str_tigong = '提供全面且独具创意的一站式服务';
+			var jishu = 0;
+			var hangshu = 1;
+			$(".shi .gbiao").show();
+			var mysetT = setInterval(function(){
+					if(hangshu == 1 && jishu<str_shi.length){
+						$(".shi .txtbox").html($(".shi .txtbox").html()+str_shi[jishu])
+						jishu++;
+						return;
+					}else{
+						if(hangshu == 1){
+							hangshu =2;
+							jishu =0
+							$(".jihe").show()
+							$(".shi .gbiao").hide()
+						}
+					}
+					if(hangshu ==2 && jishu<str_jihe.length){
+						$(".jihe .txtbox").html($(".jihe .txtbox").html()+str_jihe[jishu])
+						jishu++;
+						return
+					}else{
+						if(hangshu == 2){
+							hangshu =3;
+							jishu =0
+							$(".tigong").show()
+							$(".jihe .gbiao").hide()
+						}
+					}
+					if(hangshu ==3 && jishu<str_tigong.length){
+						$(".tigong .txtbox").html($(".tigong .txtbox").html()+str_tigong[jishu])
+						jishu++;
+						return
+					}else{
+						$(".tigong .gbiao").hide()
+						clearInterval(mysetT)
+					}
+			},150)
+			console.log("111")
+		}
+
+	</script>
+</body>
+</html>
