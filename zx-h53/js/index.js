@@ -203,6 +203,7 @@ $(function(){
 			height: window.innerHeight,
 			speed:300,
 			freeMode : false,
+			touchRatio : 2,
 			onInit: function(swiper){
 				setCanvas()
 			},

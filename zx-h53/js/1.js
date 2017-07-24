@@ -56,7 +56,10 @@ function setCanvas() {
 	       	if (!pause) {
 	       		setTimeout(animate,50)
 			}else{
-				writeFont();
+				$('.name').animate({opacity:1},1000,function(){
+					writeFont();
+				});
+				
 			}
 		}
 
@@ -82,7 +85,7 @@ function getimgData(theyImg) {
 			var i = (y * imgData.width + x) * 4;
 			console.log('取点')
 			if (imgData.data[i] >= 2) {
-			var dot = new Dot((Math.random()-0.5)*4+x, (Math.random()-0.5)*4 +y, 0, 2);//(centerX, centerY, centerZ, radius)
+			var dot = new Dot((Math.random()-0.5)*4+x, (Math.random()-0.5)*4 +y, 0, 1);//(centerX, centerY, centerZ, radius)
 			dots.push(dot);// 
 			}
 		}
