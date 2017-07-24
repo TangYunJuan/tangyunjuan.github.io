@@ -52,7 +52,7 @@ body {
 	position: relative;
 	opacity:0;
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 767px) {
 	.xz {
 		width: 414px;
 		height: 736px;
@@ -90,6 +90,12 @@ body {
 	width: 100%;
 	height: 100%;
 }
+.logo-animate {
+	position: absolute;
+	top:0;
+	left:50%;
+	transform: translateX(-50%);
+}
 .star-cir {
 	width:1px; 
 	height: 1px;
@@ -116,17 +122,19 @@ body {
 		height: 2px;
 	}
 }
-.star1 {
+.light {
 	width:10px;
 	height:10px;
 	border-radius:50%;
 	-webkit-border-radius:50%;
 	position: absolute;
 	background: rgba(0,0,255, 0.1);
-	top: 16px;
-	left: 24px;
 	box-shadow: 0 0 100px rgba(41, 55, 241, .9);
 	-webkit-box-shadow: 0 0 100px rgba(41, 55, 241, .9);
+}
+.star1 {
+	top: 16px;
+	left: 24px;
 	animation: glow1 500ms ease-out infinite alternate;
 	-webkit-animation: glow1 500ms ease-out infinite alternate;
 }
@@ -143,14 +151,8 @@ body {
     }
 }
 .star2 {
-	width:10px;
-	height:10px;
-	border-radius:50%;
-	position: absolute;
-	background: rgba(0,0,255, 0.1);
 	top: 376px;
     right: 54px;
-	box-shadow: 0 0 100px rgba(41, 55, 241, .9);
 	animation: glow2 500ms ease-out 0.3s infinite alternate;
 	-webkit-animation: glow2 500ms ease-out 0.3s infinite alternate;
 }
@@ -161,15 +163,8 @@ body {
     }
 }
 .star3 {
-	width:10px;
-	height:10px;
-	border-radius:50%;
-	-webkit-border-radius:50%;
-	position: absolute;
-	background: rgba(0,0,255, 0.1);
 	top: 376px;
     right: 54px;
-	box-shadow: 0 0 100px rgba(41, 55, 241, .9);
 	-webkit-box-shadow: 0 0 100px rgba(41, 55, 241, .9);
 	animation: glow3 500ms ease-out 0.2s infinite alternate;
 	-webkit-animation: glow3 500ms ease-out 0.2s infinite alternate;
@@ -187,16 +182,8 @@ body {
     }
 }
 .star4 {
-	width:10px;
-	height:10px;
-	border-radius:50%;
-	-webkit-border-radius:50%;
-	position: absolute;
-	background: rgba(0,0,255, 0.1);
 	bottom: 113px;
     left: 20px;
-	box-shadow: 0 0 100px rgba(41, 55, 241, .9);
-	-webkit-box-shadow: 0 0 100px rgba(41, 55, 241, .9);
 	animation: glow4 500ms ease-out 0.4s infinite alternate;
 	-webkit-animation: glow4 500ms ease-out 0.4s infinite alternate;
 }
@@ -213,16 +200,8 @@ body {
     }
 }
 .star5 {
-	width:10px;
-	height:10px;
-	border-radius:50%;
-	-webkit-border-radius:50%;
-	position: absolute;
-	background: rgba(0,0,255, 0.1);
 	bottom: 153px;
     left: 142px;
-	box-shadow: 0 0 100px rgba(41, 55, 241, .9);
-	-webkit-box-shadow: 0 0 100px rgba(41, 55, 241, .9);
 	animation: glow5 500ms ease-out 0.4s infinite alternate;
 	-webkit-animation: glow5 1200ms ease-out 0.4s infinite alternate;
 }
@@ -239,14 +218,7 @@ body {
     }
 }
 .star6 {
-	width:10px;
-	height:10px;
-	border-radius:50%;
-	position: absolute;
-	background: rgba(0,0,255, 0.1);
-	top: 287px;
     left: 69px;
-	box-shadow: 0 0 100px rgba(41, 55, 241, .9);
 	animation: glow6 300ms ease-out  infinite alternate;
 	-webkit-animation: glow6 300ms ease-out  infinite alternate;
 }
@@ -262,14 +234,8 @@ body {
     }
 }
 .star7 {
-	width:10px;
-	height:10px;
-	border-radius:50%;
-	position: absolute;
-	background: rgba(0,0,255, 0.1);
 	top: 102px;
     right: 118px;
-	box-shadow: 0 0 100px rgba(41, 55, 241, .9);
 	animation: glow7 500ms ease-out 0.4s infinite alternate;
 	-webkit-animation: glow7 700ms ease-out 0.4s infinite alternate;
 }
@@ -285,14 +251,8 @@ body {
     }
 }
 .star8 {
-	width:10px;
-	height:10px;
-	border-radius:50%;
-	position: absolute;
-	background: rgba(0,0,255, 0.1);
 	top: 334px;
     left: 40px;
-	box-shadow: 0 0 100px rgba(41, 55, 241, .9);
 	animation: glow8 600ms ease-out 0.4s infinite alternate;
 	-webkit-animation: glow8 600ms ease-out 0.4s infinite alternate;
 }
@@ -308,14 +268,8 @@ body {
     }
 }
 .star9 {
-	width:10px;
-	height:10px;
-	border-radius:50%;
-	position: absolute;
-	background: rgba(0,0,255, 0.1);
 	top: 167px;
     left: 100px;
-	box-shadow: 0 0 100px rgba(41, 55, 241, .9);
 	animation: glow9 600ms ease-out 0.4s infinite alternate;
 	-webkit-animation: glow9 400ms ease-out 0.4s infinite alternate;
 }
@@ -331,14 +285,8 @@ body {
     }
 }
 .star10 {
-	width:10px;
-	height:10px;
-	border-radius:50%;
-	position: absolute;
-	background: rgba(0,0,255, 0.1);
 	top: 39px;
     right: 26px;
-	box-shadow: 0 0 100px rgba(41, 55, 241, .9);
 	animation: glow10 600ms ease-out 0.4s infinite alternate;
 	-webkit-animation: glow10 1500ms ease-out 0.4s infinite alternate;
 }
@@ -354,14 +302,8 @@ body {
     }
 }
 .star11 {
-	width:10px;
-	height:10px;
-	border-radius:50%;
-	position: absolute;
-	background: rgba(0,0,255, 0.1);
 	bottom: 63px;
     right: 40px;
-	box-shadow: 0 0 100px rgba(41, 55, 241, .9);
 	animation: glow11 600ms ease-out 0.4s infinite alternate;
 	-webkit-animation: glow11 1000ms ease-out 0.4s infinite alternate;
 }
@@ -377,14 +319,8 @@ body {
     }
 }
 .star12 {
-	width:10px;
-	height:10px;
-	border-radius:50%;
-	position: absolute;
-	background: rgba(0,0,255, 0.1);
 	bottom: 24px;
     left: 124px;
-	box-shadow: 0 0 100px rgba(41, 55, 241, .9);
 	animation: glow12 600ms ease-out 0.4s infinite alternate;
 	-webkit-animation: glow12 100ms ease-out 0.4s infinite alternate;
 }
@@ -399,6 +335,60 @@ body {
         box-shadow: 0 0 40px rgb(0,0,255),inset 0 0 5px rgba(41, 55, 241,.1), 0 2px 0 #000;
     }
 }
+.star13 {
+	bottom: 200px;
+    right: 83px;
+	animation: glow13 600ms ease-out 0.4s infinite alternate;
+	-webkit-animation: glow13 100ms ease-out 0.4s infinite alternate;
+}
+@keyframes glow13 {
+	100% {
+        background: rgba(0,0,255, 0.4);
+        box-shadow: 0 0 40px rgb(0,0,255),inset 0 0 5px rgba(41, 55, 241,.1), 0 2px 0 #000;
+    }
+}@-webkit-keyframes glow13 {
+	100% {
+        background: rgba(0,0,255, 0.4);
+        box-shadow: 0 0 40px rgb(0,0,255),inset 0 0 5px rgba(41, 55, 241,.1), 0 2px 0 #000;
+    }
+}
+.star14 {
+	top: 248px;
+    right: 86px;
+    animation: glow13 600ms ease-out 0.4s infinite alternate;
+	-webkit-animation: glow13 100ms ease-out 0.4s infinite alternate;
+}
+.star15 {
+	bottom: 83px;
+    left: 221px;
+    animation: glow13 600ms ease-out 0.4s infinite alternate;
+	-webkit-animation: glow13 100ms ease-out 0.4s infinite alternate;
+}
+.star16 {
+	top: 83px;
+    left: 73px;
+    animation: glow13 600ms ease-out 0.4s infinite alternate;
+	-webkit-animation: glow13 100ms ease-out 0.4s infinite alternate;
+}
+.star17 {
+	top: 164px;
+    right: 80px;
+    animation: glow13 600ms ease-out 0.4s infinite alternate;
+	-webkit-animation: glow13 100ms ease-out 0.4s infinite alternate;
+}
+.star18 {
+	top: 282px;
+    left: 168px;
+    animation: glow13 600ms ease-out 0.4s infinite alternate;
+	-webkit-animation: glow13 100ms ease-out 0.4s infinite alternate;
+}
+.star19 {
+	top: 362px;
+    right: 173px;
+    animation: glow13 600ms ease-out 0.4s infinite alternate;
+	-webkit-animation: glow13 100ms ease-out 0.4s infinite alternate;
+}
+
 .logo {
 	position: absolute;
 	/*top: 8%;*/

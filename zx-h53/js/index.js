@@ -1,9 +1,24 @@
 $(function(){
+//判断移动端还是pc端
+	function IsPC() {
+	    var userAgentInfo = navigator.userAgent;
+	    var Agents = ["Android", "iPhone",
+	                "SymbianOS", "Windows Phone",
+	                "iPad", "iPod"];
+	    var flag = true;
+	    for (var v = 0; v < Agents.length; v++) {
+	        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+	            flag = false;
+	            break;
+	        }
+	    }
+	    return flag;
+	}
 	var IMGWIDTH = $(".home").width();
 	var IMGHEIGHT = $(".home").height();
 	var BGWIDTH = 640;
 	var BGHEIGHT = 1136;
-	var ZOOMNUM = IMGWIDTH / BGWIDTH;
+	var ZOOMNUM = IMGWIDTH / BGWIDTH;   //屏幕比
 	function Size(width ,height){return {w:width,h:height}}
 	function position(left,top){return {x:left,y:top}}
 	function MoveImg(dom,url,x,y) {
@@ -13,13 +28,11 @@ $(function(){
 		this.y = y;
 		this.size = Size(0,0);
 		this.pos = position(0,0);
-		this.init();
-		// console.log(this.x)	
+		this.init();	
 	}
 	MoveImg.prototype.init = function() {
 		var image = new Image();
 		image.src = this.url;
-		// console.log(this.url)
 		var _this = this;
 		image.onload = function() {
 			_this.size.w = parseInt(image.width * ZOOMNUM)
@@ -33,18 +46,15 @@ $(function(){
 		}
 	}
 	MoveImg.prototype.setSize = function()　{
-		// console.log(this.size.h)
 		this.dom.css("width",this.size.w);
 		this.dom.css("height",this.size.h)
-		// console.log(this.dom.style.width)
 	}
 	MoveImg.prototype.setPos = function()　{
 		this.dom.css("top",this.pos.x);
 		this.dom.css("left",this.pos.y);
-		// console.log(this.dom.style.width)
 	}
 
-
+//图片 大小和位置
 	new MoveImg($('.logo'),"img/logo.png","100")
 	new MoveImg($('.fingerprint-wrap'),"img/figure.png","500")
 	new MoveImg($('.hold'),"img/font.png","550","80")
@@ -83,41 +93,34 @@ $(function(){
 	new MoveImg($('.slider-set'),"img/sao.png")
 	// new MoveImg($('.hand'),"img/hand.png","170","80")
 
-
-
-
+// 触摸或点击进入页面
 	function touchFinger() {
-		var touchStart, touchEnd, touchTime
-		$(".fingerprint-wrap").on('touchstart',function(e) {
-			touchStart = e.timeStamp;
-			e.preventDefault();
-		})
-		$(".fingerprint-wrap").on('touchmove',function(e) {
-			 event.preventDefault();
-		})
-		$(".fingerprint-wrap").on('touchend',function(e) {
-			touchEnd = e.timeStamp;
-			if(touchEnd - touchStart > 2000) {
+		if(IsPC()) {
+			$(".fingerprint-wrap").on('click',function() {
 				$('.home-wrap').hide();
-				$('.home').addClass("bg-black").fadeOut();
-				$(".main").fadeIn();
-				
-				// setTimeout(setCanvas,100)
-				// setTimeout(writeFont,1800)
-				
-				swiperReady();
-			}
-		})
-		// $(".fingerprint-wrap").on('click',function() {
-		// 	$('.home-wrap').hide();
-		// 		$('.home').addClass("bg-black").fadeOut();
-		// 		$(".main").fadeIn();
-		// 		setCanvas()
-		// 		// setTimeout(setCanvas,100)
-		// 		// setTimeout(writeFont,1800)
-		// 		writeFont()
-		// })
-
+					$('.home').addClass("bg-black").fadeOut();
+					$(".main").fadeIn();
+					swiperReady();
+			})
+		}else {
+			var touchStart, touchEnd, touchTime
+			$(".fingerprint-wrap").on('touchstart',function(e) {
+				touchStart = e.timeStamp;
+				e.preventDefault();
+			})
+			$(".fingerprint-wrap").on('touchmove',function(e) {
+				 event.preventDefault();
+			})
+			$(".fingerprint-wrap").on('touchend',function(e) {
+				touchEnd = e.timeStamp;
+				if(touchEnd - touchStart > 500) {
+					$('.home-wrap').hide();
+					$('.home').addClass("bg-black").fadeOut();
+					$(".main").fadeIn();
+					swiperReady();
+				}
+			})
+		}
 	}
 	touchFinger()
 	window.writeFont = function () {
@@ -161,8 +164,8 @@ $(function(){
 						clearInterval(mysetT)
 					}
 			},150)
-			console.log("111")
 		}
+//详情
 	getDialog()
 	function getDialog() {
 		var ballArr = [];
@@ -198,13 +201,12 @@ $(function(){
 			direction : 'vertical',
 			width: window.innerWidth,
 			height: window.innerHeight,
+			speed:300,
+			freeMode : false,
 			onInit: function(swiper){
-				console.log('ready',swiper)
 				setCanvas()
-
 			},
 			onSlideChangeEnd: function(swiper){
-				console.log('进入')
 				if(swiper.activeIndex == 1) {
 					moveHand()
 				      // alert(swiper.activeIndex) //切换结束时，告诉我现在是第几个slide
@@ -212,6 +214,7 @@ $(function(){
 			}
 		})
 	}
+//星球闪烁
 	function moveHand() {
 		var handPos1Top = 170 * ZOOMNUM + "px";
 		var handPos1left = 80 * ZOOMNUM + "px";
@@ -227,7 +230,6 @@ $(function(){
 		var handPos6Left = 320 * ZOOMNUM + "px";
 		var handPos7Top = 800 * ZOOMNUM + "px";
 		var handPos7Left = 110 * ZOOMNUM + "px";
-		console.log(handPos1Top,handPos2Top,handPos3Top,handPos4Top,handPos5Top,handPos6Top,handPos7Top)
 		// $(".hand").css({"top":handPos1Top,"left":handPos1left})
 		// $(".hand").animate(
 		// 	{top:handPos2Top,left:handPos2left},1000).animate(

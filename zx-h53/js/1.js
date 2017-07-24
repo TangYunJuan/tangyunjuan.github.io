@@ -1,15 +1,13 @@
 function setCanvas() {
 	var yImg = new Image();
 	yImg.src = "img/xz.png";
-	console.log(this)
 	yImg.onload = function() {
-
 		canvas = document.getElementById("cas");
 		context = canvas.getContext('2d');
 		focallength = 250; //焦距
-
+		canvas.width = $(".xz").width();
+        canvas.height = $(".xz").height();
 		var dots = getimgData(yImg)
-		console.log("dots--",dots)
 
 		var pause = false;//暂停
 		initAnimate()
@@ -57,18 +55,6 @@ function setCanvas() {
 	        })
 	       	if (!pause) {
 	       		setTimeout(animate,50)
-				// if ("requestAnimationFrame" in window) {
-				// 	// requestAnimationFrame(animate);//启动 小球 动画 类似setTimeout
-				// }
-				// else if ("webkitRequestAnimationFrame" in window) {
-				// 	webkitRequestAnimationFrame(animate);
-				// }
-				// else if ("msRequestAnimationFrame" in window) {
-				// 	msRequestAnimationFrame(animate);
-				// }
-				// else if ("mozRequestAnimationFrame" in window) {
-				// 	mozRequestAnimationFrame(animate);
-				// }
 			}else{
 				writeFont();
 			}
@@ -78,33 +64,25 @@ function setCanvas() {
 	}
 
 }
-
-
 Array.prototype.forEach = function(callback) {
 	for (var i = 0; i < this.length; i++) {
 		callback.call(this[i]);
 	}
 }
 function getimgData(theyImg) {
-	context.drawImage(theyImg, canvas.width / 2 - theyImg.width / 2,100);
+
+	var tuheHeight = canvas.height * 0.12 ;
+	console.log(tuheHeight)
+	context.drawImage(theyImg, canvas.width / 2 - theyImg.width / 2,tuheHeight);
 	var imgData = context.getImageData(0, 0, canvas.width, canvas.height); //复制指定区域中像素点位置
 	// context.clearRect(0, 0, canvas.width, canvas.height);//清空给定矩形内的指定像素
 	var dots = [];
-	console.log('画布宽度',imgData.width,imgData.height)
-	console.log('画布点',imgData.data)
 	for (var x = 0; x < imgData.width; x += 8) {
 		for (var y = 0; y < imgData.height; y += 4) {
 			var i = (y * imgData.width + x) * 4;
-			// console.log('取点',i)
-			// console.log('取点',imgData.data[i])
 			console.log('取点')
 			if (imgData.data[i] >= 2) {
-			// console.log('>=128',imgData.data[i])
-			// console.log('通过点')
-
-			var dot = new Dot((Math.random()-0.5)*4+x, (Math.random()-0.5)*4 +y, 0, 1);//(centerX, centerY, centerZ, radius)
-
-			// console.log(dot)
+			var dot = new Dot((Math.random()-0.5)*4+x, (Math.random()-0.5)*4 +y, 0, 2);//(centerX, centerY, centerZ, radius)
 			dots.push(dot);// 
 			}
 		}
@@ -112,8 +90,6 @@ function getimgData(theyImg) {
 	console.log(dots)
 	return dots;
 }
-
-
 
 var Dot = function(centerX, centerY, centerZ, radius) {
 	this.dx = centerX;  //文字点 位置
