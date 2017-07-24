@@ -219,12 +219,12 @@ body {
 	-webkit-border-radius:50%;
 	position: absolute;
 	background: rgba(0,0,255, 0.1);
-	bottom: 182px;
-    left: 197px;
+	bottom: 153px;
+    left: 142px;
 	box-shadow: 0 0 100px rgba(41, 55, 241, .9);
 	-webkit-box-shadow: 0 0 100px rgba(41, 55, 241, .9);
 	animation: glow5 500ms ease-out 0.4s infinite alternate;
-	-webkit-animation: glow5 500ms ease-out 0.4s infinite alternate;
+	-webkit-animation: glow5 1200ms ease-out 0.4s infinite alternate;
 }
 @keyframes glow5 {
 	100% {
@@ -271,7 +271,7 @@ body {
     right: 118px;
 	box-shadow: 0 0 100px rgba(41, 55, 241, .9);
 	animation: glow7 500ms ease-out 0.4s infinite alternate;
-	-webkit-animation: glow7 500ms ease-out 0.4s infinite alternate;
+	-webkit-animation: glow7 700ms ease-out 0.4s infinite alternate;
 }
 @keyframes glow7 {
 	100% {
@@ -302,6 +302,98 @@ body {
         box-shadow: 0 0 40px rgb(0,0,255),inset 0 0 5px rgba(41, 55, 241,.1), 0 2px 0 #000;
     }
 }@-webkit-keyframes glow8 {
+	100% {
+        background: rgba(0,0,255, 0.4);
+        box-shadow: 0 0 40px rgb(0,0,255),inset 0 0 5px rgba(41, 55, 241,.1), 0 2px 0 #000;
+    }
+}
+.star9 {
+	width:10px;
+	height:10px;
+	border-radius:50%;
+	position: absolute;
+	background: rgba(0,0,255, 0.1);
+	top: 167px;
+    left: 100px;
+	box-shadow: 0 0 100px rgba(41, 55, 241, .9);
+	animation: glow9 600ms ease-out 0.4s infinite alternate;
+	-webkit-animation: glow9 400ms ease-out 0.4s infinite alternate;
+}
+@keyframes glow9 {
+	100% {
+        background: rgba(0,0,255, 0.4);
+        box-shadow: 0 0 40px rgb(0,0,255),inset 0 0 5px rgba(41, 55, 241,.1), 0 2px 0 #000;
+    }
+}@-webkit-keyframes glow9 {
+	100% {
+        background: rgba(0,0,255, 0.4);
+        box-shadow: 0 0 40px rgb(0,0,255),inset 0 0 5px rgba(41, 55, 241,.1), 0 2px 0 #000;
+    }
+}
+.star10 {
+	width:10px;
+	height:10px;
+	border-radius:50%;
+	position: absolute;
+	background: rgba(0,0,255, 0.1);
+	top: 39px;
+    right: 26px;
+	box-shadow: 0 0 100px rgba(41, 55, 241, .9);
+	animation: glow10 600ms ease-out 0.4s infinite alternate;
+	-webkit-animation: glow10 1500ms ease-out 0.4s infinite alternate;
+}
+@keyframes glow10 {
+	100% {
+        background: rgba(0,0,255, 0.4);
+        box-shadow: 0 0 40px rgb(0,0,255),inset 0 0 5px rgba(41, 55, 241,.1), 0 2px 0 #000;
+    }
+}@-webkit-keyframes glow10 {
+	100% {
+        background: rgba(0,0,255, 0.4);
+        box-shadow: 0 0 40px rgb(0,0,255),inset 0 0 5px rgba(41, 55, 241,.1), 0 2px 0 #000;
+    }
+}
+.star11 {
+	width:10px;
+	height:10px;
+	border-radius:50%;
+	position: absolute;
+	background: rgba(0,0,255, 0.1);
+	bottom: 63px;
+    right: 40px;
+	box-shadow: 0 0 100px rgba(41, 55, 241, .9);
+	animation: glow11 600ms ease-out 0.4s infinite alternate;
+	-webkit-animation: glow11 1000ms ease-out 0.4s infinite alternate;
+}
+@keyframes glow11 {
+	100% {
+        background: rgba(0,0,255, 0.4);
+        box-shadow: 0 0 40px rgb(0,0,255),inset 0 0 5px rgba(41, 55, 241,.1), 0 2px 0 #000;
+    }
+}@-webkit-keyframes glow11 {
+	100% {
+        background: rgba(0,0,255, 0.4);
+        box-shadow: 0 0 40px rgb(0,0,255),inset 0 0 5px rgba(41, 55, 241,.1), 0 2px 0 #000;
+    }
+}
+.star12 {
+	width:10px;
+	height:10px;
+	border-radius:50%;
+	position: absolute;
+	background: rgba(0,0,255, 0.1);
+	bottom: 24px;
+    left: 124px;
+	box-shadow: 0 0 100px rgba(41, 55, 241, .9);
+	animation: glow12 600ms ease-out 0.4s infinite alternate;
+	-webkit-animation: glow12 100ms ease-out 0.4s infinite alternate;
+}
+@keyframes glow12 {
+	100% {
+        background: rgba(0,0,255, 0.4);
+        box-shadow: 0 0 40px rgb(0,0,255),inset 0 0 5px rgba(41, 55, 241,.1), 0 2px 0 #000;
+    }
+}@-webkit-keyframes glow12 {
 	100% {
         background: rgba(0,0,255, 0.4);
         box-shadow: 0 0 40px rgb(0,0,255),inset 0 0 5px rgba(41, 55, 241,.1), 0 2px 0 #000;
@@ -624,6 +716,7 @@ body {
 	transform:translate(-50%,-50%);
 	-webkit-transform:translate(-50%,-50%);
 	display: none;
+	z-index: 10;
 }
 .close {
 	position: absolute;
@@ -682,4 +775,5 @@ body {
 	position: absolute;
 	/*top:0;
 	left:0;*/
+	/*display: none;*/
 }

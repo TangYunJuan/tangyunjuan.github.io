@@ -48,7 +48,7 @@ $(function(){
 	new MoveImg($('.logo'),"img/logo.png","100")
 	new MoveImg($('.fingerprint-wrap'),"img/figure.png","500")
 	new MoveImg($('.hold'),"img/font.png","550","80")
-	new MoveImg($('.name'),"img/tucen.png","480")
+	new MoveImg($('.name'),"img/tucen.png","470")
 	new MoveImg($('.next'),"img/la.png")
 	new MoveImg($('.ball-wrap'),"img/ke3.png")
 	new MoveImg($('.ball-in'),"img/ke2.png")
@@ -81,7 +81,7 @@ $(function(){
 	new MoveImg($('.pop-img7'),"img/xiaxiaball.png","60")
 	new MoveImg($('.close'),"img/close.png","40","490")
 	new MoveImg($('.slider-set'),"img/sao.png")
-	new MoveImg($('.hand'),"img/la.png")
+	new MoveImg($('.hand'),"img/hand.png","170","80")
 
 
 
@@ -97,7 +97,7 @@ $(function(){
 		})
 		$(".fingerprint-wrap").on('touchend',function(e) {
 			touchEnd = e.timeStamp;
-			if(touchEnd - touchStart > 50) {
+			if(touchEnd - touchStart > 2000) {
 				$('.home-wrap').hide();
 				$('.home').addClass("bg-black").fadeOut();
 				$(".main").fadeIn();
@@ -214,7 +214,7 @@ $(function(){
 	}
 	function moveHand() {
 		var handPos1Top = 170 * ZOOMNUM + "px";
-		var handPos1left = 50 * ZOOMNUM + "px";
+		var handPos1left = 80 * ZOOMNUM + "px";
 		var handPos2Top = 130 * ZOOMNUM + "px";
 		var handPos2left = 320 * ZOOMNUM + "px";
 		var handPos3Top = 280 * ZOOMNUM  + "px";
@@ -226,9 +226,10 @@ $(function(){
 		var handPos6Top = 760 * ZOOMNUM + "px";
 		var handPos6Left = 320 * ZOOMNUM + "px";
 		var handPos7Top = 800 * ZOOMNUM + "px";
-		var handPos7Left = 40 * ZOOMNUM + "px";
+		var handPos7Left = 110 * ZOOMNUM + "px";
 		console.log(handPos1Top,handPos2Top,handPos3Top,handPos4Top,handPos5Top,handPos6Top,handPos7Top)
-		$(".hand").css({"top":handPos1Top,"left":handPos1left}).animate(
+		$(".hand").css({"top":handPos1Top,"left":handPos1left})
+		$(".hand").animate(
 			{top:handPos2Top,left:handPos2left},1000).animate(
 			{top:handPos3Top,left:handPos3Left},1000).animate(
 			{top:handPos4Top,left:handPos4Left},1000).animate(
