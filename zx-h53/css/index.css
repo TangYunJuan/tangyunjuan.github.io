@@ -784,107 +784,164 @@ body {
 .nocir-shaing {
 	box-shadow: none;
 }
-.ball-re .ball-pos {
-	box-shadow: 0 0 0 #ccc;
+.ball-re .cir-shaing {
+	box-shadow: 0 0 0 #fff;
 	animation: boxShadow 1s linear 2;
-	animation-delay:5s
+	animation-delay:2s;
+	-webkit-animation: boxShadow 1s linear 2;
+	-webkit-animation-delay:2s;
+}
+@keyframes boxShadow {    
+    50% {
+        box-shadow: 0 0 20px #fff;
+    }
+    100% {
+        box-shadow: 0 0 0px #fff;
+    }
 }
 @-webkit-keyframes boxShadow {    
     50% {
-        box-shadow: 0 0 20px #ccc;
+        box-shadow: 0 0 20px #fff;
     }
     100% {
-        box-shadow: 0 0 0px #ccc;
+        box-shadow: 0 0 0px #fff;
     }
 }
-.ball-re2 .ball-pos {
-	box-shadow: 0 0 0 #ccc;
+.ball-re2 .cir-shaing {
+	box-shadow: 0 0 0 #fff;
+	animation: boxShadow2 1s linear 2;
+	animation-delay:4s;
+	-webkit-animation: boxShadow2 1s linear 2;
+	-webkit-animation-delay:4s;
+}
+@keyframes boxShadow2 {    
+    50% {
+        box-shadow: 0 0 20px #fff;
+    }
+    100% {
+        box-shadow: 0 0 0px #fff;
+    }
+}
+@-webkit-keyframes boxShadow2 {    
+    50% {
+        box-shadow: 0 0 20px #fff;
+    }
+    100% {
+        box-shadow: 0 0 0px #fff;
+    }
+}
+.ball-re3 .cir-shaing {
+	box-shadow: 0 0 0 #fff;
 	animation: boxShadow2 1s linear 2;
 	animation-delay:6s;
+	-webkit-animation: boxShadow2 1s linear 2;
+	-webkit-animation-delay:6s;
+}
+@keyframes boxShadow2 {    
+    50% {
+        box-shadow: 0 0 20px #fff;
+    }
+    100% {
+        box-shadow: 0 0 0px #fff;
+    }
 }
 @-webkit-keyframes boxShadow2 {    
     50% {
-        box-shadow: 0 0 20px #ccc;
+        box-shadow: 0 0 20px #fff;
     }
     100% {
-        box-shadow: 0 0 0px #ccc;
+        box-shadow: 0 0 0px #fff;
     }
 }
-.ball-re2 .ball-pos {
-	box-shadow: 0 0 0 #ccc;
-	animation: boxShadow2 1s linear 2;
-	animation-delay:9s;
-}
-@-webkit-keyframes boxShadow2 {    
-    50% {
-        box-shadow: 0 0 20px #ccc;
-    }
-    100% {
-        box-shadow: 0 0 0px #ccc;
-    }
-}
-.ball-re3 .ball-pos {
-	box-shadow: 0 0 0 #ccc;
+.ball-re4 .cir-shaing {
+	box-shadow: 0 0 0 #fff;
 	animation: boxShadow3 1s linear 2;
-	animation-delay:11s;
+	animation-delay:8s;
+	-webkit-animation: boxShadow3 1s linear 2;
+	-webkit-animation-delay:8s;
+}
+@keyframes boxShadow3 {    
+    50% {
+        box-shadow: 0 0 20px #fff;
+    }
+    100% {
+        box-shadow: 0 0 0px #fff;
+    }
 }
 @-webkit-keyframes boxShadow3 {    
     50% {
-        box-shadow: 0 0 20px #ccc;
+        box-shadow: 0 0 20px #fff;
     }
     100% {
-        box-shadow: 0 0 0px #ccc;
+        box-shadow: 0 0 0px #fff;
     }
 }
-.ball-re4 .ball-pos {
-	box-shadow: 0 0 0 #ccc;
+.ball-re5 .cir-shaing  {
+	box-shadow: 0 0 0 #fff;
 	animation: boxShadow4 1s linear 2;
-	animation-delay:13s;
+	animation-delay:10s;
+	-webkit-animation: boxShadow4 1s linear 2;
+	-webkit-animation-delay:10s;
+}
+@keyframes boxShadow4 {    
+    50% {
+        box-shadow: 0 0 20px #fff;
+    }
+    100% {
+        box-shadow: 0 0 0px #fff;
+    }
 }
 @-webkit-keyframes boxShadow4 {    
     50% {
-        box-shadow: 0 0 20px #ccc;
+        box-shadow: 0 0 20px #fff;
     }
     100% {
-        box-shadow: 0 0 0px #ccc;
+        box-shadow: 0 0 0px #fff;
     }
 }
-.ball-re5 .ball-pos {
-	box-shadow: 0 0 0 #ccc;
+.ball-re6 .cir-shaing  {
+	box-shadow: 0 0 0 #fff;
 	animation: boxShadow5 1s linear 2;
-	animation-delay:15s;
+	animation-delay:12s;
+	-webkit-animation: boxShadow5 1s linear 2;
+	-webkit-animation-delay:12s;
+}
+@keyframes boxShadow5 {    
+    50% {
+        box-shadow: 0 0 20px #fff;
+    }
+    100% {
+        box-shadow: 0 0 0px #fff;
+    }
 }
 @-webkit-keyframes boxShadow5 {    
     50% {
-        box-shadow: 0 0 20px #ccc;
+        box-shadow: 0 0 20px #fff;
     }
     100% {
-        box-shadow: 0 0 0px #ccc;
+        box-shadow: 0 0 0px #fff;
     }
 }
-.ball-re6 .ball-pos {
-	box-shadow: 0 0 0 #ccc;
+.ball-re7 .cir-shaing  {
+	box-shadow: 0 0 0 #fff;
 	animation: boxShadow6 1s linear 2;
-	animation-delay:17s;
+	animation-delay:14s;
+	-webkit-animation: boxShadow6 1s linear 2;
+	-webkit-animation-delay:14s;
+}
+@keyframes boxShadow6 {    
+    50% {
+        box-shadow: 0 0 20px #fff;
+    }
+    100% {
+        box-shadow: 0 0 0px #fff;
+    }
 }
 @-webkit-keyframes boxShadow6 {    
     50% {
-        box-shadow: 0 0 20px #ccc;
+        box-shadow: 0 0 20px #fff;
     }
     100% {
-        box-shadow: 0 0 0px #ccc;
-    }
-}
-.ball-re7 .ball-pos {
-	box-shadow: 0 0 0 #ccc;
-	animation: boxShadow7 1s linear 2;
-	animation-delay:19s;
-}
-@-webkit-keyframes boxShadow7 {    
-    50% {
-        box-shadow: 0 0 20px #ccc;
-    }
-    100% {
-        box-shadow: 0 0 0px #ccc;
+        box-shadow: 0 0 0px #fff;
     }
 }

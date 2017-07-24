@@ -238,7 +238,7 @@ $(function(){
 		// 	{top:handPos7Top,left:handPos7Left},1000,function() {
 		// 		$(".hand").hide()
 		// 	})
-		$('.ball-re .ball-pos').addClass('cir-shaing')
+		$('.ball-pos').addClass('cir-shaing')
 	}
 
 })
