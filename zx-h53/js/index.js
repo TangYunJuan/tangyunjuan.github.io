@@ -42,7 +42,7 @@ window.onload = function() {
 //图片 大小和位置
 	new MoveImg($('.logo'),"img/logo.png","100")
 	// new MoveImg($('.fingerprint-wrap'),"img/figure.gif","500")
-	new MoveImg($('.hold'),"img/font.png","550","80")
+	new MoveImg($('.hold'),"img/font.png","530","100")
 	new MoveImg($('.name'),"img/tucen.png","450")
 	new MoveImg($('.next'),"img/la.png")
 	new MoveImg($('.ball-wrap'),"img/ke3.png")
@@ -80,17 +80,18 @@ window.onload = function() {
 	new MoveImg($('.advan-cir1'),"img/ad1.png")
 	new MoveImg($('.advan-cir2'),"img/ad2.png","17","20")
 	new MoveImg($('.advan-cir3'),"img/ad3.png","32")
-    $(".fingerprint-wrap").css({"top":500 * ZOOMNUM,"width":399*ZOOMNUM,"height":400*ZOOMNUM})
+    $(".fingerprint-wrap").css({"top":480 * ZOOMNUM,"width":399*ZOOMNUM,"height":400*ZOOMNUM});
+    $(".fingerprint-img").css({"width":399*ZOOMNUM,"height":400*ZOOMNUM});
 	$(".xz-animate").css({"width":640 * ZOOMNUM,"height":1136 * ZOOMNUM })
 	$(".erwei").css("width", $(".erwei").width()*ZOOMNUM)
 	$(".erwei").css("top",170*ZOOMNUM);
 	$(".inter").css("top",620*ZOOMNUM);
 	$(".advan-wrap").css({"top":220*ZOOMNUM,"width":parseInt(556 * ZOOMNUM),"height":parseInt(557 * ZOOMNUM)});
-	$(".advan-title1").css({"top":130*ZOOMNUM,"left":115*ZOOMNUM});
-	$(".advan-title2").css({"top":200*ZOOMNUM,"right":60*ZOOMNUM});
-	$(".advan-text1").css("top",288*ZOOMNUM);
-	$(".advan-text2").css("top",240*ZOOMNUM);
-	$(".advan-title3").css("top",130*ZOOMNUM);
+	$(".advan-title1").css({"top":125*ZOOMNUM,"left":115*ZOOMNUM});
+	$(".advan-title2").css({"top":195*ZOOMNUM,"right":60*ZOOMNUM});
+	$(".advan-text1").css("top",283*ZOOMNUM);
+	$(".advan-text2").css("top",235*ZOOMNUM);
+	$(".advan-title3").css("top",125*ZOOMNUM);
 	$('.home').show();
 	$('.loading').hide();
 }
@@ -257,6 +258,7 @@ $(function(){
 		 	pagination : '.swiper-pagination',
 		 	loop:true,
 		 	autoplay : 5000,
+		 	autoplayDisableOnInteraction : false,
 		 });
 	}
 //星球闪烁
