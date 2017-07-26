@@ -441,13 +441,13 @@ body {
 	user-select: none;
 	-webkit-user-select: none;/*禁用手机浏览器的用户选择功能 */
 	-moz-user-select: none;
+	z-index: 10;
 }
-.fingerprint-wrap ,.slider-set{
+.fingerprint-wrap ,.slider-set,.fingerprint-img{
 	position: absolute;
 	left: 50%;
 	transform:translate(-50%,-50%);
 	-webkit-transform:translate(-50%,-50%);
-	background-size: cover;
 }
 .hold {
 	position: absolute;
