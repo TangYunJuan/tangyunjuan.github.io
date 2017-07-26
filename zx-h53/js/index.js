@@ -56,7 +56,7 @@ $(function(){
 
 //图片 大小和位置
 	new MoveImg($('.logo'),"img/logo.png","100")
-	new MoveImg($('.fingerprint-wrap'),"img/figure.gif","500")
+	// new MoveImg($('.fingerprint-wrap'),"img/figure.gif","500")
 	new MoveImg($('.hold'),"img/font.png","550","80")
 	new MoveImg($('.name'),"img/tucen.png","470")
 	new MoveImg($('.next'),"img/la.png")
@@ -95,7 +95,7 @@ $(function(){
 	new MoveImg($('.advan-cir1'),"img/ad1.png")
 	new MoveImg($('.advan-cir2'),"img/ad2.png","17","20")
 	new MoveImg($('.advan-cir3'),"img/ad3.png","32")
-	new MoveImg($('.xz-animate'),"img/animate2.gif")
+	// new MoveImg($('.xz-animate'),"img/animate2.gif")
 
 
 // 触摸或点击进入页面
@@ -216,7 +216,8 @@ $(function(){
 	$(".advan-text1").css("top",288*ZOOMNUM);
 	$(".advan-text2").css("top",240*ZOOMNUM);
 	$(".advan-title3").css("top",130*ZOOMNUM);
-
+	$(".fingerprint-wrap").css({"top":500 * ZOOMNUM,"width":399*ZOOMNUM,"height":400*ZOOMNUM})
+	$(".xz-animate").css({"width":640 * ZOOMNUM,"height":1136 * ZOOMNUM })
 
 
 	function swiperReady(){

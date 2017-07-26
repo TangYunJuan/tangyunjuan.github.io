@@ -46,7 +46,7 @@
 				<div class="home-content">
 					<div class="content-pos">
 						<div class="logo"></div>
-						<div class="fingerprint-wrap"></div>
+						<image src="img/figure.gif" class="fingerprint-wrap"></image>
 						<div class="hold"></div>
 					</div>
 				</div>
@@ -87,7 +87,9 @@
 			<div class="swiper-wrapper mian-wrap">
 				<div class="swiper-slide slidepage">
 					<!-- <canvas id='cas' class="logo-animate">浏览器不支持canvas</canvas> -->
-					<div class="xz-animate"></div>
+					<div>
+						<img src="img/animate3.gif" class="xz-animate">
+					</div>
 					<div class="name" id="conName"></div>
 					<div class="inter">
 						<p class="shi"><span class="txtbox"></span><span class="gbiao">|</span></p>
@@ -310,9 +312,11 @@
 	<script src="js/1.js"></script>
 	
 	<script> 
-		$(document).ready(function(){
+		window.onload = function() {
+			
 		    $('.xz').css("opacity",1)
-		})
+		}
+		
 		
 	</script>
 </body>
