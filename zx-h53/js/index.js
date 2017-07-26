@@ -41,7 +41,7 @@ window.onload = function() {
 
 //图片 大小和位置
 	new MoveImg($('.logo'),"img/logo.png","100")
-	// new MoveImg($('.fingerprint-wrap'),"img/figure.gif","500")
+	new MoveImg($('.fingerprint-wrap'),"img/figure.gif","480")
 	new MoveImg($('.hold'),"img/font.png","530","100")
 	new MoveImg($('.name'),"img/tucen.png","450")
 	new MoveImg($('.next'),"img/la.png")
@@ -80,8 +80,8 @@ window.onload = function() {
 	new MoveImg($('.advan-cir1'),"img/ad1.png")
 	new MoveImg($('.advan-cir2'),"img/ad2.png","17","20")
 	new MoveImg($('.advan-cir3'),"img/ad3.png","32")
-    $(".fingerprint-wrap").css({"top":480 * ZOOMNUM,"width":399*ZOOMNUM,"height":400*ZOOMNUM});
-    $(".fingerprint-img").css({"width":399*ZOOMNUM,"height":400*ZOOMNUM});
+    // $(".fingerprint-wrap").css({"top":480 * ZOOMNUM,"width":399*ZOOMNUM,"height":400*ZOOMNUM});
+    // $(".fingerprint-img").css({"width":399*ZOOMNUM,"height":400*ZOOMNUM});
 	$(".xz-animate").css({"width":640 * ZOOMNUM,"height":1136 * ZOOMNUM })
 	$(".erwei").css("width", $(".erwei").width()*ZOOMNUM)
 	$(".erwei").css("top",170*ZOOMNUM);
