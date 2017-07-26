@@ -216,10 +216,7 @@ $(function(){
 	$(".advan-text1").css("top",288*ZOOMNUM);
 	$(".advan-text2").css("top",240*ZOOMNUM);
 	$(".advan-title3").css("top",130*ZOOMNUM);
-	$(".fingerprint-wrap").css({"top":500 * ZOOMNUM,"width":399*ZOOMNUM,"height":400*ZOOMNUM})
-	$(".xz-animate").css({"width":640 * ZOOMNUM,"height":1136 * ZOOMNUM })
-
-
+	
 	function swiperReady(){
 		var mySwiper = new Swiper('.main', {
 			direction : 'vertical',
@@ -245,6 +242,8 @@ $(function(){
 		})
 		var myswiper = new Swiper('.advantage-container',{
 		 	pagination : '.swiper-pagination',
+		 	loop:true,
+		 	autoplay : 5000,
 		 });
 	}
 //星球闪烁

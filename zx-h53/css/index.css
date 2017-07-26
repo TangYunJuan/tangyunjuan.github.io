@@ -954,20 +954,32 @@ body {
 	transform: rotate(100deg);
 	transform-origin: 50% 50%;
 	animation: advan1 5s linear infinite alternate;
+	-webkit-animation: advan1 5s linear infinite alternate;
 }
 @keyframes advan1 {    
     100% {
         transform: rotate(-100deg);
     }
 }
+@-webkit-keyframes advan1 {    
+    100% {
+        -webkit-transform: rotate(-100deg);
+    }
+}
 .advan-cir2 {
 	transform: rotate(-100deg);
 	transform-origin: 50% 50%;
 	animation: advan2 5s linear infinite alternate;
+	-webkit-animation: advan2 5s linear infinite alternate;
 }
 @keyframes advan2 {    
     100% {
         transform: rotate(100deg);
+    }
+}
+@-webkit-keyframes advan2 {    
+    100% {
+        -webkit-transform: rotate(100deg);
     }
 }
 .swiper-pagination .swiper-pagination-bullet {
@@ -1004,6 +1016,7 @@ body {
     top: 168px;
     left: 50%;
     transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
 }
 .advan-text2 {
 	width: 72%;
@@ -1016,6 +1029,7 @@ body {
 	position: absolute;
 	left: 50%;
     transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
 }
 .swiper-pagination .swiper-pagination-bullet-active{
 	opacity: 1;
