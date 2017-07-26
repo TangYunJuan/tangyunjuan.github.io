@@ -10,6 +10,17 @@
 </head>
 <body>
 	<div class="xz">
+		<div class="loading">
+			<div id="container" class="container">
+			    <div class="stick"></div>
+			    <div class="stick"></div>
+			    <div class="stick"></div>
+			    <div class="stick"></div>
+			    <div class="stick"></div>
+			    <div class="stick"></div>				  
+			    <h1>Loading...</h1>
+			</div>
+		</div>
 		<div class="home">
 			<div class="home-wrap">
 				<div class="home-star">
@@ -46,7 +57,7 @@
 				<div class="home-content">
 					<div class="content-pos">
 						<div class="logo"></div>
-						<!-- <image src="img/figure.gif" class="fingerprint-wrap"></image> -->
+						<image src="img/figure.gif" class="fingerprint-wrap"></image>
 						<div class="hold"></div>
 					</div>
 				</div>
@@ -311,16 +322,5 @@
 	<script src="js/swiper-3.4.2.jquery.min.js"></script>
 	<script src="js/index.js"></script>
 	<script src="js/1.js"></script>
-	
-	<script> 
-		window.onload = function() {
-			var ZOOMNUM = $(".home").width() / 640;
-		    // $(".fingerprint-wrap").css({"top":500 * ZOOMNUM,"width":399*ZOOMNUM,"height":400*ZOOMNUM})
-			$(".xz-animate").css({"width":640 * ZOOMNUM,"height":1136 * ZOOMNUM })
-			$('.xz').css("opacity",1);
-		}
-		
-		
-	</script>
 </body>
 </html>

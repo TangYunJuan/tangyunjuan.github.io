@@ -1,19 +1,4 @@
-$(function(){
-//判断移动端还是pc端
-	function IsPC() {
-	    var userAgentInfo = navigator.userAgent;
-	    var Agents = ["Android", "iPhone",
-	                "SymbianOS", "Windows Phone",
-	                "iPad", "iPod"];
-	    var flag = true;
-	    for (var v = 0; v < Agents.length; v++) {
-	        if (userAgentInfo.indexOf(Agents[v]) > 0) {
-	            flag = false;
-	            break;
-	        }
-	    }
-	    return flag;
-	}
+window.onload = function() {
 	var IMGWIDTH = $(".home").width();
 	var IMGHEIGHT = $(".home").height();
 	var BGWIDTH = 640;
@@ -58,7 +43,7 @@ $(function(){
 	new MoveImg($('.logo'),"img/logo.png","100")
 	// new MoveImg($('.fingerprint-wrap'),"img/figure.gif","500")
 	new MoveImg($('.hold'),"img/font.png","550","80")
-	new MoveImg($('.name'),"img/tucen.png","470")
+	new MoveImg($('.name'),"img/tucen.png","450")
 	new MoveImg($('.next'),"img/la.png")
 	new MoveImg($('.ball-wrap'),"img/ke3.png")
 	new MoveImg($('.ball-in'),"img/ke2.png")
@@ -95,7 +80,44 @@ $(function(){
 	new MoveImg($('.advan-cir1'),"img/ad1.png")
 	new MoveImg($('.advan-cir2'),"img/ad2.png","17","20")
 	new MoveImg($('.advan-cir3'),"img/ad3.png","32")
-	// new MoveImg($('.xz-animate'),"img/animate2.gif")
+    $(".fingerprint-wrap").css({"top":500 * ZOOMNUM,"width":399*ZOOMNUM,"height":400*ZOOMNUM})
+	$(".xz-animate").css({"width":640 * ZOOMNUM,"height":1136 * ZOOMNUM })
+	$(".erwei").css("width", $(".erwei").width()*ZOOMNUM)
+	$(".erwei").css("top",170*ZOOMNUM);
+	$(".inter").css("top",620*ZOOMNUM);
+	$(".advan-wrap").css({"top":220*ZOOMNUM,"width":parseInt(556 * ZOOMNUM),"height":parseInt(557 * ZOOMNUM)});
+	$(".advan-title1").css({"top":130*ZOOMNUM,"left":115*ZOOMNUM});
+	$(".advan-title2").css({"top":200*ZOOMNUM,"right":60*ZOOMNUM});
+	$(".advan-text1").css("top",288*ZOOMNUM);
+	$(".advan-text2").css("top",240*ZOOMNUM);
+	$(".advan-title3").css("top",130*ZOOMNUM);
+	$('.home').show();
+	$('.loading').hide();
+}
+
+
+$(function(){
+//判断移动端还是pc端
+	function IsPC() {
+	    var userAgentInfo = navigator.userAgent;
+	    var Agents = ["Android", "iPhone",
+	                "SymbianOS", "Windows Phone",
+	                "iPad", "iPod"];
+	    var flag = true;
+	    for (var v = 0; v < Agents.length; v++) {
+	        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+	            flag = false;
+	            break;
+	        }
+	    }
+	    return flag;
+	}
+	var IMGWIDTH = $(".home").width();
+	var IMGHEIGHT = $(".home").height();
+	var BGWIDTH = 640;
+	var BGHEIGHT = 1136;
+	var ZOOMNUM = IMGWIDTH / BGWIDTH;   //屏幕比
+	
 
 
 // 触摸或点击进入页面
@@ -207,15 +229,6 @@ $(function(){
 			}
 		})
 	}
-	$(".erwei").css("width", $(".erwei").width()*ZOOMNUM)
-	$(".erwei").css("top",170*ZOOMNUM);
-	$(".inter").css("top",620*ZOOMNUM);
-	$(".advan-wrap").css({"top":220*ZOOMNUM,"width":parseInt(556 * ZOOMNUM),"height":parseInt(557 * ZOOMNUM)});
-	$(".advan-title1").css({"top":130*ZOOMNUM,"left":115*ZOOMNUM});
-	$(".advan-title2").css({"top":200*ZOOMNUM,"right":60*ZOOMNUM});
-	$(".advan-text1").css("top",288*ZOOMNUM);
-	$(".advan-text2").css("top",240*ZOOMNUM);
-	$(".advan-title3").css("top",130*ZOOMNUM);
 	
 	function swiperReady(){
 		var mySwiper = new Swiper('.main', {
