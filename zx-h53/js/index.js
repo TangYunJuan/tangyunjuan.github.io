@@ -56,7 +56,7 @@ $(function(){
 
 //图片 大小和位置
 	new MoveImg($('.logo'),"img/logo.png","100")
-	new MoveImg($('.fingerprint-wrap'),"img/figure.png","500")
+	new MoveImg($('.fingerprint-wrap'),"img/figure.gif","500")
 	new MoveImg($('.hold'),"img/font.png","550","80")
 	new MoveImg($('.name'),"img/tucen.png","470")
 	new MoveImg($('.next'),"img/la.png")
@@ -91,7 +91,12 @@ $(function(){
 	new MoveImg($('.pop-img7'),"img/xiaxiaball.png","60")
 	new MoveImg($('.close'),"img/close.png","40","490")
 	new MoveImg($('.slider-set'),"img/sao.png")
-	// new MoveImg($('.hand'),"img/hand.png","170","80")
+	new MoveImg($('.advantage'),"img/our.png","70")
+	new MoveImg($('.advan-cir1'),"img/ad1.png")
+	new MoveImg($('.advan-cir2'),"img/ad2.png","17","20")
+	new MoveImg($('.advan-cir3'),"img/ad3.png","32")
+	new MoveImg($('.xz-animate'),"img/animate2.gif")
+
 
 // 触摸或点击进入页面
 	function touchFinger() {
@@ -174,73 +179,75 @@ $(function(){
 			ballArr.push($(this))
 			var _this = $(this);
 			var _index = index;
-			$(this).on("touchstart",function(e) {
-				touchstart = e.timeStamp;
-				$(this).parent().children().eq(_index+7).show();
-			})
-			$(this).on('touchmove',function(e) {
-				 event.preventDefault();
-			})
-			$(this).on("touchsend",function(e) {
-				touchend = e.timeStamp;
-				if(touchend - touchstart > 200) {
+			if(IsPC()){
+				$(this).on("click",function(e) {
+					touchstart = e.timeStamp;
 					$(this).parent().children().eq(_index+7).show();
-				}
-			})
-			$(".close").on("touchend",function() {
-				_this.parent().children().eq(_index+7).hide();
-			})
+				})
+				$(".close").on("click",function() {
+					_this.parent().children().eq(_index+7).hide();
+				})
+			}else{
+				$(this).on("touchstart",function(e) {
+					touchstart = e.timeStamp;
+					$(this).parent().children().eq(_index+7).show();
+				})
+				$(this).on('touchmove',function(e) {
+					 event.preventDefault();
+				})
+				$(this).on("touchsend",function(e) {
+					touchend = e.timeStamp;
+					if(touchend - touchstart > 200) {
+						$(this).parent().children().eq(_index+7).show();
+					}
+				})
+				$(".close").on("touchend",function() {
+					_this.parent().children().eq(_index+7).hide();
+				})
+			}
 		})
 	}
 	$(".erwei").css("width", $(".erwei").width()*ZOOMNUM)
 	$(".erwei").css("top",170*ZOOMNUM);
 	$(".inter").css("top",620*ZOOMNUM);
+	$(".advan-wrap").css({"top":220*ZOOMNUM,"width":parseInt(556 * ZOOMNUM),"height":parseInt(557 * ZOOMNUM)});
+	$(".advan-title1").css({"top":130*ZOOMNUM,"left":115*ZOOMNUM});
+	$(".advan-title2").css({"top":200*ZOOMNUM,"right":60*ZOOMNUM});
+	$(".advan-text1").css("top",288*ZOOMNUM);
+	$(".advan-text2").css("top",240*ZOOMNUM);
+	$(".advan-title3").css("top",130*ZOOMNUM);
+
+
 
 	function swiperReady(){
-		var mySwiper = new Swiper('.swiper-container', {
+		var mySwiper = new Swiper('.main', {
 			direction : 'vertical',
-			width: window.innerWidth,
-			height: window.innerHeight,
+			width: $(".xz").width(),
+			height: $(".xz").height(),
 			speed:300,
 			freeMode : false,
 			touchRatio : 2,
 			onInit: function(swiper){
-				setCanvas()
+				$(".xz-animate").show();
+				setTimeout(function(){
+					$('.name').animate({opacity:1},1000,function(){
+						writeFont();
+					});
+				},2000)
+				
 			},
 			onSlideChangeEnd: function(swiper){
-				if(swiper.activeIndex == 1) {
+				if(swiper.activeIndex == 2) {
 					moveHand()
-				      // alert(swiper.activeIndex) //切换结束时，告诉我现在是第几个slide
 				}
 			}
 		})
+		var myswiper = new Swiper('.advantage-container',{
+		 	pagination : '.swiper-pagination',
+		 });
 	}
 //星球闪烁
 	function moveHand() {
-		var handPos1Top = 170 * ZOOMNUM + "px";
-		var handPos1left = 80 * ZOOMNUM + "px";
-		var handPos2Top = 130 * ZOOMNUM + "px";
-		var handPos2left = 320 * ZOOMNUM + "px";
-		var handPos3Top = 280 * ZOOMNUM  + "px";
-		var handPos3Left = 480 * ZOOMNUM  + "px";
-		var handPos4Top = 460 * ZOOMNUM + "px";
-		var handPos4Left = 260 * ZOOMNUM + "px";
-		var handPos5Top = 580 * ZOOMNUM + "px";
-		var handPos5Left = 500 * ZOOMNUM + "px";
-		var handPos6Top = 760 * ZOOMNUM + "px";
-		var handPos6Left = 320 * ZOOMNUM + "px";
-		var handPos7Top = 800 * ZOOMNUM + "px";
-		var handPos7Left = 110 * ZOOMNUM + "px";
-		// $(".hand").css({"top":handPos1Top,"left":handPos1left})
-		// $(".hand").animate(
-		// 	{top:handPos2Top,left:handPos2left},1000).animate(
-		// 	{top:handPos3Top,left:handPos3Left},1000).animate(
-		// 	{top:handPos4Top,left:handPos4Left},1000).animate(
-		// 	{top:handPos5Top,left:handPos5Left},1000).animate(
-		// 	{top:handPos6Top,left:handPos6Left},1000).animate(
-		// 	{top:handPos7Top,left:handPos7Left},1000,function() {
-		// 		$(".hand").hide()
-		// 	})
 		$('.ball-pos').addClass('cir-shaing')
 	}
 

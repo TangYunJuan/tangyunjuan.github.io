@@ -448,29 +448,6 @@ body {
 	-webkit-transform:translate(-50%,-50%);
 	background-size: cover;
 }
-.fingerprint {
-	position: relative;
-	width: 100%;
-	height: 100%;
-}
-.slider-set {
-	position: absolute;
-	top: 14%;
-	box-shadow: 0 0 5px rgba(73,150,193,0.4);
-	animation: moveSet 2s linear infinite alternate;
-	-webkit-animation: moveSet 2s linear infinite alternate;
-}
-@keyframes moveSet {    
-    100% {
-    	position: absolute;
-        top: 88%;
-    }
-}@-webkit-keyframes moveSet {    
-    100% {
-    	position: absolute;
-        top: 88%;
-    }
-}
 .hold {
 	position: absolute;
 	top: 48%;
@@ -952,3 +929,101 @@ body {
         box-shadow: 0 0 0px #fff;
     }
 }
+.advantage,.advan-wrap {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.advan-wrap {
+	width: 100%;
+	height: 100%;
+}
+.advan-cir-wrap {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.advan-cir1, .advan-cir2,.advan-cir3{
+	position: absolute;
+}
+.advan-cir3 {
+	left: 50%;
+	transform: translateX(-50%);
+}
+.advan-cir1 {
+	transform: rotate(100deg);
+	transform-origin: 50% 50%;
+	animation: advan1 5s linear infinite alternate;
+}
+@keyframes advan1 {    
+    100% {
+        transform: rotate(-100deg);
+    }
+}
+.advan-cir2 {
+	transform: rotate(-100deg);
+	transform-origin: 50% 50%;
+	animation: advan2 5s linear infinite alternate;
+}
+@keyframes advan2 {    
+    100% {
+        transform: rotate(100deg);
+    }
+}
+.swiper-pagination .swiper-pagination-bullet {
+	width: 49px;
+	height: 5px;
+	border-radius: 5px;
+	background: #0085fc;
+	opacity: 0.58;
+}
+.advan-cir-wrap .swiper-container-horizontal>.swiper-pagination-bullets {
+	bottom: 60px;
+}
+.advan-title {
+	font-size: 32px;
+}
+.advan-text {
+	font-size: 15px;
+	line-height: 20px;
+}
+.advan-title1 {
+	position: absolute;
+    top: 77px;
+    left: 66px;
+}
+.advan-title2 {
+	position: absolute;
+    top: 115px;
+    right: 35px;
+}
+.advan-text1 {
+	width: 72%;
+    text-align: left;
+    position: absolute;
+    top: 168px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.advan-text2 {
+	width: 72%;
+    text-align: left;
+    position: absolute;
+    top: 168px;
+    
+}
+.swiper-slide .advan-title3 {
+	position: absolute;
+	left: 50%;
+    transform: translateX(-50%);
+}
+.swiper-pagination .swiper-pagination-bullet-active{
+	opacity: 1;
+}
+.advantage-container {
+	border-radius: 50%;
+}
+.xz-animate {
+	display: none;
+}
+

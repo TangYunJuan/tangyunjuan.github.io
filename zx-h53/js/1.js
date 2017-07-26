@@ -56,9 +56,7 @@ function setCanvas() {
 	       	if (!pause) {
 	       		setTimeout(animate,50)
 			}else{
-				$('.name').animate({opacity:1},1000,function(){
-					writeFont();
-				});
+				
 				
 			}
 		}
