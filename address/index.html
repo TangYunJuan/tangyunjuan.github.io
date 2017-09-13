@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>嘉华金融</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/weui.min.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+	<div class="registered">
+		<div class="header">
+			<div><div class="back"></div></div>
+			<div>会员注册</div>
+			<div></div>
+		</div>
+		<div class="main">
+			<div class="banner-wrap">
+				<img src="img/member/logo.png" alt="logo">
+			</div>
+			<div class="registered-form">
+				<form >
+					<ul class="registered-form-wrap">
+						<li class="li-border">
+							<label><div class="name-icon left icon"></div><input  pl="请输入姓名"  class="left user-name content"></label>
+						</li>
+						<li>
+							<label><div class="id-icon left icon"></div><input pl="请输入身份证号码" class="left user-card content"></label>
+						</li>
+					</ul>
+					<ul class="registered-form-wrap ul-margin">
+						<li class="li-border">
+							<label><div class="phone-icon left icon"></div><input pl="请输入手机" class="left content user-number"></label>
+						</li>
+						<li class="three-line li-border">
+							<label><div class="code-icon left icon"></div><input pl="请输入验证码" class="left content user-yan"></label>
+							<div class="right verification-code right-code"></div>
+						</li>
+						<li class="three-line li-border">
+							<label ><div class="sms-icon left icon"></div><input pl="请输入短信验证码" class="left content user-sms"></label>
+							<div class="right sms-code right-code">获取</div>
+							<div class="right-code"></div>
+						</li>
+						<li class="three-line li-border">
+							<label><div class="city-icon left icon"></div><input id='userResult' placeholder="请选择区域" class="city left user-city" readonly ></label>
+							<div id="showPicker" class="right choose-city  right-code">
+								<div class="city-code"></div>
+							</div>
+						</li>
+						<li class="error-m">
+							<div class="error-content"></div>
+						</li>
+						<li class="registered-btn">
+							<div class="btn h-btn" id="btn"><a>注册</a></div>
+						</li>
+					</ul>
+				</form>
+			</div>	
+		</div>
+	</div>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/weui.min.js"></script>
+	<script src="js/city-data.js"></script>
+	<script src="js/chooseCity.js"></script>
+	<script src="js/index.js"></script>
+	<script>
+		
+	</script>
+</body>
+</html>
